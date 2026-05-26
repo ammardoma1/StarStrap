@@ -1,7 +1,7 @@
 using System.Diagnostics;
-using Voidstrap.Integrations.SwiftTunnel.Models;
+using StarStrap.Integrations.SwiftTunnel.Models;
 
-namespace Voidstrap.Integrations.SwiftTunnel
+namespace StarStrap.Integrations.SwiftTunnel
 {
     /// <summary>
     /// Main orchestrator for SwiftTunnel VPN integration.

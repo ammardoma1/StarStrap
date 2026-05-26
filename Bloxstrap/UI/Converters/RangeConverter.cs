@@ -1,6 +1,6 @@
-﻿using System.Windows.Data;
+using System.Windows.Data;
 
-namespace Voidstrap.UI.Converters
+namespace StarStrap.UI.Converters
 {
     internal class RangeConverter : IValueConverter
     {

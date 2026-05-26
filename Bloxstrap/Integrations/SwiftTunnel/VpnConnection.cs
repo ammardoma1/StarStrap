@@ -5,9 +5,9 @@ using System.Runtime.InteropServices;
 using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Voidstrap.Integrations.SwiftTunnel.Models;
+using StarStrap.Integrations.SwiftTunnel.Models;
 
-namespace Voidstrap.Integrations.SwiftTunnel
+namespace StarStrap.Integrations.SwiftTunnel
 {
     /// <summary>
     /// Manages VPN connection lifecycle using the native library

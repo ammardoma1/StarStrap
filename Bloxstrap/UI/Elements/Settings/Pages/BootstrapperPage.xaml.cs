@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
@@ -9,9 +9,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
-using Voidstrap.UI.ViewModels.Settings;
+using StarStrap.UI.ViewModels.Settings;
 
-namespace Voidstrap.UI.Elements.Settings.Pages
+namespace StarStrap.UI.Elements.Settings.Pages
 {
     public partial class BehaviourPage
     {

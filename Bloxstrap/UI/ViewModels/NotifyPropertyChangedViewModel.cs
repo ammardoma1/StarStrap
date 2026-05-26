@@ -1,10 +1,10 @@
-﻿using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Input;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
-namespace Voidstrap.UI.ViewModels
+namespace StarStrap.UI.ViewModels
 {
     public class NotifyPropertyChangedViewModel : INotifyPropertyChanged
     {
@@ -21,5 +21,16 @@ namespace Voidstrap.UI.ViewModels
         {
             Process.Start("explorer.exe", Paths.Mods);
         });
+
+        public bool SetProperty<T>(ref T backingStore, T value, [CallerMemberName] string propertyName = "", Action? onChanged = null)
+        {
+            if (EqualityComparer<T>.Default.Equals(backingStore, value))
+                return false;
+
+            backingStore = value;
+            onChanged?.Invoke();
+            OnPropertyChanged(propertyName);
+            return true;
+        }
     }
 }

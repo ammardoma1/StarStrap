@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Concurrent;
 using System.IO;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Web;
-using Voidstrap.Resources;
+using StarStrap.Resources;
 
-namespace Voidstrap.UI.ViewModels.Settings
+namespace StarStrap.UI.ViewModels.Settings
 {
     public class ShortcutsViewModel : NotifyPropertyChangedViewModel
     {
@@ -189,7 +189,7 @@ namespace Voidstrap.UI.ViewModels.Settings
             try
             {
                 string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                string folderPath = Path.Combine(documentsPath, "Voidstrap");
+                string folderPath = Path.Combine(documentsPath, "StarStrap");
                 string privateCodePath = Path.Combine(folderPath, "PrivateServerCode.txt");
 
                 if (File.Exists(privateCodePath))

@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.Models.Persistable
+namespace StarStrap.Models.Persistable
 {
     public class RobloxState
     {

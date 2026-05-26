@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Media;
 
-namespace Voidstrap.UI.ViewModels.ContextMenu
+namespace StarStrap.UI.ViewModels.ContextMenu
 {
     public class TrackItem : INotifyPropertyChanged
     {

@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Security.Principal;
-using Voidstrap;
+using StarStrap;
 
 public static class RobloxMemoryCleaner
 {
@@ -104,7 +104,7 @@ public static class RobloxMemoryCleaner
 
         if (processes.Length == 0)
         {
-            // if no roblox just fuck it 🤘
+            // if no roblox just fuck it ??
             return;
         }
 
@@ -123,7 +123,7 @@ public static class RobloxMemoryCleaner
 
                 Console.WriteLine(
                     $"[{proc.ProcessName}:{proc.Id}] " +
-                    $"{FormatBytes(before)} → {FormatBytes(after)}");
+                    $"{FormatBytes(before)} ? {FormatBytes(after)}");
             }
             finally
             {

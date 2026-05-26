@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace Voidstrap.Models.APIs
+namespace StarStrap.Models.APIs
 {
     public class IPInfoResponse
     {

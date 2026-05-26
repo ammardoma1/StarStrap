@@ -1,8 +1,8 @@
-﻿using System.Windows;
+using System.Windows;
 using System.Xml.Linq;
-using Voidstrap;
+using StarStrap;
 
-namespace Voidstrap.UI.Elements.Bootstrapper
+namespace StarStrap.UI.Elements.Bootstrapper
 {
     public partial class CustomDialog
     {

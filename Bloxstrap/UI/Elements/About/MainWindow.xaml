@@ -1,12 +1,12 @@
 <base:WpfUiWindow
-    x:Class="Voidstrap.UI.Elements.About.MainWindow"
+    x:Class="StarStrap.UI.Elements.About.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:base="clr-namespace:Voidstrap.UI.Elements.Base"
+    xmlns:base="clr-namespace:StarStrap.UI.Elements.Base"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:pages="clr-namespace:Voidstrap.UI.Elements.About.Pages"
-    xmlns:resources="clr-namespace:Voidstrap.Resources"
+    xmlns:pages="clr-namespace:StarStrap.UI.Elements.About.Pages"
+    xmlns:resources="clr-namespace:StarStrap.Resources"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     Title="{x:Static resources:Strings.About_Title}"
     Width="800"
@@ -40,7 +40,7 @@
             Grid.Row="0"
             Padding="8"
             Title="{x:Static resources:Strings.About_Title}"
-            Icon="pack://application:,,,/Voidstrap.ico"
+            Icon="pack://application:,,,/StarStrap.ico"
             ForceShutdown="False"
             MinimizeToTray="False"
             UseSnapLayout="True" />
@@ -71,36 +71,11 @@
                 <ui:NavigationStore.Items>
                     <ui:NavigationItem
                         Margin="0,0,0,12"
-                        Content="{x:Static resources:Strings.Menu_About_Title}"
+                        Content="Contributors"
                         Icon="QuestionCircle48"
                         IconFilled="True"
                         PageType="{x:Type pages:AboutPage}"
                         Tag="about" />
-
-                    <ui:NavigationItem
-                        Margin="0,0,0,12"
-                        Content="Supporters"
-                        Icon="Heart24"
-                        PageType="{x:Type pages:SupportersPage}"
-                        Tag="supporters" />
-
-                    <ui:NavigationItem
-                        Margin="0,0,0,12"
-                        Icon="Translate24"
-                        PageType="{x:Type pages:TranslatorsPage}"
-                        Tag="translators">
-                        <TextBlock
-                            x:Name="TranslatorsText"
-                            FontSize="10"
-                            Text="{x:Static resources:Strings.About_Translators_Title}" />
-                    </ui:NavigationItem>
-
-                    <ui:NavigationItem
-                        Margin="0,0,0,12"
-                        Content="{x:Static resources:Strings.About_Licenses_Title}"
-                        Icon="Code24"
-                        PageType="{x:Type pages:LicensesPage}"
-                        Tag="licenses" />
                 </ui:NavigationStore.Items>
             </ui:NavigationStore>
 

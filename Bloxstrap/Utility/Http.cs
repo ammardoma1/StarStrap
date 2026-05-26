@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Voidstrap.Utility
+namespace StarStrap.Utility
 {
     internal static class Http
     {

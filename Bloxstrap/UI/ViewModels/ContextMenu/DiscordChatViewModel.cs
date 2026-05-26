@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
@@ -11,7 +11,7 @@ using System.Windows;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
-namespace Voidstrap.UI.Chat
+namespace StarStrap.UI.Chat
 {
     public class DiscordChatViewModel : ObservableObject
     {
@@ -64,7 +64,7 @@ namespace Voidstrap.UI.Chat
             for (int i = 0x1F600; i <= 0x1F64F; i++)
                 AllEmojis.Add(char.ConvertFromUtf32(i));
 
-            foreach (var c in "❤️👍😂😮😢😡🎉💯🔥✨😎💖🥰🤯🤔")
+            foreach (var c in "?????????????????????????????")
                 AllEmojis.Add(c.ToString());
         }
 

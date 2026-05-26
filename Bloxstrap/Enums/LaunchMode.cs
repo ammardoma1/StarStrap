@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.Enums
+namespace StarStrap.Enums
 {
     public enum LaunchMode
     {

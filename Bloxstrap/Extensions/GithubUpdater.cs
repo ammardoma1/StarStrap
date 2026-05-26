@@ -1,23 +1,23 @@
-﻿using System;
+using System;
 using System.IO;
 using System.IO.Compression;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Voidstrap;
+using StarStrap;
 
 public static class GithubUpdater
 {
     private static readonly HttpClient http = new()
     {
-        DefaultRequestHeaders = { { "User-Agent", "Voidstrap-Updater" } }
+        DefaultRequestHeaders = { { "User-Agent", "StarStrap-Updater" } }
     };
 
     public static async Task<string?> GetLatestVersionTagAsync()
     {
         try
         {
-            string url = "https://api.github.com/repos/voidstrap/Voidstrap/releases/latest";
+            string url = "https://api.github.com/repos/StarStrap/StarStrap/releases/latest";
             string response = await http.GetStringAsync(url);
             using var doc = JsonDocument.Parse(response);
             return doc.RootElement.GetProperty("tag_name").GetString();
@@ -33,7 +33,7 @@ public static class GithubUpdater
     {
         try
         {
-            string url = "https://api.github.com/repos/voidstrap/Voidstrap/releases/latest";
+            string url = "https://api.github.com/repos/StarStrap/StarStrap/releases/latest";
             string response = await http.GetStringAsync(url);
             using var doc = JsonDocument.Parse(response);
             var assets = doc.RootElement.GetProperty("assets");
@@ -62,7 +62,7 @@ public static class GithubUpdater
 
     private static async Task<bool> UpdateExe(string url, string name)
     {
-        string tempDir = Path.Combine(Path.GetTempPath(), "Voidstrap_Update");
+        string tempDir = Path.Combine(Path.GetTempPath(), "StarStrap_Update");
         Directory.CreateDirectory(tempDir);
 
         string exePath = Path.Combine(tempDir, name);
@@ -81,7 +81,7 @@ public static class GithubUpdater
 
     private static async Task<bool> UpdateZip(string url, string name)
     {
-        string tempDir = Path.Combine(Path.GetTempPath(), "Voidstrap_Update");
+        string tempDir = Path.Combine(Path.GetTempPath(), "StarStrap_Update");
         Directory.CreateDirectory(tempDir);
 
         string zipPath = Path.Combine(tempDir, name);
@@ -101,7 +101,7 @@ public static class GithubUpdater
             File.Copy(file, dest, true);
         }
 
-        string mainExe = Path.Combine(currentDir, "Voidstrap.exe");
+        string mainExe = Path.Combine(currentDir, "StarStrap.exe");
         RestartAfterUpdate(mainExe);
         return true;
     }

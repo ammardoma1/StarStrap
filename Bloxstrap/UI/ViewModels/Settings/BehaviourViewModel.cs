@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
-using Voidstrap.AppData;
-using Voidstrap.RobloxInterfaces;
-using static VoidstrapRobloxSettingsManager;
+using StarStrap.AppData;
+using StarStrap.RobloxInterfaces;
+using static StarStrapRobloxSettingsManager;
 
 
-namespace Voidstrap.UI.ViewModels.Settings
+namespace StarStrap.UI.ViewModels.Settings
 {
     public class BehaviourViewModel : NotifyPropertyChangedViewModel
     {
@@ -255,7 +255,7 @@ namespace Voidstrap.UI.ViewModels.Settings
 
         private void LoadSettings()
         {
-            var settings = VoidstrapRobloxSettingsManager.Load();
+            var settings = StarStrapRobloxSettingsManager.Load();
 
             SelectedMemoryCleanerInterval =
                 MemoryCleanerIntervals.FirstOrDefault(x =>
@@ -265,13 +265,13 @@ namespace Voidstrap.UI.ViewModels.Settings
 
         private void SaveSettings()
         {
-            var settings = new VoidstrapRobloxSettings
+            var settings = new StarStrapRobloxSettings
             {
                 MemoryCleanerIntervalSeconds =
                     SelectedMemoryCleanerInterval?.Seconds ?? 0
             };
 
-            VoidstrapRobloxSettingsManager.Save(settings);
+            StarStrapRobloxSettingsManager.Save(settings);
         }
 
         public bool RenameClientToEurotrucks2
@@ -339,22 +339,22 @@ namespace Voidstrap.UI.ViewModels.Settings
             }
         }
 
-        public bool CleanerVoidstrap
+        public bool CleanerStarStrap
         {
-            get => CleanerItems.Contains("VoidstrapLogs");
+            get => CleanerItems.Contains("StarStrapLogs");
             set
             {
-                if (value && !CleanerItems.Contains("VoidstrapLogs"))
+                if (value && !CleanerItems.Contains("StarStrapLogs"))
                 {
-                    CleanerItems.Add("VoidstrapLogs");
+                    CleanerItems.Add("StarStrapLogs");
                     UpdateCleanerItems();
                 }
-                else if (!value && CleanerItems.Contains("VoidstrapLogs"))
+                else if (!value && CleanerItems.Contains("StarStrapLogs"))
                 {
-                    CleanerItems.Remove("VoidstrapLogs");
+                    CleanerItems.Remove("StarStrapLogs");
                     UpdateCleanerItems();
                 }
-                OnPropertyChanged(nameof(CleanerVoidstrap));
+                OnPropertyChanged(nameof(CleanerStarStrap));
             }
         }
 

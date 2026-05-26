@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.Models.RobloxApi
+namespace StarStrap.Models.RobloxApi
 {
     /// <summary>
     /// Roblox.Users.Api.GetUserResponse
@@ -24,7 +24,7 @@
         public bool IsBanned { get; set; }
 
         /// <summary>
-        /// Unused, legacy attribute… rely on its existence.
+        /// Unused, legacy attribute� rely on its existence.
         /// </summary>
         [JsonPropertyName("externalAppDisplayName")]
         public string ExternalAppDisplayName { get; set; } = null!;

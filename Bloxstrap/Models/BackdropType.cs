@@ -1,4 +1,4 @@
-﻿public enum BackgroundType
+public enum BackgroundType
 {
     Mica,
     Aero,

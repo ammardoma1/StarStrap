@@ -1,6 +1,6 @@
-﻿using System.Windows.Media;
+using System.Windows.Media;
 
-namespace Voidstrap.Models
+namespace StarStrap.Models
 {
     public class BootstrapperIconEntry
     {

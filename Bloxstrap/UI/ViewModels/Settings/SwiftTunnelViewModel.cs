@@ -3,11 +3,11 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using CommunityToolkit.Mvvm.Input;
-using Voidstrap.Integrations.SwiftTunnel;
-using Voidstrap.Integrations.SwiftTunnel.Models;
-using Voidstrap.UI.Elements.Dialogs;
+using StarStrap.Integrations.SwiftTunnel;
+using StarStrap.Integrations.SwiftTunnel.Models;
+using StarStrap.UI.Elements.Dialogs;
 
-namespace Voidstrap.UI.ViewModels.Settings
+namespace StarStrap.UI.ViewModels.Settings
 {
     public class SwiftTunnelViewModel : NotifyPropertyChangedViewModel, IDisposable
     {

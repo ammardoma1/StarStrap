@@ -1,12 +1,12 @@
-﻿using Voidstrap.AppData;
-using Voidstrap;
+using StarStrap.AppData;
+using StarStrap;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Voidstrap.AppData
+namespace StarStrap.AppData
 {
     public class RobloxPlayerData : CommonAppData, IAppData
     {

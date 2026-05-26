@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.UI.ViewModels.ContextMenu
+namespace StarStrap.UI.ViewModels.ContextMenu
 {
     public class TrackViewModel : TrackItem { }
 }

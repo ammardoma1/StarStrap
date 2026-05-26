@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.UI.Elements.Settings.Pages
+namespace StarStrap.UI.Elements.Settings.Pages
 {
     public partial class HelpPage
     {

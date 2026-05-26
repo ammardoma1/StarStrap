@@ -1,6 +1,6 @@
-﻿using System.Security.Cryptography;
+using System.Security.Cryptography;
 
-namespace Voidstrap.Utility
+namespace StarStrap.Utility
 {
     public static class MD5Hash
     {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Media;
 using System.Web;
 using System.Windows;
@@ -7,7 +7,7 @@ using System.Windows.Interop;
 using Windows.Win32;
 using Windows.Win32.Foundation;
 
-namespace Voidstrap.UI.Elements.Dialogs
+namespace StarStrap.UI.Elements.Dialogs
 {
     // this entire code is so stupid but hada clean it up
     public partial class ExceptionDialog
@@ -24,7 +24,7 @@ namespace Voidstrap.UI.Elements.Dialogs
                 LocateLogFileButton.Content = Strings.Dialog_Exception_CopyLogContents;
 
             string repoUrl = $"https://github.com/{App.ProjectRepository}";
-            string wikiUrl = $"https://voidstrapp.netlify.app/documentation/documentation";
+            string wikiUrl = $"https://voidstrap.netlify.app/documentation/documentation";
 
             string title = HttpUtility.UrlEncode($"[BUG] {exception.GetType()}: {exception.Message}");
             string log = HttpUtility.UrlEncode(
@@ -72,7 +72,7 @@ namespace Voidstrap.UI.Elements.Dialogs
             AppendException(exception, false);
         }
 
-        private string GetHelpMessage(string wikiUrl, string issueUrl) // when I read this 'gethelp' I just feel like I need help 💀
+        private string GetHelpMessage(string wikiUrl, string issueUrl) // when I read this 'gethelp' I just feel like I need help ??
         {
             if (!App.IsActionBuild &&
                 !App.BuildMetadata.Machine.Contains("pizzaboxer", StringComparison.Ordinal)) // ah yes we use pizzabox

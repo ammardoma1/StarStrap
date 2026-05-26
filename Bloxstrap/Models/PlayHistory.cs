@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
-using Voidstrap;
+using StarStrap;
 
-namespace Voidstrap.Models
+namespace StarStrap.Models
 {
     public static class PlayHistory
     {

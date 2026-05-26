@@ -1,8 +1,8 @@
-﻿using System.Windows;
+using System.Windows;
 
-using Voidstrap.UI.ViewModels.About;
+using StarStrap.UI.ViewModels.About;
 
-namespace Voidstrap.UI.Elements.About.Pages
+namespace StarStrap.UI.Elements.About.Pages
 {
     /// <summary>
     /// Interaction logic for SupportersPage.xaml

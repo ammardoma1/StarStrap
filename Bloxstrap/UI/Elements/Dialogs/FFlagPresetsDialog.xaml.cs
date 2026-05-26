@@ -1,8 +1,8 @@
 using System.Windows;
 using System.Windows.Controls;
-using Voidstrap.UI.Elements.Base;
+using StarStrap.UI.Elements.Base;
 
-namespace Voidstrap.UI.Elements.Dialogs
+namespace StarStrap.UI.Elements.Dialogs
 {
     /// <summary>
     /// Dialog for selecting preset FFlag values

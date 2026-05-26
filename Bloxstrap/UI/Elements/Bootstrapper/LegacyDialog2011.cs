@@ -1,8 +1,8 @@
 using System.ComponentModel;
 using System.Windows.Forms;
-using Voidstrap.UI.Elements.Bootstrapper.Base;
+using StarStrap.UI.Elements.Bootstrapper.Base;
 
-namespace Voidstrap.UI.Elements.Bootstrapper
+namespace StarStrap.UI.Elements.Bootstrapper
 {
     // https://youtu.be/3K9oCEMHj2s?t=35
     public partial class LegacyDialog2011 : WinFormsDialogBase

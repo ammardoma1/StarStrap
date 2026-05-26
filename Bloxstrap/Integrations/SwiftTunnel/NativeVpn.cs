@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace Voidstrap.Integrations.SwiftTunnel
+namespace StarStrap.Integrations.SwiftTunnel
 {
     /// <summary>
     /// P/Invoke declarations for swifttunnel_vpn.dll

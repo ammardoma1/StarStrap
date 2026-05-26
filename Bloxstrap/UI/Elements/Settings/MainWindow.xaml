@@ -1,13 +1,13 @@
-﻿<base:WpfUiWindow
-    x:Class="Voidstrap.UI.Elements.Settings.MainWindow"
+<base:WpfUiWindow
+    x:Class="StarStrap.UI.Elements.Settings.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:base="clr-namespace:Voidstrap.UI.Elements.Base"
+    xmlns:base="clr-namespace:StarStrap.UI.Elements.Base"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:dmodels="clr-namespace:Voidstrap.UI.ViewModels.Settings"
+    xmlns:dmodels="clr-namespace:StarStrap.UI.ViewModels.Settings"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:pages="clr-namespace:Voidstrap.UI.Elements.Settings.Pages"
-    xmlns:resources="clr-namespace:Voidstrap.Resources"
+    xmlns:pages="clr-namespace:StarStrap.UI.Elements.Settings.Pages"
+    xmlns:resources="clr-namespace:StarStrap.Resources"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
     xmlns:media="clr-namespace:System.Windows.Media.Animation;assembly=PresentationCore"
@@ -33,7 +33,7 @@
     <base:WpfUiWindow.Resources>
         <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
         <BitmapImage x:Key="AppIconImage"
-                     UriSource="pack://application:,,,/Voidstrap.ico" />
+                     UriSource="pack://application:,,,/StarStrap.ico" />
         <media:CubicEase x:Key="SmoothEaseOut" EasingMode="EaseOut" />
         <media:QuinticEase x:Key="UltraSmoothEaseOut" EasingMode="EaseOut" />
         <LinearGradientBrush x:Key="LightningBrush"
@@ -211,14 +211,14 @@
                        Stretch="Uniform"
                        Margin="0,0,0,12" />
 
-                <TextBlock Text="Voidstrap"
+                <TextBlock Text="StarStrap"
                            FontSize="28"
                            FontWeight="SemiBold"
                            HorizontalAlignment="Center"
                            Foreground="White"
                            Opacity="0.95" />
 
-                <TextBlock Text="Bloxstrap Fork | Voidstrap Team"
+                <TextBlock Text="Maybe theres hope? | StarStrap"
                            FontSize="14"
                            HorizontalAlignment="Center"
                            Foreground="White"
@@ -264,7 +264,7 @@
         </ui:Snackbar>
         
         <ui:Snackbar x:Name="SettingsSavedLaunchSnackbar"
-             Title="Voidstrap Saved And Launched Roblox!"
+             Title="StarStrap Saved And Launched Roblox!"
              Grid.RowSpan="10"
              Margin="150,0,150,20"
              Panel.ZIndex="10"
@@ -289,7 +289,7 @@
                      MinimizeToTray="False"
                      UseSnapLayout="True"
                      Title="{x:Static resources:Strings.Menu_Title}"
-                     Icon="pack://application:,,,/Voidstrap.ico" />
+                     Icon="pack://application:,,,/StarStrap.ico" />
 
         <Grid x:Name="RootGrid"
               MouseMove="RootGrid_MouseMove"
@@ -321,7 +321,6 @@
                     <ui:NavigationItem Content="{x:Static resources:Strings.Menu_Mods_Title}" Icon="WrenchScrewdriver20" Tag="Wrench24" PageType="{x:Type pages:ModsPage}" />
                     <ui:NavigationSeparator />
                     <ui:NavigationItem IsEnabled="False" Opacity="0.6" />
-                    <ui:NavigationItem Content="News" Icon="News16" Tag="News20" Margin="0,-40,0,20" PageType="{x:Type pages:NewsPage}" />
                 </ui:NavigationFluent.Items>
 
                 <ui:NavigationFluent.Footer>

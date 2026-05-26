@@ -1,13 +1,13 @@
-﻿using System.Collections.Specialized;
+using System.Collections.Specialized;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
-using Voidstrap.UI.Chat;
-using Voidstrap.UI.Elements.Base;
-using static Voidstrap.UI.Chat.DiscordChatViewModel;
+using StarStrap.UI.Chat;
+using StarStrap.UI.Elements.Base;
+using static StarStrap.UI.Chat.DiscordChatViewModel;
 
-namespace Voidstrap.UI.Elements.ContextMenu
+namespace StarStrap.UI.Elements.ContextMenu
 {
     public partial class DiscordChatWindow : WpfUiWindow
     {

@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Windows;
 
-namespace Voidstrap.UI.Elements.Bootstrapper.Base
+namespace StarStrap.UI.Elements.Bootstrapper.Base
 {
     static class BaseFunctions
     {

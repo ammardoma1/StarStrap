@@ -1,9 +1,9 @@
-﻿using Voidstrap.Models.SettingTasks.Base;
+using StarStrap.Models.SettingTasks.Base;
 using System;
 using System.IO;
 using System.Security.Cryptography;
 
-namespace Voidstrap.Models.SettingTasks
+namespace StarStrap.Models.SettingTasks
 {
     public class FontModPresetTask : StringBaseTask
     {

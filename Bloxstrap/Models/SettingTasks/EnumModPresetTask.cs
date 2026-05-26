@@ -1,7 +1,7 @@
-﻿using Voidstrap.Models.Entities;
-using Voidstrap.Models.SettingTasks.Base;
+using StarStrap.Models.Entities;
+using StarStrap.Models.SettingTasks.Base;
 
-namespace Voidstrap.Models.SettingTasks
+namespace StarStrap.Models.SettingTasks
 {
     public class EnumModPresetTask<T> : EnumBaseTask<T> where T : struct, Enum
     {

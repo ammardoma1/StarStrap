@@ -1,6 +1,6 @@
-﻿using System.Windows;
+using System.Windows;
 
-namespace Voidstrap.UI.ViewModels.About
+namespace StarStrap.UI.ViewModels.About
 {
     public class AboutViewModel : NotifyPropertyChangedViewModel
     {

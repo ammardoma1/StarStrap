@@ -1,7 +1,7 @@
-﻿using Voidstrap.UI.ViewModels.Settings;
+using StarStrap.UI.ViewModels.Settings;
 using System.Windows;
 
-namespace Voidstrap.UI.Elements.Settings.Pages
+namespace StarStrap.UI.Elements.Settings.Pages
 {
     /// <summary>
     /// Interaction logic for FastFlagEditorWarningPage.xaml

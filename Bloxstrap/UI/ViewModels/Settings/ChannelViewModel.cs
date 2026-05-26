@@ -1,4 +1,4 @@
-﻿using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -13,14 +13,14 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Threading;
-using Voidstrap;
-using Voidstrap.AppData;
-using Voidstrap.RobloxInterfaces;
-using Voidstrap.UI.Elements.ContextMenu;
+using StarStrap;
+using StarStrap.AppData;
+using StarStrap.RobloxInterfaces;
+using StarStrap.UI.Elements.ContextMenu;
 using Wpf.Ui.Appearance;
-using static Voidstrap.Models.Persistable.AppSettings;
+using static StarStrap.Models.Persistable.AppSettings;
 
-namespace Voidstrap.UI.ViewModels.Settings
+namespace StarStrap.UI.ViewModels.Settings
 {
     public class ChannelViewModel : INotifyPropertyChanged
     {

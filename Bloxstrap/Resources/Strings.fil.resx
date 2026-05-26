@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Bootstrapper.AutoUpdateFailed" xml:space="preserve">
-    <value>Hindi nagkukusang nag update ang Voidstrap sa version {0}. Pakiusap na i-update mo ng manu-mano sa pag-download at pagtakbo nito sa website.</value>
+    <value>Hindi nagkukusang nag update ang StarStrap sa version {0}. Pakiusap na i-update mo ng manu-mano sa pag-download at pagtakbo nito sa website.</value>
   </data>
   <data name="Bootstrapper.ConfirmLaunch" xml:space="preserve">
     <value>Nakabukas pa rin ang Roblox, at ang pag-launch ng iba pang instance ay isasarado ito. Sigurado ka bang gusto mong ituloy ang pag-launch?</value>
@@ -127,10 +127,10 @@
     <value>Maaring down ngayon ang Roblox. Tignan dito sa {0} para sa ibang impormasyon.</value>
   </data>
   <data name="Dialog.Connectivity.BadConnection" xml:space="preserve">
-    <value>Hindi makagawa ng connection, ibig sabihin nito ay mahina ang internet connection o isang firewall block. Kapag ang iyong connection ay ayos, i-ensure na ang iyong antivirus ay hindi binablock ang Voidstrap.</value>
+    <value>Hindi makagawa ng connection, ibig sabihin nito ay mahina ang internet connection o isang firewall block. Kapag ang iyong connection ay ayos, i-ensure na ang iyong antivirus ay hindi binablock ang StarStrap.</value>
   </data>
   <data name="Bootstrapper.FirstRunUninstall" xml:space="preserve">
-    <value>Kailangan mo munang i-install ang Voidstrap bago mo ito i-uninstall.</value>
+    <value>Kailangan mo munang i-install ang StarStrap bago mo ito i-uninstall.</value>
   </data>
   <data name="Bootstrapper.NotEnoughSpace" xml:space="preserve">
     <value>Walang sapat na disk space para mag-install ng Roblox. Maaring mag-delete ng mga files upang magkaroon ng disk space at subukan muli.</value>
@@ -157,8 +157,8 @@
   <data name="Bootstrapper.Status.Upgrading" xml:space="preserve">
     <value>Mag-uupgrade ng {product}...</value>
   </data>
-  <data name="Bootstrapper.Status.UpgradingVoidstrap" xml:space="preserve">
-    <value>Kinukuha ang latest Voidstrap...</value>
+  <data name="Bootstrapper.Status.UpgradingStarStrap" xml:space="preserve">
+    <value>Kinukuha ang latest StarStrap...</value>
   </data>
   <data name="Bootstrapper.Status.WaitingOtherInstances" xml:space="preserve">
     <value>Naghihintay ng ibang instances...</value>
@@ -172,10 +172,10 @@
     <comment>Text for style previews that use text button that says "Cancel"</comment>
   </data>
   <data name="Bootstrapper.SuccessfullyUninstalled" xml:space="preserve">
-    <value>Natanggal na ang Voidstrap</value>
+    <value>Natanggal na ang StarStrap</value>
   </data>
   <data name="Bootstrapper.Uninstall.RobloxRunning" xml:space="preserve">
-    <value>Tumatakbo ang Roblox, pero kailangan i-close bago tangalin ang Voidstrap. Gusto mo ba i-sarado ang Roblox ngayon?</value>
+    <value>Tumatakbo ang Roblox, pero kailangan i-close bago tangalin ang StarStrap. Gusto mo ba i-sarado ang Roblox ngayon?</value>
   </data>
   <data name="Bootstrapper.WMFNotFound" xml:space="preserve">
     <value>Kinakailangan ng Roblox na gumamit ng Windows Media Foundation components. Mukhang ang mga components ay nawawala sa iyong system, dahil siguro ikaw ay gumagamit ng N edition ng Windows. Maaring i-install muna ang mga components, tapos i-launch ang Roblox.</value>
@@ -279,22 +279,22 @@ Pindutin para sa marami pang impormasyon</value>
     <value>Connectivity error</value>
   </data>
   <data name="Dialog.Connectivity.UnableToConnect" xml:space="preserve">
-    <value>Hindi maka-konek ang Voidstrap sa {0}</value>
+    <value>Hindi maka-konek ang StarStrap sa {0}</value>
     <comment>{0} is the name of a service (i.e. Roblox, GitHub)</comment>
   </data>
   <data name="Dialog.Exception.CopyLogContents" xml:space="preserve">
     <value>Kopyahin ang log contents</value>
   </data>
   <data name="Dialog.Exception.Info.1" xml:space="preserve">
-    <value>May exception na nangyari habang pinapatakbo ang Voidstrap</value>
+    <value>May exception na nangyari habang pinapatakbo ang StarStrap</value>
   </data>
   <data name="Dialog.Exception.Info.2" xml:space="preserve">
-    <value>Suriin muna ang [Voidstrap Wiki]({0}) upang makita kung itong problema ay meron nang paraan ng pag-aayos.
+    <value>Suriin muna ang [StarStrap Wiki]({0}) upang makita kung itong problema ay meron nang paraan ng pag-aayos.
 
 Kung hindi, paki ulat itong pagbubukod, gamit ang [GitHub issue]({1}) kasama ang kopya ng log file na nilikha.</value>
   </data>
   <data name="Dialog.Exception.Title" xml:space="preserve">
-    <value>Voidstrap Exception</value>
+    <value>StarStrap Exception</value>
   </data>
   <data name="Common.Custom" xml:space="preserve">
     <value>Custom</value>
@@ -309,10 +309,10 @@ Kung hindi, paki ulat itong pagbubukod, gamit ang [GitHub issue]({1}) kasama ang
     <value>Fake Byfron (2023)</value>
   </data>
   <data name="Enums.BootstrapperStyle.ClassicFluentDialog" xml:space="preserve">
-    <value>Voidstrap (Classic)</value>
+    <value>StarStrap (Classic)</value>
   </data>
   <data name="Enums.BootstrapperStyle.FluentAeroDialog" xml:space="preserve">
-    <value>Voidstrap (Glass)</value>
+    <value>StarStrap (Glass)</value>
   </data>
   <data name="Enums.BootstrapperStyle.LegacyDialog2008" xml:space="preserve">
     <value>Legacy (2008 - 2011)</value>
@@ -402,10 +402,10 @@ Kung hindi, paki ulat itong pagbubukod, gamit ang [GitHub issue]({1}) kasama ang
     <value>Light</value>
   </data>
   <data name="InstallChecker.Updated" xml:space="preserve">
-    <value>Na-upgrade na ang Voidstrap sa v{0}</value>
+    <value>Na-upgrade na ang StarStrap sa v{0}</value>
   </data>
   <data name="InstallChecker.VersionDifferentThanInstalled" xml:space="preserve">
-    <value>Ang bersyon ng Voidstrap na iyong sinimulan ay magkaiba sa bersyon na iyong ininstall. Gusto mo ba i-upgrade ang kasalukuyang naka-install na bersyon?</value>
+    <value>Ang bersyon ng StarStrap na iyong sinimulan ay magkaiba sa bersyon na iyong ininstall. Gusto mo ba i-upgrade ang kasalukuyang naka-install na bersyon?</value>
   </data>
   <data name="Menu.About.Contributors" xml:space="preserve">
     <value>Mga Kontribyutor</value>
@@ -414,7 +414,7 @@ Kung hindi, paki ulat itong pagbubukod, gamit ang [GitHub issue]({1}) kasama ang
     <value>Code</value>
   </data>
   <data name="Menu.About.Contributors.Description" xml:space="preserve">
-    <value>Ito ang mga tao na nagbigay ng mahalagang kontribusyon sa Voidstrap, na tumulong upang maging ganito ang Voidstrap.</value>
+    <value>Ito ang mga tao na nagbigay ng mahalagang kontribusyon sa StarStrap, na tumulong upang maging ganito ang StarStrap.</value>
   </data>
   <data name="Menu.About.Contributors.FeatureIdeas" xml:space="preserve">
     <value>Mga tampok na ideya</value>
@@ -460,7 +460,7 @@ Kung hindi, paki ulat itong pagbubukod, gamit ang [GitHub issue]({1}) kasama ang
     <value>Tandaan, hindi lahat ng pagbabago ay agad na maga-apply hangga't hindi pa naisasa ang lahat ng bukas na Roblox instances.</value>
   </data>
   <data name="Menu.AlreadyRunning.Title" xml:space="preserve">
-    <value>Ang Voidstrap ay kasalukuyang tumatakbo</value>
+    <value>Ang StarStrap ay kasalukuyang tumatakbo</value>
   </data>
   <data name="Menu.Appearance.Bootstrapper.Description" xml:space="preserve">
     <value>Maaari mong gawin itong magmukhang iba, retro, o kahit na tulad lamang ng Roblox.</value>
@@ -487,7 +487,7 @@ Kung hindi, paki ulat itong pagbubukod, gamit ang [GitHub issue]({1}) kasama ang
     <value>Title</value>
   </data>
   <data name="Menu.Appearance.Description" xml:space="preserve">
-    <value>I-configure kung paano dapat magmukha ang Voidstrap.</value>
+    <value>I-configure kung paano dapat magmukha ang StarStrap.</value>
   </data>
   <data name="Menu.Appearance.Global.Theme.Title" xml:space="preserve">
     <value>Global Theme</value>
@@ -511,10 +511,10 @@ Kung hindi, paki ulat itong pagbubukod, gamit ang [GitHub issue]({1}) kasama ang
     <value>Appearance</value>
   </data>
   <data name="Menu.Behaviour.AutoUpdate.Description" xml:space="preserve">
-    <value>Awtomatikong susuriin at ia-update ng Voidstrap ang sarili nito kapag magsisimula na ang Roblox.</value>
+    <value>Awtomatikong susuriin at ia-update ng StarStrap ang sarili nito kapag magsisimula na ang Roblox.</value>
   </data>
   <data name="Menu.Behaviour.AutoUpdate.Title" xml:space="preserve">
-    <value>Awtomatikong i-update ang Voidstrap</value>
+    <value>Awtomatikong i-update ang StarStrap</value>
   </data>
   <data name="Menu.Behaviour.ConfirmLaunches.Description" xml:space="preserve">
     <value>Pigilan ang pagsasara ng kasalukuyang laro mo mula sa aksidenteng pagbukas ng isa pa.</value>
@@ -523,7 +523,7 @@ Kung hindi, paki ulat itong pagbubukod, gamit ang [GitHub issue]({1}) kasama ang
     <value>I-prompt upang kumpirmahin kapag mag-launch ng iba pang Roblox instance</value>
   </data>
   <data name="Menu.Behaviour.Description" xml:space="preserve">
-    <value>I-configure kung ano ang dapat gawin ng Voidstrap kapag ito'y binubuksan.</value>
+    <value>I-configure kung ano ang dapat gawin ng StarStrap kapag ito'y binubuksan.</value>
   </data>
   <data name="Menu.Behaviour.ForceRobloxReinstall.Description" xml:space="preserve">
     <value>Ang Roblox ay mai-install nang bago sa susunod na bubuksan ito.</value>
@@ -639,7 +639,7 @@ HUWAG gagamitin ito upang mag-import ng mga malalaking "flag lists" na gawa ng i
     <value>Framerate Limit</value>
   </data>
   <data name="Menu.FastFlags.Presets.HideGuis.Description" xml:space="preserve">
-    <value>Toggled kasama ang [keyboard shortcuts]({0}). Gumagana lang kapag ikaw ay nasa [Voidstrap group]({1}).</value>
+    <value>Toggled kasama ang [keyboard shortcuts]({0}). Gumagana lang kapag ikaw ay nasa [StarStrap group]({1}).</value>
   </data>
   <data name="Menu.FastFlags.Presets.HideGuis.Title" xml:space="preserve">
     <value>Paganahin ang kakayahang itago ang mga GUIs</value>
@@ -663,10 +663,10 @@ HUWAG gagamitin ito upang mag-import ng mga malalaking "flag lists" na gawa ng i
     <value>Icon files</value>
   </data>
   <data name="Menu.InstallLocation.CantInstall" xml:space="preserve">
-    <value>Hindi maaring i-install ang Voidstrap dito. Mangyaring pumili ng ibang location, o mapilitang gamitin ang Default location sa pamamagitan ng pagpindot ng reset button.</value>
+    <value>Hindi maaring i-install ang StarStrap dito. Mangyaring pumili ng ibang location, o mapilitang gamitin ang Default location sa pamamagitan ng pagpindot ng reset button.</value>
   </data>
   <data name="Menu.InstallLocation.NotEmpty" xml:space="preserve">
-    <value>Ang iyong piniling folder upang i-install ang Voidstrap ay umiiral na at HINDI walang laman. Ito ay malakas na ni rerecommenda para ma install ang Voidstrap sa kanyang independent na folder.
+    <value>Ang iyong piniling folder upang i-install ang StarStrap ay umiiral na at HINDI walang laman. Ito ay malakas na ni rerecommenda para ma install ang StarStrap sa kanyang independent na folder.
 
 Iminumungkahi na palitan ito sa:
 {0}
@@ -679,7 +679,7 @@ Ang pagpili ng 'Hindi' ay hindi papansinin ang babalang ito at itutuloy ang pag-
     <value>Kinakailangan mo mag-set ang install location</value>
   </data>
   <data name="Menu.InstallLocation.NoWritePerms" xml:space="preserve">
-    <value>Ang Voidstrap ay walang write access sa iyong install location na pinili. Mangyari pumili ng ibang location.</value>
+    <value>Ang StarStrap ay walang write access sa iyong install location na pinili. Mangyari pumili ng ibang location.</value>
   </data>
   <data name="Menu.Integrations.ActivityTracking" xml:space="preserve">
     <value>Activity tracking</value>
@@ -730,7 +730,7 @@ Ang pagpili ng 'Hindi' ay hindi papansinin ang babalang ito at itutuloy ang pag-
     <value>Huwag lumabas sa desktop app</value>
   </data>
   <data name="Menu.Integrations.EnableActivityTracking.Description" xml:space="preserve">
-    <value>Pahintulutan ang Voidstrap na matukoy kung anong larong Roblox ang iyong nilalaro. Maaaring kailanganin ito ng ilang partikular na feature.</value>
+    <value>Pahintulutan ang StarStrap na matukoy kung anong larong Roblox ang iyong nilalaro. Maaaring kailanganin ito ng ilang partikular na feature.</value>
   </data>
   <data name="Menu.Integrations.EnableActivityTracking.Title" xml:space="preserve">
     <value>Paganahin ang activity tracking</value>
@@ -827,7 +827,7 @@ Ang pagpili ng 'Hindi' ay hindi papansinin ang babalang ito at itutuloy ang pag-
     <value>Nai-save na ang settings!</value>
   </data>
   <data name="Menu.Title" xml:space="preserve">
-    <value>Voidstrap Settings</value>
+    <value>StarStrap Settings</value>
   </data>
   <data name="Dialog.LanguageSelector.Header" xml:space="preserve">
     <value>Pumili ng gustong wika</value>
@@ -857,7 +857,7 @@ Ang pagpili ng 'Hindi' ay hindi papansinin ang babalang ito at itutuloy ang pag-
     <value>User Interface at Layout</value>
   </data>
   <data name="Menu.FastFlags.ManagerEnabled.Title" xml:space="preserve">
-    <value>Payagin ang Voidstrap na i-manage ang Fast Flags</value>
+    <value>Payagin ang StarStrap na i-manage ang Fast Flags</value>
   </data>
   <data name="Menu.FastFlags.ManagerEnabled.Description" xml:space="preserve">
     <value>Sa pag disable nito ay ang mga na-configure dito ay hindi gagana sa Roblox.</value>
@@ -902,7 +902,7 @@ Ang pagpili ng 'Hindi' ay hindi papansinin ang babalang ito at itutuloy ang pag-
     <value>I-disable ang terrain textures</value>
   </data>
   <data name="Dialog.Connectivity.UnableToDownload" xml:space="preserve">
-    <value>Hindi maka-download ng Roblox ang Voidstrap</value>
+    <value>Hindi maka-download ng Roblox ang StarStrap</value>
   </data>
   <data name="Dialog.Connectivity.UnableToDownloadReason" xml:space="preserve">
     <value>Hindi ma-download ang Roblox ngayon oras na ito. Basahin ang following help page para sa idadag na impormasyon: {0}</value>
@@ -923,7 +923,7 @@ Ang pagpili ng 'Hindi' ay hindi papansinin ang babalang ito at itutuloy ang pag-
     <value>Ang entry para sa '{0}' ay hindi tama sapagkat ang value ay dapat isang numero</value>
   </data>
   <data name="Logger.NoWriteMode" xml:space="preserve">
-    <value>Walang magagawang log file para sa launch na ito dahil ang Voidstrap ay hindi makapag-gawa nito sa folder na '{0}'</value>
+    <value>Walang magagawang log file para sa launch na ito dahil ang StarStrap ay hindi makapag-gawa nito sa folder na '{0}'</value>
   </data>
   <data name="Common.Default" xml:space="preserve">
     <value>Default</value>
@@ -938,7 +938,7 @@ Ang pagpili ng 'Hindi' ay hindi papansinin ang babalang ito at itutuloy ang pag-
     <value>Ang entry na {0} ay hindi tama dahil ang place filter ay hindi naka-format ng maayos.</value>
   </data>
   <data name="Installer.Title" xml:space="preserve">
-    <value>Voidstrap Installer</value>
+    <value>StarStrap Installer</value>
   </data>
   <data name="Installer.Welcome.Title" xml:space="preserve">
     <value>Maligayang pagdating</value>
@@ -957,18 +957,18 @@ Ang pagpili ng 'Hindi' ay hindi papansinin ang babalang ito at itutuloy ang pag-
     <value>Sunod</value>
   </data>
   <data name="Installer.Welcome.MainText" xml:space="preserve">
-    <value>Salamat sa pag-download ng Voidstrap.
+    <value>Salamat sa pag-download ng StarStrap.
 
-Ang mga opisyal na websites na makukuha para ma-download ang Voidstrap ay nandito sa {0} at {1}, kaya’t pakiusap lang na i-verify mo na nakuha mo siya sa opisyal na source.
+Ang mga opisyal na websites na makukuha para ma-download ang StarStrap ay nandito sa {0} at {1}, kaya’t pakiusap lang na i-verify mo na nakuha mo siya sa opisyal na source.
 
-Ang proseso ng installation ay mabilis at simple lang, at ikaw ang magaayos ng kahit anong mga settings ng Voidstrap pagkatapos ng installation.</value>
+Ang proseso ng installation ay mabilis at simple lang, at ikaw ang magaayos ng kahit anong mga settings ng StarStrap pagkatapos ng installation.</value>
     <comment>{0} and {1} are URLs</comment>
   </data>
   <data name="Installer.Welcome.NextToContinue" xml:space="preserve">
     <value>Paki click ang 'Next' upang magpatuloy.</value>
   </data>
   <data name="Installer.Welcome.UpdateNotice" xml:space="preserve">
-    <value>Sinubukan mong i-install ang version {0} ng Voidstrap, pero ang latest version ay {1}. Gusto mo ba itong i-download?</value>
+    <value>Sinubukan mong i-install ang version {0} ng StarStrap, pero ang latest version ay {1}. Gusto mo ba itong i-download?</value>
   </data>
   <data name="Installer.Install.Location.Title" xml:space="preserve">
     <value>Piliin kung saan i-install</value>
@@ -989,16 +989,16 @@ Ang proseso ng installation ay mabilis at simple lang, at ikaw ang magaayos ng k
     <value>Start Menu na icon</value>
   </data>
   <data name="Installer.Completion.Text" xml:space="preserve">
-    <value>Nai-install ng matagumpay ang Voidstrap.
+    <value>Nai-install ng matagumpay ang StarStrap.
 
-Hindi pa nainstall ang Roblox, yan ang mangyayari kapag nilaunch mo gamit ang Voidstrap sa unahang pagkakataon.
+Hindi pa nainstall ang Roblox, yan ang mangyayari kapag nilaunch mo gamit ang StarStrap sa unahang pagkakataon.
 
-Gayundin, iwasang paggamit ng "Roblox Player" shortcut para i-launch ang Roblox, dahil hindi la-launch ang Voidstrap kasama ang Roblox. Kung hindi mo nakitang lumilitaw ang Voidstrap kapag nag-lalaunch siya galing sa website, i-launch mo yung Roblox kasama ang Voidstrap ng isang beses galing sa desktop para ayusin ito.
+Gayundin, iwasang paggamit ng "Roblox Player" shortcut para i-launch ang Roblox, dahil hindi la-launch ang StarStrap kasama ang Roblox. Kung hindi mo nakitang lumilitaw ang StarStrap kapag nag-lalaunch siya galing sa website, i-launch mo yung Roblox kasama ang StarStrap ng isang beses galing sa desktop para ayusin ito.
 
 Ano ang gusto mong gawin?</value>
   </data>
   <data name="Installer.Completion.Settings.Title" xml:space="preserve">
-    <value>I-configure mga Voidstrap settings</value>
+    <value>I-configure mga StarStrap settings</value>
   </data>
   <data name="Installer.Completion.Settings.Description" xml:space="preserve">
     <value>I-tweak ang lahat ng features na inaalok nito</value>
@@ -1010,22 +1010,22 @@ Ano ang gusto mong gawin?</value>
     <value>Ilalagay ka sa loob ng desktop app kapag tapos na lahat</value>
   </data>
   <data name="Uninstaller.Title" xml:space="preserve">
-    <value>I-uninstall ang Voidstrap</value>
+    <value>I-uninstall ang StarStrap</value>
   </data>
   <data name="Uninstaller.Text" xml:space="preserve">
-    <value>Matatanggal ang Voidstrap sa iyong systema kapag na-uninstall mo, at kukusang i-configure ang default na Roblox launcher kung naka install pa rin.
+    <value>Matatanggal ang StarStrap sa iyong systema kapag na-uninstall mo, at kukusang i-configure ang default na Roblox launcher kung naka install pa rin.
 
 Kung ikaw ay mag-uninstall o mag-reinstall dahil mayroon kang issues sa Roblox, basahin mo [itong help page]({0}) muna.
 
-Ang proseso sa pag-uninstall ay maaaring hindi ganap na malinis ang sarili, kaya kailangan mong linisin ang natitirang files kung saan na-install ang Voidstrap.
+Ang proseso sa pag-uninstall ay maaaring hindi ganap na malinis ang sarili, kaya kailangan mong linisin ang natitirang files kung saan na-install ang StarStrap.
 
-Na-installed ang Voidstrap sa "{1}".</value>
+Na-installed ang StarStrap sa "{1}".</value>
   </data>
   <data name="Uninstaller.KeepData.Label" xml:space="preserve">
     <value>I-tabi ang aking settings at mods</value>
   </data>
   <data name="Uninstaller.KeepData.Description" xml:space="preserve">
-    <value>Matatabi din ito kung saan na-install ang Voidstrap, at mababalik din sa pag-reinstall.</value>
+    <value>Matatabi din ito kung saan na-install ang StarStrap, at mababalik din sa pag-reinstall.</value>
   </data>
   <data name="Uninstaller.Uninstall" xml:space="preserve">
     <value>Uninstall</value>
@@ -1046,19 +1046,19 @@ Na-installed ang Voidstrap sa "{1}".</value>
     <value>Hindi mo pa nainstall ang WebView2 runtime. Hindi gagana ng maayos ang mga Roblox features kung wala pa yan, katulad ng desktop app. Gusto mong I-download ito ngayon?</value>
   </data>
   <data name="Dialog.CannotCreateShortcuts" xml:space="preserve">
-    <value>Hindi kaya ng Voidstrap na gumawa ng shortcuts para sa Desktop at Start Menu. Subukan mong gawin ito sa ibang pagkakataon sa mga settings.</value>
+    <value>Hindi kaya ng StarStrap na gumawa ng shortcuts para sa Desktop at Start Menu. Subukan mong gawin ito sa ibang pagkakataon sa mga settings.</value>
   </data>
   <data name="Dialog.Exception.Info.2.Alt" xml:space="preserve">
-    <value>Tumingin sa [Voidstrap Wiki]({0}) muna para makita kung itong problema ay tinutugunan ng pag-aayos.
+    <value>Tumingin sa [StarStrap Wiki]({0}) muna para makita kung itong problema ay tinutugunan ng pag-aayos.
 
-Kung hindi, I-report mo itong eksepsyon sa maintainers ng fork nito. HUWAG mong i-report ito sa GitHub issues ng Voidstrap, dahil ito ang unofficial build.</value>
+Kung hindi, I-report mo itong eksepsyon sa maintainers ng fork nito. HUWAG mong i-report ito sa GitHub issues ng StarStrap, dahil ito ang unofficial build.</value>
     <comment>"fork" in general means "a variation of" or "a different version of". You can alternatively write the first sentence as "...to the maintainers of this version."</comment>
   </data>
   <data name="Installer.Install.Shortcuts.Description" xml:space="preserve">
     <value>Ito ang mga pangkalahatang mga shortcuts na ilabas ang multi-choice launch menu. Ang mga shortcuts para sa mga tiyak na functions ay magagawa din sa susunod sa loob ng settings.</value>
   </data>
   <data name="Menu.Shortcuts.Description" xml:space="preserve">
-    <value>I-configure kung paano madaling i-launch ang Voidstrap.</value>
+    <value>I-configure kung paano madaling i-launch ang StarStrap.</value>
   </data>
   <data name="Menu.Shortcuts.General.Title" xml:space="preserve">
     <value>General</value>
@@ -1088,7 +1088,7 @@ Kung hindi, I-report mo itong eksepsyon sa maintainers ng fork nito. HUWAG mong 
     <value>Paki antaying tapusin ang uninstallation.</value>
   </data>
   <data name="About.Title" xml:space="preserve">
-    <value>Tungkol sa Voidstrap</value>
+    <value>Tungkol sa StarStrap</value>
   </data>
   <data name="About.Licenses.Title" xml:space="preserve">
     <value>Mga lisensya</value>
@@ -1101,7 +1101,7 @@ Kung hindi, I-report mo itong eksepsyon sa maintainers ng fork nito. HUWAG mong 
     <value>Meron kang nabago at hindi pa naka-save. Sigurado ka bang gusto mo isara nang hindi naka-save?</value>
   </data>
   <data name="InstallChecker.VersionLessThanInstalled" xml:space="preserve">
-    <value>Ang version ng Voidstrap na nabuksan mo ay mas matanda kaysa sa version na install mo ngayon.
+    <value>Ang version ng StarStrap na nabuksan mo ay mas matanda kaysa sa version na install mo ngayon.
 Mayroong issues na mangyayari at yung settings mo ay maiiba. Ang pag-reinstall ay rekomendado.
 Sigurado kang gusto mo bang ituloy?</value>
   </data>
@@ -1114,7 +1114,7 @@ Sigurado kang gusto mo bang ituloy?</value>
   <data name="Dialog.PlayerError.HelpInformation" xml:space="preserve">
     <value>Para sa impormasyon kung bakit ito nangyayari at kung paano ito ayusin, pakibasa po [ng help article]({0})
 
-Tingnan kung nagana ang Roblox gamit ang [original launcher]({1}). Kapag hindi, ito ay hindi problema ng Voidstrap. Kapag nagana, pakitingin sa help article.</value>
+Tingnan kung nagana ang Roblox gamit ang [original launcher]({1}). Kapag hindi, ito ay hindi problema ng StarStrap. Kapag nagana, pakitingin sa help article.</value>
   </data>
   <data name="Common.NetworkError" xml:space="preserve">
     <value>Hindi makapag load ng data dahil sa network error.</value>
@@ -1126,7 +1126,7 @@ Tingnan kung nagana ang Roblox gamit ang [original launcher]({1}). Kapag hindi, 
     <value>Mga Tagasupporta</value>
   </data>
   <data name="About.Supporters.Description" xml:space="preserve">
-    <value>Ito ang mga tao na nag suporta sa Voidstrap gamit ang Ko-fi. Maraming salamat para sa lahat ng nandito! Lahat ng tao na nandito ay naka rank gamit ang kanilang overall pledge.</value>
+    <value>Ito ang mga tao na nag suporta sa StarStrap gamit ang Ko-fi. Maraming salamat para sa lahat ng nandito! Lahat ng tao na nandito ay naka rank gamit ang kanilang overall pledge.</value>
   </data>
   <data name="JsonManager.SettingsLoadFailed" xml:space="preserve">
     <value>Ang settings mo ay hindi makaload. Naka-reset na sa dating pagsasaayos.</value>
@@ -1156,12 +1156,12 @@ Tingnan kung nagana ang Roblox gamit ang [original launcher]({1}). Kapag hindi, 
     <value>Para sa launch nito, hindi makatingin ang Roblox para sa mga upgrades, at mga pagkakaiba sa mods ay hindi ilalapat.</value>
   </data>
   <data name="Dialog.Connectivity.RobloxUpgradeNeeded" xml:space="preserve">
-    <value>Dahil kailangan ng Roblox na maginstall o magupgrade, hindi makapagtuloy ang Voidstrap.</value>
+    <value>Dahil kailangan ng Roblox na maginstall o magupgrade, hindi makapagtuloy ang StarStrap.</value>
   </data>
   <data name="Installer.Install.CannotOverwrite" xml:space="preserve">
-    <value>Ang Voidstrap ay naka install sa isang lokasyon dati at andito pa rin, pero hindi ma-overwrite ng installer ang dating executable.
+    <value>Ang StarStrap ay naka install sa isang lokasyon dati at andito pa rin, pero hindi ma-overwrite ng installer ang dating executable.
 
-Pakialisin mismo ang Voidstrap.exe sa install location o subukan mong i-restart ang systema, at ulitin mo yung installation pagkatapos.</value>
+Pakialisin mismo ang StarStrap.exe sa install location o subukan mong i-restart ang systema, at ulitin mo yung installation pagkatapos.</value>
   </data>
   <data name="Common.NotAvailable" xml:space="preserve">
     <value>Hindi magagamit</value>
@@ -1173,7 +1173,7 @@ Pakialisin mismo ang Voidstrap.exe sa install location o subukan mong i-restart 
     <value>I-configure ang mga application parameters kagaya ng DPI scaling behaviour at [fullscreen optimizations]({0}).</value>
   </data>
   <data name="Common.RobloxNotInstalled" xml:space="preserve">
-    <value>Hindi pa nakainstall ang Roblox. Paki-launch mo yung Roblox gamit ng Voidstrap kahit minsan lang bago subukang gamitin itong option.</value>
+    <value>Hindi pa nakainstall ang Roblox. Paki-launch mo yung Roblox gamit ng StarStrap kahit minsan lang bago subukang gamitin itong option.</value>
   </data>
   <data name="Installer.ShouldCancel" xml:space="preserve">
     <value>Sigurado ka bang gusto mo i-cancel ang pag install?</value>
@@ -1191,10 +1191,10 @@ Pakialisin mismo ang Voidstrap.exe sa install location o subukan mong i-restart 
     <value>I-extract ang mga icon ng Roblox sa folder</value>
   </data>
   <data name="Menu.Shortcuts.ExtractIcons.Description" xml:space="preserve">
-    <value>Binibigyang-daan kang gamitin yung Voidstrap ang mga Roblox icons para sa iyong shortcuts. [Pakita kung paano.]({0})</value>
+    <value>Binibigyang-daan kang gamitin yung StarStrap ang mga Roblox icons para sa iyong shortcuts. [Pakita kung paano.]({0})</value>
   </data>
   <data name="Dialog.RegistryWriteError" xml:space="preserve">
-    <value>Hindi makapagsulat sa Windows Registry ang Voidstrap. Malamang ang antivirus ay nakialam at nagdudulot ng mga isyu. Pakitignan para sigurado na walang anumang bagay na pumipigil sa operasyon ng Voidstrap.</value>
+    <value>Hindi makapagsulat sa Windows Registry ang StarStrap. Malamang ang antivirus ay nakialam at nagdudulot ng mga isyu. Pakitignan para sigurado na walang anumang bagay na pumipigil sa operasyon ng StarStrap.</value>
   </data>
   <data name="About.Supporters.Monthly" xml:space="preserve">
     <value>Buwanan</value>
@@ -1202,13 +1202,13 @@ Pakialisin mismo ang Voidstrap.exe sa install location o subukan mong i-restart 
   <data name="About.Supporters.OneOff" xml:space="preserve">
     <value>Isang beses</value>
   </data>
-  <data name="Menu.Voidstrap.Description" xml:space="preserve">
-    <value>I-configure ang mga option na nanuugnay sa pag-uugali ng Voidstrap mismo.</value>
+  <data name="Menu.StarStrap.Description" xml:space="preserve">
+    <value>I-configure ang mga option na nanuugnay sa pag-uugali ng StarStrap mismo.</value>
   </data>
-  <data name="Menu.Voidstrap.Analytics.Title" xml:space="preserve">
+  <data name="Menu.StarStrap.Analytics.Title" xml:space="preserve">
     <value>I-enable ang pag-send ng analitiko</value>
   </data>
-  <data name="Menu.Voidstrap.Analytics.Description" xml:space="preserve">
+  <data name="Menu.StarStrap.Analytics.Description" xml:space="preserve">
     <value>Ito ay anonima lang at walang masama, promise. Para sa insight na anong kinokolekta namin at bakit, tignan mo ang aming [privacy policy]({0}).</value>
   </data>
   <data name="Common.Analytics" xml:space="preserve">
@@ -1228,7 +1228,7 @@ Habang naka-enable, kusang bubukas ang Roblox pagkatapos isara ang mga settings,
 Gusto mo bang i-enable ang "Test Mode"?</value>
   </data>
   <data name="About.Translators.Description" xml:space="preserve">
-    <value>Lahat ng translations para sa Voidstrap ay crowdsourced galing sa [Crowdin]({0}). Lahat nakalista dito ang mga tao na nakapagboluntaryo para sa oras at pagsisikap para tulungan i-localize at Voidstrap. Malaking pasasalamat sa iyong lahat!</value>
+    <value>Lahat ng translations para sa StarStrap ay crowdsourced galing sa [Crowdin]({0}). Lahat nakalista dito ang mga tao na nakapagboluntaryo para sa oras at pagsisikap para tulungan i-localize at StarStrap. Malaking pasasalamat sa iyong lahat!</value>
   </data>
   <data name="Common.Navigation.Install" xml:space="preserve">
     <value>I-install</value>
@@ -1245,7 +1245,7 @@ Gusto mo bang i-enable ang "Test Mode"?</value>
     <value>Version {0}</value>
   </data>
   <data name="Bootstrapper.FilesInUse" xml:space="preserve">
-    <value>Sinubukan ng Voidstrap mag-upgrade ng Roblox pero hindi kaya kasi ginagamit pa ang mga file ng Roblox.
+    <value>Sinubukan ng StarStrap mag-upgrade ng Roblox pero hindi kaya kasi ginagamit pa ang mga file ng Roblox.
 
 Isarado muna ang kahit anong application na maaaring gamitin ang mga file ng Roblox, at mag relaunch.</value>
     <comment>This is *not* for when Roblox is still running when trying to upgrade. This applies to files being open (i.e. image assets)</comment>
@@ -1256,20 +1256,20 @@ Isarado muna ang kahit anong application na maaaring gamitin ang mga file ng Rob
   </data>
   <data name="Common.Export" xml:space="preserve">
     <value>I-export</value>
-    <comment>Currently used under the "Voidstrap" settings tab for the button to export diagnostic data</comment>
+    <comment>Currently used under the "StarStrap" settings tab for the button to export diagnostic data</comment>
   </data>
-  <data name="Menu.Voidstrap.ExportData.Title" xml:space="preserve">
+  <data name="Menu.StarStrap.ExportData.Title" xml:space="preserve">
     <value>I-export ang diagnostic data</value>
   </data>
-  <data name="Menu.Voidstrap.ExportData.Description" xml:space="preserve">
+  <data name="Menu.StarStrap.ExportData.Description" xml:space="preserve">
     <value>I-gather ang impormasyon na pwedeng I-upload online para ma-troubleshoot ang iyong nararanasan na problema.</value>
   </data>
-  <data name="Menu.Voidstrap.ExportData.ExportConfig" xml:space="preserve">
-    <value>Voidstrap configuration</value>
+  <data name="Menu.StarStrap.ExportData.ExportConfig" xml:space="preserve">
+    <value>StarStrap configuration</value>
     <comment>Label that appears next to a checkbox</comment>
   </data>
-  <data name="Menu.Voidstrap.ExportData.ExportLogs" xml:space="preserve">
-    <value>Lahat ng Voidstrap logs</value>
+  <data name="Menu.StarStrap.ExportData.ExportLogs" xml:space="preserve">
+    <value>Lahat ng StarStrap logs</value>
     <comment>Label that appears next to a checkbox</comment>
   </data>
   <data name="Enums.CursorType.Custom" xml:space="preserve">

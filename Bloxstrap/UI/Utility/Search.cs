@@ -1,8 +1,8 @@
-﻿using System.Windows.Controls;
+using System.Windows.Controls;
 using System.Windows;
 using System.Windows.Media;
 
-namespace Voidstrap.UI.Elements.Settings
+namespace StarStrap.UI.Elements.Settings
 {
     public class SearchablePage : Page
     {

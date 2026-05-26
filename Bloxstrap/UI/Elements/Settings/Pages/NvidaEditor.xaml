@@ -1,11 +1,11 @@
-﻿<ui:UiPage
-    x:Class="Voidstrap.UI.Elements.Settings.Pages.NvidiaFFlagEditorPage"
+<ui:UiPage
+    x:Class="StarStrap.UI.Elements.Settings.Pages.NvidiaFFlagEditorPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:resources="clr-namespace:Voidstrap.Resources"
-    xmlns:settings="clr-namespace:Voidstrap.UI.ViewModels.Settings"
+    xmlns:resources="clr-namespace:StarStrap.Resources"
+    xmlns:settings="clr-namespace:StarStrap.UI.ViewModels.Settings"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     Title="NVIDIA FFlag Editor"
     d:DataContext="{d:DesignInstance Type=settings:ModsViewModel}"
@@ -38,7 +38,7 @@
         Margin="8,0"
         Height="32"
         VerticalContentAlignment="Center"
-        PlaceholderText="Search Flags…"
+        PlaceholderText="Search Flags"
         Icon="Search24"
         TextChanged="SearchTextBox_TextChanged"/>
             

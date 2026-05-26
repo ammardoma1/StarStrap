@@ -1,6 +1,6 @@
-﻿using System.Resources;
+using System.Resources;
 
-namespace Voidstrap.Extensions
+namespace StarStrap.Extensions
 {
     static class ResourceManagerEx
     {

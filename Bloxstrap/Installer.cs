@@ -1,8 +1,8 @@
-﻿using System.Windows;
-using Voidstrap;
+using System.Windows;
+using StarStrap;
 using Microsoft.Win32;
 
-namespace Voidstrap
+namespace StarStrap
 {
     internal class Installer
     {
@@ -26,7 +26,7 @@ namespace Voidstrap
 
         public bool EnableAnalytics = true;
 
-        public bool VoidstrapRPCReal = true;
+        public bool StarStrapRPCReal = true;
 
         public bool IsImplicitInstall = false;
 
@@ -84,7 +84,7 @@ namespace Voidstrap
 
             WindowsRegistry.RegisterApis();
 
-            // only register player, for the scenario where the user installs Voidstrap, closes it,
+            // only register player, for the scenario where the user installs StarStrap, closes it,
             // and then launches from the website expecting it to work
             // studio can be implicitly registered when it's first launched manually
             WindowsRegistry.RegisterPlayer();
@@ -538,7 +538,7 @@ namespace Voidstrap
                     }
 
                     string oldDesktopPath = Path.Combine(Paths.Desktop, "Play Roblox.lnk");
-                    string oldStartPath = Path.Combine(Paths.WindowsStartMenu, "Voidstrap");
+                    string oldStartPath = Path.Combine(Paths.WindowsStartMenu, "StarStrap");
 
                     if (File.Exists(oldDesktopPath))
                         File.Move(oldDesktopPath, DesktopShortcut, true);
@@ -557,7 +557,7 @@ namespace Voidstrap
                         Shortcut.Create(Paths.Application, "", StartMenuShortcut);
                     }
 
-                    Registry.CurrentUser.DeleteSubKeyTree("Software\\Voidstrap", false);
+                    Registry.CurrentUser.DeleteSubKeyTree("Software\\StarStrap", false);
 
                     WindowsRegistry.RegisterPlayer();
 
@@ -616,7 +616,7 @@ namespace Voidstrap
             {
 #pragma warning disable CS0162 // Unreachable code detected
                 if (OpenReleaseNotes)
-                    Utilities.ShellExecute($"https://github.com/{App.ProjectRepository}/wiki/Release-notes-for-Voidstrap-v{currentVer}");
+                    Utilities.ShellExecute($"https://github.com/{App.ProjectRepository}/wiki/Release-notes-for-StarStrap-v{currentVer}");
 #pragma warning restore CS0162 // Unreachable code detected
             }
             else

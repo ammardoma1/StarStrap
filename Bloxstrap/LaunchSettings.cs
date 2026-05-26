@@ -1,4 +1,4 @@
-﻿using Voidstrap.Enums;
+using StarStrap.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows;
-using Voidstrap;
+using StarStrap;
 
-namespace Voidstrap
+namespace StarStrap
 {
     public class LaunchSettings
     {

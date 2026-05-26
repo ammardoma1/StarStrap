@@ -1,7 +1,7 @@
-﻿using System.Windows.Controls;
-using Voidstrap.UI.ViewModels.Pages;
+using System.Windows.Controls;
+using StarStrap.UI.ViewModels.Pages;
 
-namespace Voidstrap.UI.Elements.Settings.Pages
+namespace StarStrap.UI.Elements.Settings.Pages
 {
     public partial class HistoryPage : Page
     {

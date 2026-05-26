@@ -1,10 +1,10 @@
-﻿using System.Globalization;
+using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Windows;
 using System.Collections.Generic;
 
-namespace Voidstrap
+namespace StarStrap
 {
     internal static class Locale
     {
@@ -19,35 +19,35 @@ namespace Voidstrap
         {
             { DefaultLocale, Strings.Common_SystemDefault },
             { "en-US", "English (Recommended)" },
-            { "ar", "العربية" }, // Arabic
-            { "bg", "Български" }, // Bulgarian
-            { "cs", "Čeština" }, // Czech
+            { "ar", "???????" }, // Arabic
+            { "bg", "?????????" }, // Bulgarian
+            { "cs", "Ce�tina" }, // Czech
             { "de", "Deutsch" }, // German
-            { "es-ES", "Español" }, // Spanish
-            { "fa", "فارسی" }, // Persian
+            { "es-ES", "Espa�ol" }, // Spanish
+            { "fa", "?????" }, // Persian
             { "fi", "Suomi" }, // Finnish
             { "fil", "Filipino" }, // Filipino
-            { "fr", "Français" }, // French
+            { "fr", "Fran�ais" }, // French
             { "hr", "Hrvatski" }, // Croatian
             { "hu", "Magyar" }, // Hungarian
             { "id", "Bahasa Indonesia" }, // Indonesian
             { "it", "Italiano" }, // Italian
-            { "ja", "日本語" }, // Japanese
-            { "ko", "한국어" }, // Korean
-            { "lt", "Lietuvių" }, // Lithuanian
+            { "ja", "???" }, // Japanese
+            { "ko", "???" }, // Korean
+            { "lt", "Lietuviu" }, // Lithuanian
             { "ms", "Malay" }, // Malay
             { "nl", "Nederlands" }, // Dutch
             { "pl", "Polski" }, // Polish
-            { "pt-BR", "Português (Brasil)" }, // Portuguese (Brazilian)
-            { "ro", "Română" }, // Romanian
-            { "ru", "Русский" }, // Russian
+            { "pt-BR", "Portugu�s (Brasil)" }, // Portuguese (Brazilian)
+            { "ro", "Rom�na" }, // Romanian
+            { "ru", "???????" }, // Russian
             { "sv-SE", "Svenska" }, // Swedish
-            { "th", "ภาษาไทย" }, // Thai
-            { "tr", "Türkçe" }, // Turkish
-            { "uk", "Українська" }, // Ukrainian
-            { "vi", "Tiếng Việt" }, // Vietnamese
-            { "zh-CN", "中文 (简体)" }, // Chinese Simplified
-            { "zh-TW", "中文 (繁體)" } // Chinese Traditional
+            { "th", "???????" }, // Thai
+            { "tr", "T�rk�e" }, // Turkish
+            { "uk", "??????????" }, // Ukrainian
+            { "vi", "Ti?ng Vi?t" }, // Vietnamese
+            { "zh-CN", "?? (??)" }, // Chinese Simplified
+            { "zh-TW", "?? (??)" } // Chinese Traditional
         };
 
         public static string GetIdentifierFromName(string language) =>

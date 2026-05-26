@@ -1,13 +1,13 @@
-﻿using System.Windows;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
 using CommunityToolkit.Mvvm.Input;
 using Wpf.Ui.Mvvm.Contracts;
 
-using Voidstrap.UI.Elements.Settings.Pages;
+using StarStrap.UI.Elements.Settings.Pages;
 
-namespace Voidstrap.UI.ViewModels.Settings
+namespace StarStrap.UI.ViewModels.Settings
 {
     internal class FastFlagEditorWarningViewModel : NotifyPropertyChangedViewModel
     {

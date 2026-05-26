@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using Microsoft.Win32;
 
-namespace Voidstrap.UI.Elements.Settings.Pages
+namespace StarStrap.UI.Elements.Settings.Pages
 {
     public partial class MobilePage
     {
         private readonly string mobileFolder = Path.Combine(Paths.Base, "Mobile");
-        private readonly string githubZipUrl = "https://github.com/KloBraticc/This-is-for-Voidstrap-Mobile-Support-its-the-installer/archive/refs/heads/main.zip";
+        private readonly string githubZipUrl = "https://github.com/KloBraticc/This-is-for-StarStrap-Mobile-Support-its-the-installer/archive/refs/heads/main.zip";
         private readonly string extractedFolder;
         private readonly string remoteDesktopUrl = "https://remotedesktop.google.com/access";
 

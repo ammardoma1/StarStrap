@@ -1,18 +1,18 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.Windows.Shell;
-using Voidstrap.UI.Utility;
+using StarStrap.UI.Utility;
 
-namespace Voidstrap.UI.Elements.Bootstrapper.Base
+namespace StarStrap.UI.Elements.Bootstrapper.Base
 {
     public class WinFormsDialogBase : Form, IBootstrapperDialog
     {
         public const int TaskbarProgressMaximum = 100;
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public Voidstrap.Bootstrapper? Bootstrapper { get; set; }
+        public StarStrap.Bootstrapper? Bootstrapper { get; set; }
 
         private bool _isClosing;
 
@@ -28,7 +28,7 @@ namespace Voidstrap.UI.Elements.Bootstrapper.Base
 
         #endregion
 
-        #region OVERRIDABLE PROPERTIES  🔥🔥🔥
+        #region OVERRIDABLE PROPERTIES  ??????
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public virtual string Message

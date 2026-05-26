@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -8,10 +8,10 @@ using System.Web;
 using System.Windows;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
-using Voidstrap.AppData;
-using Voidstrap.Models.APIs;
+using StarStrap.AppData;
+using StarStrap.Models.APIs;
 
-namespace Voidstrap.Models.Entities
+namespace StarStrap.Models.Entities
 {
     public class ActivityData
     {
@@ -87,7 +87,7 @@ namespace Voidstrap.Models.Entities
             get
             {
                 string desc = string.Format(
-                    "{0} â€¢ {1} {2} {3}",
+                    "{0} • {1} {2} {3}",
                     UniverseDetails?.Data.Creator.Name ?? "Unknown",
                     TimeJoined.ToString("t"),
                     Locale.CurrentCulture.Name.StartsWith("ja") ? '~' : '-',
@@ -95,7 +95,7 @@ namespace Voidstrap.Models.Entities
                 );
 
                 if (ServerType != ServerType.Public)
-                    desc += " â€¢ " + ServerType.ToTranslatedString();
+                    desc += " • " + ServerType.ToTranslatedString();
 
                 return desc;
             }

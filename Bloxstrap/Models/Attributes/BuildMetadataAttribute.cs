@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.Models.Attributes
+namespace StarStrap.Models.Attributes
 {
     [AttributeUsage(AttributeTargets.Assembly)]
     public class BuildMetadataAttribute : Attribute

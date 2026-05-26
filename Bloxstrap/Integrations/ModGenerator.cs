@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -10,9 +10,9 @@ using System.Reflection;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Threading;
-using Voidstrap;
+using StarStrap;
 
-namespace Voidstrap.Integrations
+namespace StarStrap.Integrations
 {
     public static class ModGenerator
     {
@@ -90,7 +90,7 @@ namespace Voidstrap.Integrations
             }
 
             var assembly = Assembly.GetExecutingAssembly();
-            using var stream = assembly.GetManifestResourceStream("Voidstrap.Resources.mappings.json");
+            using var stream = assembly.GetManifestResourceStream("StarStrap.Resources.mappings.json");
             if (stream == null)
             {
                 App.Logger?.WriteLine(LOG_IDENT, "mappings.json embedded resource not found");
@@ -330,7 +330,7 @@ namespace Voidstrap.Integrations
                                         File.Copy(src, destPath, overwrite: true);
                                         SafeRecolorImage(destPath, solidColor, gradient, gradientAngleDeg);
 
-                                        App.Logger?.WriteLine(LOG_IDENT, $"Copied + recolored '{src}' → '{destPath}'");
+                                        App.Logger?.WriteLine(LOG_IDENT, $"Copied + recolored '{src}' ? '{destPath}'");
                                     }
                                     catch (Exception ex)
                                     {
@@ -500,7 +500,7 @@ namespace Voidstrap.Integrations
 
                                         SafeRecolorImageSelective(destPath, solidColor, gradient, angleToUse, MakeDetector());
 
-                                        App.Logger?.WriteLine(LOG_IDENT, $"Copied + recolored '{src}' → '{destPath}'");
+                                        App.Logger?.WriteLine(LOG_IDENT, $"Copied + recolored '{src}' ? '{destPath}'");
                                     }
                                     catch (Exception ex)
                                     {

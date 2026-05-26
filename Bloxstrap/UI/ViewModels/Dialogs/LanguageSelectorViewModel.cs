@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 using CommunityToolkit.Mvvm.Input;
 
-namespace Voidstrap.UI.ViewModels.Dialogs
+namespace StarStrap.UI.ViewModels.Dialogs
 {
     internal class LanguageSelectorViewModel
     {

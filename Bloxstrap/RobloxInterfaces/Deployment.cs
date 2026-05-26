@@ -1,10 +1,10 @@
-﻿using System.Collections.Concurrent;
+using System.Collections.Concurrent;
 using System.Net;
 using System.Net.Http;
 using System.Text.Json;
-using Voidstrap;
+using StarStrap;
 
-namespace Voidstrap.RobloxInterfaces
+namespace StarStrap.RobloxInterfaces
 {
     public static class Deployment
     {
@@ -43,7 +43,7 @@ namespace Voidstrap.RobloxInterfaces
 
         static Deployment()
         {
-            SharedHttp.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "VoidstrapUpdater/2.0");
+            SharedHttp.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "StarStrapUpdater/2.0");
             SharedHttp.DefaultRequestHeaders.TryAddWithoutValidation("Accept", "application/json");
         }
 
@@ -221,7 +221,7 @@ namespace Voidstrap.RobloxInterfaces
             string versionHash = clientInfo.VersionGuid["version-".Length..];
             string version = clientInfo.Version;
 
-            string tmp = Path.Combine(Path.GetTempPath(), "Voidstrap");
+            string tmp = Path.Combine(Path.GetTempPath(), "StarStrap");
             Directory.CreateDirectory(tmp);
 
             string luaPackagesUrl =

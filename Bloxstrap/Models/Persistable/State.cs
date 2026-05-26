@@ -1,6 +1,6 @@
-﻿using System.Windows.Forms;
+using System.Windows.Forms;
 
-namespace Voidstrap.Models.Persistable
+namespace StarStrap.Models.Persistable
 {
     public class State
     {

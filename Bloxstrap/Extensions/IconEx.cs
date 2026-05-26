@@ -1,8 +1,8 @@
-﻿using System.Drawing;
+using System.Drawing;
 using System.Windows.Media.Imaging;
 using System.Windows.Media;
 
-namespace Voidstrap.Extensions
+namespace StarStrap.Extensions
 {
     public static class IconEx
     {
@@ -23,7 +23,7 @@ namespace Voidstrap.Extensions
                 {
                     App.Logger.WriteException("IconEx::GetImageSource", ex);
                     Frontend.ShowMessageBox(String.Format(Strings.Dialog_IconLoadFailed, ex.Message));
-                    return BootstrapperIcon.IconVoidstrap.GetIcon().GetImageSource(false);
+                    return BootstrapperIcon.IconStarStrap.GetIcon().GetImageSource(false);
                 }
             }
             else

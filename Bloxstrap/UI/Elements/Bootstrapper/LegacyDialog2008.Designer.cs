@@ -1,7 +1,7 @@
-﻿using System.Windows;
+using System.Windows;
 using System.Windows.Forms;
 
-namespace Voidstrap.UI.Elements.Bootstrapper
+namespace StarStrap.UI.Elements.Bootstrapper
 {
     partial class LegacyDialog2008
     {
@@ -32,23 +32,23 @@ namespace Voidstrap.UI.Elements.Bootstrapper
         private void InitializeComponent()
         {
             _mainWindow = System.Windows.Application.Current.Windows
-            .OfType<Voidstrap.UI.Elements.Settings.MainWindow>()
+            .OfType<StarStrap.UI.Elements.Settings.MainWindow>()
             .FirstOrDefault();
             if (App.Settings.Prop.BackgroundWindow)
             {
                 _mainWindow?.Hide();
             }
-            Voidstrap.UI.Elements.Bootstrapper.AudioPlayerHelper.PlayStartupAudio();
+            StarStrap.UI.Elements.Bootstrapper.AudioPlayerHelper.PlayStartupAudio();
             this.Closed += (s, e) =>
             {
                 _mainWindow = System.Windows.Application.Current.Windows
-                .OfType<Voidstrap.UI.Elements.Settings.MainWindow>()
+                .OfType<StarStrap.UI.Elements.Settings.MainWindow>()
                 .FirstOrDefault();
                 if (App.Settings.Prop.BackgroundWindow)
                 {
                     _mainWindow?.Show();
                 }
-                Voidstrap.UI.Elements.Bootstrapper.AudioPlayerHelper.StopAudio();
+                StarStrap.UI.Elements.Bootstrapper.AudioPlayerHelper.StopAudio();
             };
             labelMessage = new Label();
             ProgressBar = new ProgressBar();

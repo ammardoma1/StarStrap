@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using Voidstrap.UI.ViewModels;
+using StarStrap.UI.ViewModels;
 
-namespace Voidstrap.UI.ViewModels.Dialogs
+namespace StarStrap.UI.ViewModels.Dialogs
 {
     internal class AddCustomThemeViewModel : NotifyPropertyChangedViewModel
     {

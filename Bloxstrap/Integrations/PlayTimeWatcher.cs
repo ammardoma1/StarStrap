@@ -1,4 +1,4 @@
-﻿using Voidstrap.Integrations;
+using StarStrap.Integrations;
 
 public class PlaytimeTracker
 {

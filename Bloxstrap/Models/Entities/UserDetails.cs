@@ -1,6 +1,6 @@
-﻿using Voidstrap.Models.RobloxApi;
+using StarStrap.Models.RobloxApi;
 
-namespace Voidstrap.Models.Entities
+namespace StarStrap.Models.Entities
 {
     public class UserDetails
     {

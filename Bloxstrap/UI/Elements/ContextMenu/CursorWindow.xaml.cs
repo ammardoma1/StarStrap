@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows;
@@ -9,9 +9,9 @@ using System.Windows.Threading;
 using System.Windows.Interop;
 using System.Windows.Media.Imaging;
 using Microsoft.Win32;
-using Voidstrap.UI.ViewModels.Settings;
+using StarStrap.UI.ViewModels.Settings;
 
-namespace Voidstrap.UI.Elements.Crosshair
+namespace StarStrap.UI.Elements.Crosshair
 {
     public partial class CrosshairWindow : Window
     {

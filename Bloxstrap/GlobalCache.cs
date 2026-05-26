@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 
-namespace Voidstrap.AppData
+namespace StarStrap.AppData
 {
     public static class GlobalCache
     {

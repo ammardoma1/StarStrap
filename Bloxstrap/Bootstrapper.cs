@@ -13,7 +13,7 @@
 
 using ICSharpCode.SharpZipLib.Zip;
 using Microsoft.VisualBasic.Devices;
-using Strings = Voidstrap.Resources.Strings;
+using Strings = StarStrap.Resources.Strings;
 using Microsoft.Win32;
 using Newtonsoft.Json.Linq;
 using SharpCompress.Archives;
@@ -41,14 +41,14 @@ using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Shell;
 using System.Windows.Threading;
-using Voidstrap.AppData;
-using Voidstrap.Integrations;
-using Voidstrap.RobloxInterfaces;
-using Voidstrap.UI.Elements.Bootstrapper.Base;
-using Voidstrap.UI.ViewModels.Settings;
-using static Voidstrap.UI.ViewModels.Settings.ModsViewModel;
+using StarStrap.AppData;
+using StarStrap.Integrations;
+using StarStrap.RobloxInterfaces;
+using StarStrap.UI.Elements.Bootstrapper.Base;
+using StarStrap.UI.ViewModels.Settings;
+using static StarStrap.UI.ViewModels.Settings.ModsViewModel;
 
-namespace Voidstrap
+namespace StarStrap
 {
     public class Bootstrapper
     {
@@ -114,12 +114,16 @@ namespace Voidstrap
         private double _taskbarProgressMaximum;
 
         private Process? _robloxProcess;
+        private Process? _memReductProcess;
         private DispatcherTimer? _memoryCleanerTimer;
         private CancellationTokenSource? _optimizationCts;
         private CancellationTokenSource? _cpuWatcherCts;
         private AsyncMutex? _mutex;
         private int _appPid = 0;
         private bool _noConnection = false;
+
+        private static readonly string MemReductDir = Path.Combine(Paths.Base, "MemReduct");
+        private static readonly string MemReductExe = Path.Combine(MemReductDir, "memreduct.exe");
 
         private static readonly string PackFolder =
             Path.Combine(Paths.Base, "SkyboxPack");
@@ -230,9 +234,9 @@ namespace Voidstrap
             bool mutexExists = false;
             try
             {
-                using (Mutex.OpenExisting("Voidstrap-Bootstrapper"))
+                using (Mutex.OpenExisting("StarStrap-Bootstrapper"))
                 {
-                    App.Logger.WriteLine(LOG_IDENT, "Voidstrap-Bootstrapper mutex exists, waiting...");
+                    App.Logger.WriteLine(LOG_IDENT, "StarStrap-Bootstrapper mutex exists, waiting...");
                     SetStatus(Strings.Bootstrapper_Status_WaitingOtherInstances);
                     mutexExists = true;
                 }
@@ -243,7 +247,7 @@ namespace Voidstrap
                 App.Logger.WriteLine(LOG_IDENT, $"Unexpected error checking mutex: {ex}");
             }
 
-            await using var mutex = new AsyncMutex(false, "Voidstrap-Bootstrapper");
+            await using var mutex = new AsyncMutex(false, "StarStrap-Bootstrapper");
             await mutex.AcquireAsync(_cancelTokenSource.Token);
             _mutex = mutex;
 
@@ -299,7 +303,7 @@ namespace Voidstrap
             bool ok = await GithubUpdater.DownloadAndInstallUpdate(latestTag);
             if (ok)
             {
-                App.Logger.WriteLine(logIdent, "Update installed restarting Voidstrap...");
+                App.Logger.WriteLine(logIdent, "Update installed restarting StarStrap...");
                 RestartApplication();
             }
             else
@@ -544,13 +548,23 @@ namespace Voidstrap
                 await LaunchCustomIntegrations(LOG_IDENT);
                 await DisableCrashHandlerIfNeeded(LOG_IDENT, ct);
                 await LaunchWatcherIfNeeded(logFileName, ct);
+                await LaunchMemReductIfEnabled(LOG_IDENT);
+
+                OptimizeWindowsOnLaunchIfNeeded(LOG_IDENT);
+                ClearTempFilesIfNeeded(LOG_IDENT);
+                CancelXboxGameBarIfNeeded(LOG_IDENT);
+                CloseBackgroundAppsIfNeeded(LOG_IDENT);
 
                 await Task.Delay(2500, ct).ConfigureAwait(false);
 
                 if (_robloxProcess is not null)
                 {
                     _robloxProcess.EnableRaisingEvents = true;
-                    _robloxProcess.Exited += (_, __) => StopOptimizer();
+                    _robloxProcess.Exited += (_, __) =>
+                    {
+                        StopOptimizer();
+                        StopMemReduct();
+                    };
                 }
             }
             catch (Exception ex)
@@ -862,7 +876,7 @@ namespace Voidstrap
             _memoryCleanerTimer?.Stop();
             _memoryCleanerTimer = null;
 
-            var settings = VoidstrapRobloxSettingsManager.Load();
+            var settings = StarStrapRobloxSettingsManager.Load();
             int seconds = settings.MemoryCleanerIntervalSeconds;
 
             if (seconds <= 0)
@@ -893,6 +907,124 @@ namespace Voidstrap
         {
             _memoryCleanerTimer?.Stop();
             _memoryCleanerTimer = null;
+        }
+
+        private void OptimizeWindowsOnLaunchIfNeeded(string logIdent)
+        {
+            if (App.Settings.Prop?.OptimizeWindowsOnLaunch != true)
+                return;
+
+            App.Logger.WriteLine(logIdent, "Optimizing Windows: Closing unimportant background processes...");
+
+            string[] bloatwareProcesses = new[]
+            {
+                "Cortana", "YourPhone", "PhoneExperienceHost", "Widgets", "Widgets.exe", "SearchApp", "BingSvc", "Teams", "OneDrive"
+            };
+
+            foreach (var procName in bloatwareProcesses)
+            {
+                try
+                {
+                    var procs = Process.GetProcessesByName(procName);
+                    foreach (var proc in procs)
+                    {
+                        proc.Kill();
+                        proc.Dispose();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    App.Logger.WriteLine(logIdent, $"Failed to close {procName}: {ex.Message}");
+                }
+            }
+        }
+
+        private void CancelXboxGameBarIfNeeded(string logIdent)
+        {
+            if (App.Settings.Prop?.CancelXboxGameBarEnabled != true)
+                return;
+
+            App.Logger.WriteLine(logIdent, "Closing Xbox Gamebar processes...");
+            string[] gameBarProcs = new[] { "GameBar", "GameBarFTServer", "bcastdvr" };
+            foreach (var procName in gameBarProcs)
+            {
+                try
+                {
+                    var processes = Process.GetProcessesByName(procName);
+                    foreach (var proc in processes)
+                    {
+                        proc.Kill();
+                        proc.Dispose();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    App.Logger.WriteLine(logIdent, $"Failed to close {procName}: {ex.Message}");
+                }
+            }
+        }
+
+        private void CloseBackgroundAppsIfNeeded(string logIdent)
+        {
+            if (App.Settings.Prop?.CloseBackgroundAppsEnabled != true)
+                return;
+
+            App.Logger.WriteLine(logIdent, "Closing unused background apps...");
+            string[] backgroundApps = new[] { "Discord", "Spotify", "Steam", "EpicGamesLauncher", "msedge", "chrome" };
+            foreach (var procName in backgroundApps)
+            {
+                try
+                {
+                    var processes = Process.GetProcessesByName(procName);
+                    foreach (var proc in processes)
+                    {
+                        proc.Kill();
+                        proc.Dispose();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    App.Logger.WriteLine(logIdent, $"Failed to close {procName}: {ex.Message}");
+                }
+            }
+        }
+
+        private void ClearTempFilesIfNeeded(string logIdent)
+        {
+            if (App.Settings.Prop?.ClearTempFilesEnabled != true)
+                return;
+
+            App.Logger.WriteLine(logIdent, "Clearing Temp Files...");
+
+            try
+            {
+                string tempPath = Path.GetTempPath();
+                var dir = new DirectoryInfo(tempPath);
+
+                foreach (var file in dir.GetFiles())
+                {
+                    try { file.Delete(); } catch { }
+                }
+
+                foreach (var subDir in dir.GetDirectories())
+                {
+                    try { subDir.Delete(true); } catch { }
+                }
+
+                string robloxTemp = Path.Combine(Paths.LocalAppData, "Roblox", "logs");
+                if (Directory.Exists(robloxTemp))
+                {
+                    var rdir = new DirectoryInfo(robloxTemp);
+                    foreach (var file in rdir.GetFiles("*.log"))
+                    {
+                        try { file.Delete(); } catch { }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                App.Logger.WriteLine(logIdent, $"Failed to clear temp files: {ex.Message}");
+            }
         }
 
         private void StartOptimizerIfNeeded()
@@ -1109,7 +1241,7 @@ namespace Voidstrap
                 proc.Refresh();
                 if (proc.HasExited) return;
 
-                string pname = App.Settings.Prop?.PriorityLimit ?? "Normal";
+                string pname = App.Settings.Prop?.HighCpuPriorityEnabled == true ? "High" : (App.Settings.Prop?.PriorityLimit ?? "Normal");
                 var newPriority = pname switch
                 {
                     "Realtime" => ProcessPriorityClass.RealTime,
@@ -2089,6 +2221,127 @@ namespace Voidstrap
             int place = (int)Math.Floor(Math.Log(Math.Abs(bytes), 1024));
             double num = Math.Round(bytes / Math.Pow(1024, place), 1);
             return $"{num} {suf[Math.Min(place, suf.Length - 1)]}";
+        }
+
+        #endregion
+
+        #region MemReduct Integration
+
+        private async Task LaunchMemReductIfEnabled(string logIdent)
+        {
+            if (!App.Settings.Prop.MemReductEnabled)
+                return;
+
+            try
+            {
+                // Download MemReduct if not already present
+                if (!File.Exists(MemReductExe))
+                {
+                    App.Logger.WriteLine(logIdent, "MemReduct not found, downloading portable version...");
+                    SetStatus("Downloading MemReduct...");
+                    await DownloadMemReduct();
+                }
+
+                if (!File.Exists(MemReductExe))
+                {
+                    App.Logger.WriteLine(logIdent, "MemReduct download failed, skipping launch.");
+                    return;
+                }
+
+                // Launch MemReduct minimized to tray
+                App.Logger.WriteLine(logIdent, "Launching MemReduct...");
+                _memReductProcess = Process.Start(new ProcessStartInfo
+                {
+                    FileName = MemReductExe,
+                    Arguments = "/minimized",
+                    WorkingDirectory = MemReductDir,
+                    UseShellExecute = false,
+                    CreateNoWindow = true
+                });
+
+                App.Logger.WriteLine(logIdent, $"MemReduct launched (PID: {_memReductProcess?.Id})");
+            }
+            catch (Exception ex)
+            {
+                App.Logger.WriteLine(logIdent, $"Failed to launch MemReduct: {ex.Message}");
+            }
+        }
+
+        private async Task DownloadMemReduct()
+        {
+            const string downloadUrl = "https://github.com/henrypp/memreduct/releases/latest/download/memreduct-3.4-bin.zip";
+
+            try
+            {
+                Directory.CreateDirectory(MemReductDir);
+
+                string zipPath = Path.Combine(MemReductDir, "memreduct.zip");
+
+                using var http = new HttpClient();
+                http.Timeout = TimeSpan.FromMinutes(5);
+                http.DefaultRequestHeaders.UserAgent.ParseAdd("StarStrap/1.0");
+
+                var response = await http.GetAsync(downloadUrl);
+                response.EnsureSuccessStatusCode();
+
+                await using var fs = File.Create(zipPath);
+                await response.Content.CopyToAsync(fs);
+                fs.Close();
+
+                // Extract the zip
+                System.IO.Compression.ZipFile.ExtractToDirectory(zipPath, MemReductDir, true);
+
+                // MemReduct portable extracts into a subfolder, find the exe
+                if (!File.Exists(MemReductExe))
+                {
+                    // Search subdirectories for memreduct.exe
+                    var found = Directory.GetFiles(MemReductDir, "memreduct.exe", SearchOption.AllDirectories).FirstOrDefault();
+                    if (found != null && found != MemReductExe)
+                    {
+                        // Move all files from the subfolder to the root MemReduct dir
+                        string subDir = Path.GetDirectoryName(found)!;
+                        foreach (var file in Directory.GetFiles(subDir))
+                        {
+                            string destFile = Path.Combine(MemReductDir, Path.GetFileName(file));
+                            if (!File.Exists(destFile))
+                                File.Move(file, destFile);
+                        }
+                    }
+                }
+
+                // Clean up zip
+                if (File.Exists(zipPath))
+                    File.Delete(zipPath);
+
+                App.Logger.WriteLine("MemReduct", "Download and extraction complete.");
+            }
+            catch (Exception ex)
+            {
+                App.Logger.WriteLine("MemReduct", $"Failed to download MemReduct: {ex.Message}");
+            }
+        }
+
+        private void StopMemReduct()
+        {
+            try
+            {
+                if (_memReductProcess is not null && !_memReductProcess.HasExited)
+                {
+                    _memReductProcess.Kill();
+                    App.Logger.WriteLine("MemReduct", "MemReduct process terminated.");
+                }
+                _memReductProcess = null;
+
+                // Also kill any stray memreduct processes we may have spawned
+                foreach (var proc in Process.GetProcessesByName("memreduct"))
+                {
+                    try { proc.Kill(); } catch { }
+                }
+            }
+            catch (Exception ex)
+            {
+                App.Logger.WriteLine("MemReduct", $"Failed to stop MemReduct: {ex.Message}");
+            }
         }
 
         #endregion

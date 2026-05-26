@@ -1,4 +1,4 @@
-﻿using Markdig.Extensions.CustomContainers;
+using Markdig.Extensions.CustomContainers;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -18,11 +18,11 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Threading;
-using Voidstrap.Integrations;
-using Voidstrap.UI.ViewModels.Settings;
+using StarStrap.Integrations;
+using StarStrap.UI.ViewModels.Settings;
 using Wpf.Ui.Mvvm.Contracts;
 
-namespace Voidstrap.UI.Elements.Settings.Pages
+namespace StarStrap.UI.Elements.Settings.Pages
 {
     public partial class FastFlagsPage // meowr
     {
@@ -267,7 +267,7 @@ namespace Voidstrap.UI.Elements.Settings.Pages
                 Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
                 "SystemCheckLog.txt");
 
-            string configFolder = Path.Combine(Paths.Base, "VoidstrapMods", "ClientSettings");
+            string configFolder = Path.Combine(Paths.Base, "StarStrapMods", "ClientSettings");
             string configFile = Path.Combine(configFolder, "ClientAppSettings.json");
             Directory.CreateDirectory(configFolder);
 
@@ -369,6 +369,70 @@ namespace Voidstrap.UI.Elements.Settings.Pages
             SystemCheckProgress.Value = 100;
             await Task.Delay(350);
             Frontend.ShowMessageBox($"System check complete! Flags applied for {tier}-tier.\nConfig saved to: {configFile}\nLog saved to Documents.\nApp Restart is needed!", MessageBoxImage.Information);
+
+            string exePath = System.Diagnostics.Process.GetCurrentProcess().MainModule!.FileName!;
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = exePath,
+                UseShellExecute = true
+            });
+
+            Application.Current.Shutdown();
+        }
+
+        private async void ApplyPerformance_Click(object sender, RoutedEventArgs e)
+        {
+            var flags = new Dictionary<string, string>
+            {
+                ["DFFlagDisableDPIScale"] = "True",
+                ["DFFlagTextureQualityOverrideEnabled"] = "False",
+                ["DFIntTextureQualityOverride"] = "1",
+                ["DFIntCSGLevelOfDetailSwitchingDistance"] = "10",
+                ["DFIntCSGLevelOfDetailSwitchingDistanceL12"] = "5",
+                ["DFIntCSGLevelOfDetailSwitchingDistanceL23"] = "0",
+                ["DFIntCSGLevelOfDetailSwitchingDistanceL34"] = "0",
+                ["FIntGrassMovementReducedMotionFactor"] = "0"
+            };
+            await WriteFlagsAndRestart(flags, "Performance");
+        }
+
+        private async void ApplyQuality_Click(object sender, RoutedEventArgs e)
+        {
+            var flags = new Dictionary<string, string>
+            {
+                ["DFFlagDisableDPIScale"] = "True",
+                ["DFFlagTextureQualityOverrideEnabled"] = "True",
+                ["DFIntTextureQualityOverride"] = "4",
+                ["DFIntCSGLevelOfDetailSwitchingDistance"] = "50",
+                ["DFIntCSGLevelOfDetailSwitchingDistanceL12"] = "30",
+                ["DFIntCSGLevelOfDetailSwitchingDistanceL23"] = "20",
+                ["DFIntCSGLevelOfDetailSwitchingDistanceL34"] = "10",
+                ["FIntGrassMovementReducedMotionFactor"] = "100"
+            };
+            await WriteFlagsAndRestart(flags, "Quality");
+        }
+
+        private async void ApplyNvidia_Click(object sender, RoutedEventArgs e)
+        {
+            var flags = new Dictionary<string, string>
+            {
+                ["FFlagDebugGraphicsDisableDirect3D11"] = "False",
+                ["FFlagDebugGraphicsPreferVulkan"] = "False",
+                ["DFFlagDisableDPIScale"] = "True"
+            };
+            await WriteFlagsAndRestart(flags, "Nvidia");
+        }
+
+        private async Task WriteFlagsAndRestart(Dictionary<string, string> flags, string presetName)
+        {
+            string configFolder = Path.Combine(Paths.Base, "StarStrapMods", "ClientSettings");
+            string configFile = Path.Combine(configFolder, "ClientAppSettings.json");
+            Directory.CreateDirectory(configFolder);
+
+            string json = System.Text.Json.JsonSerializer.Serialize(flags, new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
+            await File.WriteAllTextAsync(configFile, json);
+
+            Frontend.ShowMessageBox($"{presetName} flags applied!\nConfig saved to: {configFile}\nApp Restart is needed!", MessageBoxImage.Information);
 
             string exePath = System.Diagnostics.Process.GetCurrentProcess().MainModule!.FileName!;
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo

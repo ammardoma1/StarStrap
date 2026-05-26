@@ -1,7 +1,7 @@
-﻿using System.Windows;
-using Voidstrap.UI.ViewModels.Installer;
+using System.Windows;
+using StarStrap.UI.ViewModels.Installer;
 
-namespace Voidstrap.UI.Elements.Installer.Pages
+namespace StarStrap.UI.Elements.Installer.Pages
 {
     /// <summary>
     /// Interaction logic for CompletionPage.xaml

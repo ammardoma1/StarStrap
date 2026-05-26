@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Markup;
 using System.Windows.Threading;
 
-namespace Voidstrap.UI.Elements.Controls
+namespace StarStrap.UI.Elements.Controls
 {
     [ContentProperty(nameof(InnerContent))]
     public partial class OptionControl : UserControl

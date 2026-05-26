@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 using System.Windows.Shell;
 
-namespace Voidstrap.UI.Utility
+namespace StarStrap.UI.Utility
 {
     internal static class TaskbarProgress
     {

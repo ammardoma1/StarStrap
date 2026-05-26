@@ -1,10 +1,10 @@
-﻿using System.Windows;
+using System.Windows;
 
-using Voidstrap.UI.Elements.Bootstrapper;
-using Voidstrap.UI.Elements.Dialogs;
-using Voidstrap;
+using StarStrap.UI.Elements.Bootstrapper;
+using StarStrap.UI.Elements.Dialogs;
+using StarStrap;
 
-namespace Voidstrap.UI
+namespace StarStrap.UI
 {
     static class Frontend
     {
@@ -110,7 +110,7 @@ namespace Voidstrap.UI
         {
             var notifyIcon = new System.Windows.Forms.NotifyIcon
             {
-                Icon = Properties.Resources.IconVoidstrap,
+                Icon = Properties.Resources.IconStarStrap,
                 Text = App.ProjectName,
                 Visible = true
             };

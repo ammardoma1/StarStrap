@@ -1,7 +1,7 @@
-﻿using System.Windows;
-using Voidstrap.Resources;
+using System.Windows;
+using StarStrap.Resources;
 
-namespace Voidstrap.Utility
+namespace StarStrap.Utility
 {
     internal static class Shortcut
     {

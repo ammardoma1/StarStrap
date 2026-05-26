@@ -1,13 +1,13 @@
-﻿using System.Windows.Input;
+using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
-using Voidstrap.UI.ViewModels;
-using Voidstrap;
+using StarStrap.UI.ViewModels;
+using StarStrap;
 using ICSharpCode.SharpZipLib.Zip;
 using Microsoft.Win32;
 
-namespace Voidstrap.UI.ViewModels.Settings
+namespace StarStrap.UI.ViewModels.Settings
 {
-    public class VoidstrapViewModel : NotifyPropertyChangedViewModel
+    public class StarStrapViewModel : NotifyPropertyChangedViewModel
     {
         public bool ShouldExportConfig { get; set; } = true;
 
@@ -27,7 +27,7 @@ namespace Voidstrap.UI.ViewModels.Settings
 
             var dialog = new SaveFileDialog
             {
-                FileName = $"Voidstrap-export-{timestamp}.zip",
+                FileName = $"StarStrap-export-{timestamp}.zip",
                 Filter = $"{Strings.FileTypes_ZipArchive}|*.zip"
             };
 

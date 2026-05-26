@@ -1,10 +1,10 @@
-﻿/*
+/*
  * Roblox Studio Mod Manager (ProjectSrc/Utility/Package.cs)
  * MIT License
  * Copyright (c) 2015-present MaximumADHD
 */
 
-namespace Voidstrap.Models.Manifest
+namespace StarStrap.Models.Manifest
 {
     public class Package
     {

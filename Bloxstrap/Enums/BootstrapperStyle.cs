@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.Enums
+namespace StarStrap.Enums
 {
     public enum BootstrapperStyle
     {
@@ -8,7 +8,7 @@
         ProgressDialog,
         ClassicFluentDialog,
         ByfronDialog,
-        [EnumName(StaticName = "Voidstrap")]
+        [EnumName(StaticName = "StarStrap")]
         FluentDialog,
         FluentAeroDialog,
         CustomDialog

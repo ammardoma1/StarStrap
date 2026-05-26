@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Voidstrap.Utility
+namespace StarStrap.Utility
 {
     public class InterProcessLock : IDisposable
     {
@@ -16,7 +16,7 @@ namespace Voidstrap.Utility
 
         public InterProcessLock(string name, TimeSpan timeout)
         {
-            Mutex = new Mutex(false, "Voidstrap-" + name);
+            Mutex = new Mutex(false, "StarStrap-" + name);
 
             try
             {

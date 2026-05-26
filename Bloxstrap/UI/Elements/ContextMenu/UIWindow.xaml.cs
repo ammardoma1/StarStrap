@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
@@ -14,7 +14,7 @@ using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Threading;
 
-namespace Voidstrap.UI.Elements.Overlay
+namespace StarStrap.UI.Elements.Overlay
 {
     public class OverlayWindow : Window, INotifyPropertyChanged
     {
@@ -61,7 +61,7 @@ namespace Voidstrap.UI.Elements.Overlay
             };
 
             Http.DefaultRequestHeaders.UserAgent.ParseAdd(
-                "Voidstrap/1.0 (+https://github.com/voidstrap)"
+                "StarStrap/1.0 (+https://github.com/StarStrap)"
             );
             Http.DefaultRequestHeaders.Accept.ParseAdd("application/json");
         }

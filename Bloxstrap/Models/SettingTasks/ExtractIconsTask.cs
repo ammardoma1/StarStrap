@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 
-namespace Voidstrap.Models.SettingTasks
+namespace StarStrap.Models.SettingTasks
 {
     public class ExtractIconsTask : BoolBaseTask
     {
@@ -17,7 +17,7 @@ namespace Voidstrap.Models.SettingTasks
             "Icon2017.ico",
             "Icon2019.ico",
             "Icon2022.ico",
-            "IconVoidstrap.ico",
+            "IconStarStrap.ico",
             "IconEarly2015.ico",
             "IconLate2015.ico"
         };
@@ -38,7 +38,7 @@ namespace Voidstrap.Models.SettingTasks
 
                 foreach (string iconName in AllowedIconNames)
                 {
-                    string fullResourceName = $"Voidstrap.Resources.{iconName}";
+                    string fullResourceName = $"StarStrap.Resources.{iconName}";
 
                     if (!resourceNames.Contains(fullResourceName))
                         continue;

@@ -1,4 +1,4 @@
-﻿using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Input;
 using ICSharpCode.SharpZipLib.Zip;
 using Microsoft.Win32;
 using NAudio.Gui;
@@ -13,16 +13,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using System.Xml.Linq;
-using Voidstrap;
-using Voidstrap.AppData;
-using Voidstrap.UI.Elements.Settings.Pages;
-using Voidstrap.UI.ViewModels;
+using StarStrap;
+using StarStrap.AppData;
+using StarStrap.UI.Elements.Settings.Pages;
+using StarStrap.UI.ViewModels;
 using Windows.Win32;
 using Windows.Win32.Foundation;
 using Windows.Win32.UI.Shell;
-using static Voidstrap.UI.Elements.Settings.Pages.ModsPage;
+using static StarStrap.UI.Elements.Settings.Pages.ModsPage;
 
-namespace Voidstrap.UI.ViewModels.Settings
+namespace StarStrap.UI.ViewModels.Settings
 {
     public class ModsViewModel : NotifyPropertyChangedViewModel
     {
@@ -80,7 +80,7 @@ namespace Voidstrap.UI.ViewModels.Settings
         public async Task LoadModsAsync() // was working on this but idk fuc
         {
             using var http = new HttpClient();
-            http.DefaultRequestHeaders.UserAgent.ParseAdd("VoidstrapApp");
+            http.DefaultRequestHeaders.UserAgent.ParseAdd("StarStrapApp");
 
             var json = await http.GetStringAsync(GitHubApiBase);
             var items = JsonSerializer.Deserialize<List<GitHubContent>>(json);
@@ -136,7 +136,7 @@ namespace Voidstrap.UI.ViewModels.Settings
 
         public async Task LoadSkyboxPacksFromGithub()
         {
-            _http.DefaultRequestHeaders.UserAgent.ParseAdd("VoidstrapSkyboxClient");
+            _http.DefaultRequestHeaders.UserAgent.ParseAdd("StarStrapSkyboxClient");
 
             AvailableSkyboxPacks.Clear();
 
@@ -608,7 +608,7 @@ namespace Voidstrap.UI.ViewModels.Settings
         private string _imageUrl;
 
         private readonly string _dir =
-            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Voidstrap");
+            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "StarStrap");
         private readonly string _file;
 
         public ModsViewModel()

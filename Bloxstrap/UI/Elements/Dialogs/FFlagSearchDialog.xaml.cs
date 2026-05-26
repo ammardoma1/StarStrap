@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -13,9 +13,9 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input; // Add this for KeyEventArgs and Key
 using Microsoft.Win32;
-using Voidstrap.UI.Elements.Base;
+using StarStrap.UI.Elements.Base;
 
-namespace Voidstrap.UI.Elements.Dialogs
+namespace StarStrap.UI.Elements.Dialogs
 {
     public partial class FFlagSearchDialog : WpfUiWindow
     {
@@ -95,13 +95,13 @@ namespace Voidstrap.UI.Elements.Dialogs
                             }
                         }
 
-                        source.Status = "✓ Success";
+                        source.Status = "? Success";
                         source.FlagCount = flags.Count;
                         source.LastUpdated = DateTime.Now.ToString("HH:mm:ss");
                     }
                     catch (Exception ex)
                     {
-                        source.Status = "❌ Error";
+                        source.Status = "? Error";
                         App.Logger.WriteException($"FFlagSearch", ex);
                     }
                 }
@@ -363,13 +363,13 @@ namespace Voidstrap.UI.Elements.Dialogs
 
                     if (_allFlags.TryGetValue(inputFlag.Key, out var validValue))
                     {
-                        result.Status = "✓ Valid";
+                        result.Status = "? Valid";
                         result.ValidValue = validValue?.ToString() ?? "null";
                         result.Notes = "Flag exists in database";
                     }
                     else
                     {
-                        result.Status = "❌ Invalid";
+                        result.Status = "? Invalid";
                         result.ValidValue = "N/A";
                         result.Notes = "Flag not found in any data source";
                     }
@@ -384,9 +384,9 @@ namespace Voidstrap.UI.Elements.Dialogs
                 }
 
                 UpdateValidationResultsCount();
-                ExportValidResultsButton.IsEnabled = results.Any(r => r.Status == "✓ Valid");
+                ExportValidResultsButton.IsEnabled = results.Any(r => r.Status == "? Valid");
                 
-                await UpdateStatusAsync($"Validated {results.Count} flags. {results.Count(r => r.Status == "✓ Valid")} valid, {results.Count(r => r.Status == "❌ Invalid")} invalid.");
+                await UpdateStatusAsync($"Validated {results.Count} flags. {results.Count(r => r.Status == "? Valid")} valid, {results.Count(r => r.Status == "? Invalid")} invalid.");
             }
             catch (Exception ex)
             {
@@ -477,7 +477,7 @@ namespace Voidstrap.UI.Elements.Dialogs
 
         private async void ExportValidResultsButton_Click(object sender, RoutedEventArgs e)
         {
-            var validFlags = _validationResults.Where(r => r.Status == "✓ Valid")
+            var validFlags = _validationResults.Where(r => r.Status == "? Valid")
                                                .ToDictionary(r => r.Name, r => ParseValue(r.ValidValue));
             await ExportFlagsAsync(validFlags, "valid_flags");
         }

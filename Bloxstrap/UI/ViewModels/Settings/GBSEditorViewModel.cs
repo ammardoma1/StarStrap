@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
 using System.Windows.Input;
 using System.Xml.Linq;
-using Voidstrap.UI.ViewModels;
-using Voidstrap.UI.ViewModels.ContextMenu;
+using StarStrap.UI.ViewModels;
+using StarStrap.UI.ViewModels.ContextMenu;
 
-namespace Voidstrap.UI.ViewModels.Settings
+namespace StarStrap.UI.ViewModels.Settings
 {
     public class GBSEditorViewModel : NotifyPropertyChangedViewModel
     {

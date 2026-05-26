@@ -1,17 +1,17 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using Voidstrap.Integrations;
-using Voidstrap.UI.Elements.Dialogs;
-using Voidstrap.UI.ViewModels.Settings;
+using StarStrap.Integrations;
+using StarStrap.UI.Elements.Dialogs;
+using StarStrap.UI.ViewModels.Settings;
 using Windows.Win32;
 using Windows.Win32.Foundation;
 
-namespace Voidstrap
+namespace StarStrap
 {
     public static class LaunchHandler
     {
@@ -119,7 +119,7 @@ namespace Voidstrap
                 {
 #if QA_BUILD
                     Frontend.ShowMessageBox(
-                        "You are about to install a QA build of Voidstrap. The red window border indicates that this is a QA build.\n\n" +
+                        "You are about to install a QA build of StarStrap. The red window border indicates that this is a QA build.\n\n" +
                         "QA builds are handled completely separately of your standard installation, like a virtual environment.",
                         MessageBoxImage.Information);
 #endif
@@ -296,7 +296,7 @@ namespace Voidstrap
 
             if (App.Settings.Prop.ExclusiveFullscreen)
             {
-                _ = Task.Run(RobloxFullscreen.WaitAndTriggerFullscreen); // redid https://github.com/voidstrap/Voidstrap/pull/362/changes/f0177af4ec39475a5b5c8ea5adc365dcdba0b0d9#diff-ed77fad50af3a8225af6d4c3e81af6095905805d31369da2b5d54f0c2382180e
+                _ = Task.Run(RobloxFullscreen.WaitAndTriggerFullscreen); // redid https://github.com/StarStrap/StarStrap/pull/362/changes/f0177af4ec39475a5b5c8ea5adc365dcdba0b0d9#diff-ed77fad50af3a8225af6d4c3e81af6095905805d31369da2b5d54f0c2382180e
             }
 
             Task.Run(App.Bootstrapper.Run).ContinueWith(t =>

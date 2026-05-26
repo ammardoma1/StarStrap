@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace Voidstrap.UI.Chat
+namespace StarStrap.UI.Chat
 {
     public class MenuContainerViewModel : ObservableObject
     {

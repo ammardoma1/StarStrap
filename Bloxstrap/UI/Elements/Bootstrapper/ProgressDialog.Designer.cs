@@ -1,6 +1,6 @@
-﻿using System.Windows.Forms;
+using System.Windows.Forms;
 
-namespace Voidstrap.UI.Elements.Bootstrapper
+namespace StarStrap.UI.Elements.Bootstrapper
 {
     partial class ProgressDialog
     {

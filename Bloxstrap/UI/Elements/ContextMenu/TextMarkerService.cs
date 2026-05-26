@@ -1,10 +1,10 @@
-﻿using ICSharpCode.AvalonEdit.Document;
+using ICSharpCode.AvalonEdit.Document;
 using ICSharpCode.AvalonEdit.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Windows.Media;
 
-namespace Voidstrap.UI.Elements.ContextMenu
+namespace StarStrap.UI.Elements.ContextMenu
 {
     public interface ITextMarkerService
     {

@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.Models.APIs.Roblox
+namespace StarStrap.Models.APIs.Roblox
 {
     /// <summary>
     /// Roblox.Games.Api.Models.Response.GameCreator

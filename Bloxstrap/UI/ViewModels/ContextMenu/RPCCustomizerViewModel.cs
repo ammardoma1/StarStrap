@@ -1,4 +1,5 @@
-﻿using System;
+using CommunityToolkit.Mvvm.Input;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
@@ -14,7 +15,7 @@ using DiscordRPC;
 using DiscordRPC.Logging;
 using DiscordRichPresence = DiscordRPC.RichPresence;
 
-namespace Voidstrap.UI.ViewModels.ContextMenu
+namespace StarStrap.UI.ViewModels.ContextMenu
 {
     public class RPCCustomizerViewModel : INotifyPropertyChanged
     {
@@ -26,7 +27,7 @@ namespace Voidstrap.UI.ViewModels.ContextMenu
 
         private readonly string _configPath =
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
-                         "Voidstrap", "discord-rpc.json");
+                         "StarStrap", "discord-rpc.json");
 
         private CancellationTokenSource _saveCts;
         private CancellationTokenSource _presenceCts;
@@ -35,7 +36,7 @@ namespace Voidstrap.UI.ViewModels.ContextMenu
         private readonly Dispatcher _dispatcher = Application.Current?.Dispatcher ?? Dispatcher.CurrentDispatcher;
 
         private string _applicationId;
-        private string _appName = "Voidstrap";
+        private string _appName = "StarStrap";
         private string _details = "";
         private string _state = "";
         private string _largeImageKey = "large";
@@ -310,14 +311,14 @@ namespace Voidstrap.UI.ViewModels.ContextMenu
             {
                 var presence = new DiscordRichPresence
                 {
-                    Details = string.IsNullOrWhiteSpace(Details) ? "Using Voidstrap" : Details,
+                    Details = string.IsNullOrWhiteSpace(Details) ? "Using StarStrap" : Details,
                     State = State,
                     Assets = new Assets
                     {
                         LargeImageKey = string.IsNullOrWhiteSpace(LargeImageKey) ? null : LargeImageKey,
                         LargeImageText = AppName,
                         SmallImageKey = string.IsNullOrWhiteSpace(SmallImageKey) ? null : SmallImageKey,
-                        SmallImageText = "Voidstrap RPC"
+                        SmallImageText = "StarStrap RPC"
                     }
                 };
 

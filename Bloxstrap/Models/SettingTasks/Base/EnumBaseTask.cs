@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.Models.SettingTasks.Base
+namespace StarStrap.Models.SettingTasks.Base
 {
     public abstract class EnumBaseTask<T> : BaseTask where T : struct, Enum
     {

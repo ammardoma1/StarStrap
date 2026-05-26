@@ -1,9 +1,9 @@
-﻿using System.Windows;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using Voidstrap.UI.ViewModels.Dialogs;
+using StarStrap.UI.ViewModels.Dialogs;
 
-namespace Voidstrap.UI.Elements.Dialogs
+namespace StarStrap.UI.Elements.Dialogs
 {
     public partial class ChannelListsDialog
     {

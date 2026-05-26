@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using Voidstrap;
+using StarStrap;
 
 namespace RobloxLightingOverlay
 {
@@ -265,7 +265,7 @@ namespace RobloxLightingOverlay
 
         public FxUI()
         {
-            Title = "Voidstrap Lighting FX";
+            Title = "StarStrap Lighting FX";
             Width = 520;
             Height = 700;
             Background = new SolidColorBrush(Color.FromRgb(18, 18, 18));

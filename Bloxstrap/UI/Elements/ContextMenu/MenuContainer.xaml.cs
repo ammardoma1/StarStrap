@@ -1,4 +1,4 @@
-﻿using RobloxLightingOverlay;
+using RobloxLightingOverlay;
 using RobloxLightingOverlay.Effects;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
@@ -7,20 +7,20 @@ using System.Windows.Controls;
 using System.Windows.Interop;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
-using Voidstrap.Integrations;
-using Voidstrap.UI.Chat;
-using Voidstrap.UI.Elements.Crosshair;
-using Voidstrap.UI.Elements.FPS;
-using Voidstrap.UI.Elements.Overlay;
-using Voidstrap.UI.Elements.Settings.Pages;
-using Voidstrap.UI.ViewModels;
-using Voidstrap.UI.ViewModels.Settings;
+using StarStrap.Integrations;
+using StarStrap.UI.Chat;
+using StarStrap.UI.Elements.Crosshair;
+using StarStrap.UI.Elements.FPS;
+using StarStrap.UI.Elements.Overlay;
+using StarStrap.UI.Elements.Settings.Pages;
+using StarStrap.UI.ViewModels;
+using StarStrap.UI.ViewModels.Settings;
 using Windows.Win32;
 using Windows.Win32.Foundation;
 using Windows.Win32.UI.WindowsAndMessaging;
 using Wpf.Ui.Appearance;
 
-namespace Voidstrap.UI.Elements.ContextMenu
+namespace StarStrap.UI.Elements.ContextMenu
 {
     /// <summary>
     /// Interaction logic for NotifyIconMenu.xaml
@@ -137,26 +137,25 @@ namespace Voidstrap.UI.Elements.ContextMenu
                 MusicMenuItem.Visibility = Visibility.Visible;
             }
 
+            StartMemoryCleaning();
+
             if (_watcher.RichPresence is not null)
                 RichPresenceMenuItem.Visibility = Visibility.Visible;
 
             VersionTextBlock.Text = $"{App.ProjectName} v{App.Version}";
+        }
 
-            if (App.Settings.Prop.AniWatch)
+
+
+        private void ShowWindow(Window window)
+        {
+            if (!window.IsVisible)
             {
-                if (!(App.Current.Resources["AnimeWindow"] is AnimeWindow window))
-                {
-                    window = new AnimeWindow();
-                    App.Current.Resources["AnimeWindow"] = window;
-                }
-                if (!window.IsVisible)
-                {
-                    window.Show();
-                }
-
-                window.MainBorder.Opacity = 0;
-                window.FadeIn();
+                window.Show();
             }
+
+            
+            
         }
 
         public void UpdateCurrentGameInfo(string gameName, string gameIconUrl)
@@ -207,16 +206,13 @@ namespace Voidstrap.UI.Elements.ContextMenu
 
         public void ShowServerInformationWindow()
         {
-            if (_serverInformationWindow is null)
+            if (_serverInformationWindow == null)
             {
-                _serverInformationWindow = new(_watcher);
-                _serverInformationWindow.Closed += (_, _) => _serverInformationWindow = null;
+                _serverInformationWindow = new ServerInformation(_watcher);
+                _serverInformationWindow.Closed += (s, e) => _serverInformationWindow = null;
             }
 
-            if (!_serverInformationWindow.IsVisible)
-                _serverInformationWindow.ShowDialog();
-            else
-                _serverInformationWindow.Activate();
+            ShowWindow(_serverInformationWindow);
         }
 
         private async Task UpdateClosestServerMenuItemText()
@@ -309,8 +305,8 @@ namespace Voidstrap.UI.Elements.ContextMenu
         {
             try
             {
-                var voidstrapProcess = Process.GetProcessesByName("Voidstrap").FirstOrDefault();
-                long voidstrapMemory = voidstrapProcess?.WorkingSet64 ?? 0;
+                var StarStrapProcess = Process.GetProcessesByName("StarStrap").FirstOrDefault();
+                long StarStrapMemory = StarStrapProcess?.WorkingSet64 ?? 0;
                 var robloxProcesses = Process.GetProcessesByName("RobloxPlayerBeta");
                 long robloxMemory = robloxProcesses.Sum(p => p.WorkingSet64);
 
@@ -459,7 +455,7 @@ namespace Voidstrap.UI.Elements.ContextMenu
                 }
             }
             catch { }
-            string playerText = players > 1 ? $" • {players} Players" : string.Empty;
+            string playerText = players > 1 ? $"  {players} Players" : string.Empty;
             string text = $"{universeName}\n{serverLocation}{playerText}";
 
             await Dispatcher.InvokeAsync(() =>
@@ -519,7 +515,7 @@ namespace Voidstrap.UI.Elements.ContextMenu
                 Application.Current.Dispatcher.Invoke(() =>
                 {
                     if (App.Current.Resources["DiscordChatOverlayWindow"]
-                        is Voidstrap.UI.Elements.Overlay.DiscordChatOverlayWindow existing)
+                        is StarStrap.UI.Elements.Overlay.DiscordChatOverlayWindow existing)
                     {
                         if (existing.IsLoaded)
                         {
@@ -531,7 +527,7 @@ namespace Voidstrap.UI.Elements.ContextMenu
                         }
                     }
 
-                    var discordOverlay = new Voidstrap.UI.Elements.Overlay.DiscordChatOverlayWindow();
+                    var discordOverlay = new StarStrap.UI.Elements.Overlay.DiscordChatOverlayWindow();
                     discordOverlay.Show();
                     App.Current.Resources["DiscordChatOverlayWindow"] = discordOverlay;
                 });
@@ -541,7 +537,7 @@ namespace Voidstrap.UI.Elements.ContextMenu
             {
                 Application.Current.Dispatcher.Invoke(() =>
                 {
-                    if (App.Current.Resources["OverlayWindow"] is Voidstrap.UI.Elements.Overlay.OverlayWindow existing)
+                    if (App.Current.Resources["OverlayWindow"] is StarStrap.UI.Elements.Overlay.OverlayWindow existing)
                     {
                         if (existing.IsLoaded)
                         {
@@ -553,7 +549,7 @@ namespace Voidstrap.UI.Elements.ContextMenu
                         }
                     }
 
-                    var overlay = new Voidstrap.UI.Elements.Overlay.OverlayWindow();
+                    var overlay = new StarStrap.UI.Elements.Overlay.OverlayWindow();
                     overlay.Show();
                     App.Current.Resources["OverlayWindow"] = overlay;
                 });
@@ -595,13 +591,13 @@ namespace Voidstrap.UI.Elements.ContextMenu
                     App.Current.Resources.Remove("CrosshairWindow");
                 }
 
-                if (App.Current.Resources["OverlayWindow"] is Voidstrap.UI.Elements.Overlay.OverlayWindow overlay)
+                if (App.Current.Resources["OverlayWindow"] is StarStrap.UI.Elements.Overlay.OverlayWindow overlay)
                 {
                     overlay.Close();
                     App.Current.Resources.Remove("OverlayWindow");
                 }
 
-                if (App.Current.Resources["DiscordChatOverlayWindow"] is Voidstrap.UI.Elements.Overlay.DiscordChatOverlayWindow discordOverlay)
+                if (App.Current.Resources["DiscordChatOverlayWindow"] is StarStrap.UI.Elements.Overlay.DiscordChatOverlayWindow discordOverlay)
                 {
                     discordOverlay.Close();
                     App.Current.Resources.Remove("DiscordChatOverlayWindow");
@@ -806,6 +802,29 @@ namespace Voidstrap.UI.Elements.ContextMenu
                 _ChatLogs.ShowDialog();
             else
                 _ChatLogs.Activate();
+        }
+
+        private void StartMemoryCleaning()
+        {
+            memoryCleanTimer = new System.Windows.Threading.DispatcherTimer
+            {
+                Interval = TimeSpan.FromMinutes(5)
+            };
+            memoryCleanTimer.Tick += (s, e) => CleanRobloxMemory();
+            memoryCleanTimer.Start();
+        }
+
+        private void CleanRobloxMemory()
+        {
+            var processes = System.Diagnostics.Process.GetProcessesByName("RobloxPlayerBeta");
+            foreach (var process in processes)
+            {
+                try
+                {
+                    SetProcessWorkingSetSize(process.Handle, (UIntPtr)0xFFFFFFFF, (UIntPtr)0xFFFFFFFF);
+                }
+                catch { }
+            }
         }
     }
 }

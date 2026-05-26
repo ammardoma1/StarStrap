@@ -1,17 +1,17 @@
-﻿using System.Collections.ObjectModel;
+using System.Collections.ObjectModel;
 using System.IO;
-using Voidstrap.Enums;
+using StarStrap.Enums;
 
-namespace Voidstrap.Models.Persistable
+namespace StarStrap.Models.Persistable
 {
     /// <summary>
-    /// Represents configuration settings for Voidstrap.
+    /// Represents configuration settings for StarStrap.
     /// </summary>
     public class AppSettings
     {
         // General Configuration
         public BootstrapperStyle BootstrapperStyle { get; set; } = BootstrapperStyle.FluentAeroDialog;
-        public BootstrapperIcon BootstrapperIcon { get; set; } = BootstrapperIcon.IconVoidstrap;
+        public BootstrapperIcon BootstrapperIcon { get; set; } = BootstrapperIcon.IconStarStrap;
         public CleanerOptions CleanerOptions { get; set; } = CleanerOptions.Never;
         public List<string> CleanerDirectories { get; set; } = new List<string>();
         public string BootstrapperTitle { get; set; } = App.ProjectName;
@@ -52,11 +52,16 @@ namespace Voidstrap.Models.Persistable
         public bool BackgroundWindow { get; set; } = true;
         public bool UsePlaceId { get; set; } = false;
         public bool ClearFont { get; set; } = false;
-        public bool AniWatch { get; set; } = false;
+        public bool MemReductEnabled { get; set; } = false;
 
         public bool Fleasion { get; set; } = false;
         public string PlaceId { get; set; } = "";
         public bool OptimizeRoblox { get; set; } = false;
+        public bool OptimizeWindowsOnLaunch { get; set; } = false;
+        public bool ClearTempFilesEnabled { get; set; } = false;
+        public bool HighCpuPriorityEnabled { get; set; } = false;
+        public bool CancelXboxGameBarEnabled { get; set; } = false;
+        public bool CloseBackgroundAppsEnabled { get; set; } = false;
         public bool BackgroundUpdatesEnabled { get; set; } = true;
         public bool VoidNotify { get; set; } = true;
         public bool ServerPingCounter { get; set; } = false;
@@ -114,6 +119,12 @@ namespace Voidstrap.Models.Persistable
         public bool ShowAccountOnRichPresence { get; set; } = true;
         public bool MultiAccount { get; set; } = false;
         public bool ShowServerDetails { get; set; } = true;
+        public bool SwiftTunnelEnabled { get; set; } = false;
+        public string SwiftTunnelRegion { get; set; } = "";
+        public bool SwiftTunnelAutoConnect { get; set; } = false;
+        public bool SwiftTunnelSplitTunnel { get; set; } = false;
+        public bool SwiftTunnelRememberLogin { get; set; } = false;
+        public bool EnableLuaScripting { get; set; } = false;
 
         public bool OverlaysEnabled { get; set; } = false;
 

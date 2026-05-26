@@ -1,6 +1,6 @@
-﻿using DiscordRPC;
+using DiscordRPC;
 using DiscordRPC.Message;
-using Voidstrap;
+using StarStrap;
 using System.Linq;
 
 public static class DiscordManager
@@ -22,8 +22,8 @@ public static class DiscordManager
 
         var assets = new Assets
         {
-            SmallImageKey = "https://voidstrapp.netlify.app/Image/Voidstrap.png",
-            SmallImageText = "Voidstrap"
+            SmallImageKey = "https://voidstrap.netlify.app/Image/StarStrap.png",
+            SmallImageText = "StarStrap"
         };
 
         if (!string.IsNullOrWhiteSpace(largeImageKey))

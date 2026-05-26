@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Controls;
@@ -7,7 +7,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using WpfAnimatedGif;
 
-namespace Voidstrap.UI.Elements.Bootstrapper
+namespace StarStrap.UI.Elements.Bootstrapper
 {
     public static class BackgroundManager
     {

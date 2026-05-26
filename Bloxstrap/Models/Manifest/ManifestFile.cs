@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.Models.Manifest
+namespace StarStrap.Models.Manifest
 {
     public class ManifestFile
     {

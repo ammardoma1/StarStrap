@@ -1,13 +1,13 @@
-﻿<base:WpfUiWindow
-    x:Class="Voidstrap.UI.Elements.Dialogs.AddFastFlagDialog"
+<base:WpfUiWindow
+    x:Class="StarStrap.UI.Elements.Dialogs.AddFastFlagDialog"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:base="clr-namespace:Voidstrap.UI.Elements.Base"
-    xmlns:converters="clr-namespace:Voidstrap.UI.Converters"
+    xmlns:base="clr-namespace:StarStrap.UI.Elements.Base"
+    xmlns:converters="clr-namespace:StarStrap.UI.Converters"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:Voidstrap.UI.Elements.Dialogs"
+    xmlns:local="clr-namespace:StarStrap.UI.Elements.Dialogs"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:resources="clr-namespace:Voidstrap.Resources"
+    xmlns:resources="clr-namespace:StarStrap.Resources"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     Title="{x:Static resources:Strings.Dialog_AddFastFlag_Title}"
     Width="480"
@@ -67,7 +67,7 @@
                                Text="{x:Static resources:Strings.Common_Value}"/>
                     <TextBox Name="FlagValueTextBox" Grid.Row="1" Grid.Column="1" Margin="0,0,8,0"/>
                     <Button Grid.Row="1" Grid.Column="2" Width="30" Height="30" Padding="0"
-                            Click="PresetValuesButton_Click" Content="⤵" FontSize="16" FontWeight="Bold"
+                            Click="PresetValuesButton_Click" Content="?" FontSize="16" FontWeight="Bold"
                             ToolTip="Select preset value"/>
                 </Grid>
             </TabItem>

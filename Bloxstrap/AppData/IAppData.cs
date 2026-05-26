@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.AppData
+namespace StarStrap.AppData
 {
     internal interface IAppData
     {

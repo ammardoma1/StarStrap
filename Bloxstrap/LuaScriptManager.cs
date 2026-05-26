@@ -3,7 +3,7 @@ using System.IO;
 using System.Reflection;
 using NLua;
 
-namespace Voidstrap
+namespace StarStrap
 {
     public static class LuaScriptManager
     {
@@ -133,7 +133,7 @@ namespace Voidstrap
         }
 
         /// <summary>
-        /// Loads a DLL from the Voidstrap directory and executes its Main function
+        /// Loads a DLL from the StarStrap directory and executes its Main function
         /// Usage in Lua: load("MyDll.dll") or load("MyDll")
         /// The DLL must have a public static class with a public static void Main() method
         /// </summary>

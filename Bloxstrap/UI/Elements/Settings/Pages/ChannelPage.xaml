@@ -1,13 +1,13 @@
-﻿<ui:UiPage
-    x:Class="Voidstrap.UI.Elements.Settings.Pages.ChannelPage"
+<ui:UiPage
+    x:Class="StarStrap.UI.Elements.Settings.Pages.ChannelPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:controls="clr-namespace:Voidstrap.UI.Elements.Controls"
+    xmlns:controls="clr-namespace:StarStrap.UI.Elements.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:Voidstrap.UI.Elements.Settings.Pages"
+    xmlns:local="clr-namespace:StarStrap.UI.Elements.Settings.Pages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:models="clr-namespace:Voidstrap.UI.ViewModels.Settings"
-    xmlns:resources="clr-namespace:Voidstrap.Resources"
+    xmlns:models="clr-namespace:StarStrap.UI.ViewModels.Settings"
+    xmlns:resources="clr-namespace:StarStrap.Resources"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     Title="Settings"
     d:DataContext="{d:DesignInstance Type=models:ChannelViewModel}"
@@ -23,12 +23,12 @@
             Foreground="{StaticResource TextFillColorSecondaryBrush}"
             Text="{x:Static resources:Strings.Menu_Channel_Description}" />
 
-        <!--  Voidstrap Settings Section  -->
+        <!--  StarStrap Settings Section  -->
         <TextBlock
             Margin="0,16,0,0"
             FontSize="16"
             FontWeight="Medium"
-            Text="Voidstrap" />
+            Text="StarStrap" />
 
 
         <controls:OptionControl 
@@ -49,7 +49,7 @@
 
         <controls:OptionControl 
     Header="Check for Updates"
-    Description="Check for any available Voidstrap updates.">
+    Description="Check for any available StarStrap updates.">
             <StackPanel>
                 <Button Content="Check for Updates"
                 HorizontalAlignment="Left"
@@ -71,21 +71,21 @@
             <StackPanel>
 
                 <controls:OptionControl Header="Disable hardware acceleration (WIP)"
-    Description="When disabled, Voidstrap won't take up as much memory usage and disables All Animations and Transparency effects. Requires App Restart.">
+    Description="When disabled, StarStrap won't take up as much memory usage and disables All Animations and Transparency effects. Requires App Restart.">
                     <ui:ToggleSwitch IsChecked="{Binding HWAsselEnabled, Mode=TwoWay}"
                      Checked="ToggleSwitch_Checked_1"
                      Unchecked="ToggleSwitch_Unchecked_1" />
                 </controls:OptionControl>
 
                 <controls:OptionControl
-            Description="Displays Voidstrap notifications, joined servers, and more."
+            Description="Displays StarStrap notifications, joined servers, and more."
             Header="App Notifications">
                     <ui:ToggleSwitch IsChecked="{Binding VoidNotify, Mode=TwoWay}" />
                 </controls:OptionControl>
 
                 <controls:OptionControl
-            Description="Displays Voidstraps discord RPC."
-            Header="Voidstrap RPC">
+            Description="Displays StarStraps discord RPC."
+            Header="StarStrap RPC">
                     <ui:ToggleSwitch IsChecked="{Binding VoidRPC, Mode=TwoWay}" />
                 </controls:OptionControl>
 

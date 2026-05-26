@@ -1,21 +1,21 @@
-﻿using Voidstrap.RobloxInterfaces;
+using StarStrap.RobloxInterfaces;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
-using Voidstrap;
-using Voidstrap.RobloxInterfaces;
+using StarStrap;
+using StarStrap.RobloxInterfaces;
 using System.Net.Http;
 using System.Text.Json;
 
-namespace Voidstrap.UI.ViewModels.Dialogs
+namespace StarStrap.UI.ViewModels.Dialogs
 {
     public class ChannelListsViewModel : NotifyPropertyChangedViewModel
     {
         private static readonly string[] ChannelsJsonUrls =
         {
             "https://raw.githubusercontent.com/SCR00M/gsagsssssssagdsgadgsgds/refs/heads/main/Channels.json",
-            "https://raw.githubusercontent.com/KloBraticc/Voidstrap-Roblox-Channels/main/Channels.json"
+            "https://raw.githubusercontent.com/KloBraticc/StarStrap-Roblox-Channels/main/Channels.json"
         };
 
         private readonly Dictionary<string, ClientVersion> _channelInfoCache = new();

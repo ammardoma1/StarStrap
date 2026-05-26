@@ -1,10 +1,10 @@
-﻿using System.Windows;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using Voidstrap.Integrations;
-using Voidstrap.UI.ViewModels.Settings;
+using StarStrap.Integrations;
+using StarStrap.UI.ViewModels.Settings;
 
-namespace Voidstrap.UI.Elements.Settings.Pages
+namespace StarStrap.UI.Elements.Settings.Pages
 {
     public partial class IntegrationsPage
     {

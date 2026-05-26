@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,10 +11,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Voidstrap.Integrations;
-using Voidstrap.UI.ViewModels.ContextMenu;
+using StarStrap.Integrations;
+using StarStrap.UI.ViewModels.ContextMenu;
 
-namespace Voidstrap.UI.Elements.ContextMenu
+namespace StarStrap.UI.Elements.ContextMenu
 {
     /// <summary>
     /// Interaction logic for ServerInformation.xaml

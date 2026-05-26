@@ -1,9 +1,9 @@
-﻿using System.Globalization;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace Voidstrap.UI.Utility
+namespace StarStrap.UI.Utility
 {
     public static class Rendering
     {

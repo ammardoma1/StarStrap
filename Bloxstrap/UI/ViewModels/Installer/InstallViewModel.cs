@@ -1,12 +1,12 @@
-﻿using System.Windows;
+using System.Windows;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
 
-namespace Voidstrap.UI.ViewModels.Installer
+namespace StarStrap.UI.ViewModels.Installer
 {
     public class InstallViewModel : NotifyPropertyChangedViewModel
     {
-        private readonly Voidstrap.Installer installer = new();
+        private readonly StarStrap.Installer installer = new();
 
         private readonly string _originalInstallLocation;
 

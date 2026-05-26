@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Wpf.Ui.Common;
 
-namespace Voidstrap.UI.Elements.Controls
+namespace StarStrap.UI.Elements.Controls
 {
   /// <summary>
   /// Interaction logic for Expander.xaml

@@ -1,6 +1,6 @@
-﻿using System.Windows;
+using System.Windows;
 
-namespace Voidstrap.UI.ViewModels.About
+namespace StarStrap.UI.ViewModels.About
 {
     public class SupportersViewModel : NotifyPropertyChangedViewModel
     {
@@ -42,7 +42,7 @@ namespace Voidstrap.UI.ViewModels.About
 
             try
             {
-                SupporterData = await Http.GetJson<SupporterData>("https://raw.githubusercontent.com/voidstrap/Voidstrap/main/supportersdata7.json");
+                SupporterData = await Http.GetJson<SupporterData>("https://raw.githubusercontent.com/StarStrap/StarStrap/main/supportersdata7.json");
             }
             catch (Exception ex)
             {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Windows;
 using System.Windows.Interop;
@@ -8,7 +8,7 @@ using Wpf.Ui.Controls;
 using Wpf.Ui.Mvvm.Contracts;
 using Wpf.Ui.Mvvm.Services;
 
-namespace Voidstrap.UI.Elements.Base
+namespace StarStrap.UI.Elements.Base
 {
     /// <summary>
     /// Base window class that integrates theme management and software rendering control.
@@ -30,12 +30,11 @@ namespace Voidstrap.UI.Elements.Base
         public void ApplyTheme()
         {
             var finalThemeEnum = App.Settings.Prop.Theme2.GetFinal();
-            bool isCustom = finalThemeEnum == Enums.Theme.Custom;
             var currentTheme = (finalThemeEnum == Enums.Theme.Light)
                 ? ThemeType.Light
                 : ThemeType.Dark;
 
-            if (!isCustom && _lastAppliedTheme == currentTheme)
+            if (_lastAppliedTheme == currentTheme)
                 return;
 
             _lastAppliedTheme = currentTheme;
@@ -44,55 +43,6 @@ namespace Voidstrap.UI.Elements.Base
             _themeService.SetSystemAccent();
 
             ResourceDictionary themeDict = null;
-
-            if (isCustom)
-            {
-                var customXamlPath = Path.Combine(Paths.Base, "Custom.xaml");
-                var customXshdPath = Path.Combine(Paths.Base, "Editor-Theme-Custom.xshd");
-
-                if (File.Exists(customXamlPath))
-                {
-                    try
-                    {
-                        using var stream = File.OpenRead(customXamlPath);
-                        themeDict = (ResourceDictionary)XamlReader.Load(stream);
-                    }
-                    catch (Exception ex)
-                    {
-                        Frontend.ShowMessageBox(
-                            $"Failed to load Custom.xaml:\n{ex.Message}\nFalling back to Dark theme.",
-                            MessageBoxImage.Warning
-                        );
-                    }
-                }
-
-                if (!File.Exists(customXshdPath))
-                {
-                    _ = Task.Run(async () =>
-                    {
-                        var url = "https://raw.githubusercontent.com/KloBraticc/VoidstrapCustomThemes/main/Editor-Theme-Custom.xshd";
-                        // fixes color issues and crap XSHD
-                        try
-                        {
-                            using var http = new HttpClient();
-                            var xshdContent = await http.GetStringAsync(url);
-
-                            Directory.CreateDirectory(Paths.Base);
-                            await File.WriteAllTextAsync(customXshdPath, xshdContent);
-                        }
-                        catch (Exception ex)
-                        {
-                            Application.Current.Dispatcher.Invoke(() =>
-                            {
-                                Frontend.ShowMessageBox(
-                                    $"Failed to download Custom XSHD file:\n{ex.Message}",
-                                    MessageBoxImage.Warning
-                                );
-                            });
-                        }
-                    });
-                }
-            }
 
             if (themeDict == null)
             {

@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.Models.APIs.Roblox
+namespace StarStrap.Models.APIs.Roblox
 {
     // lmao its just one property
     public class UniverseIdResponse

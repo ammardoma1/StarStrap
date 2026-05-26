@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -24,8 +24,8 @@ public class RobloxFullscreen
     {
         const string LOG_IDENT = "RobloxFullscreen::WaitAndTriggerAltEnter";
 
-        string processName = Voidstrap.App.RobloxPlayerAppName.Split('.')[0];
-        Voidstrap.App.Logger.WriteLine(LOG_IDENT, $"Waiting for {processName} to start and become visible...");
+        string processName = StarStrap.App.RobloxPlayerAppName.Split('.')[0];
+        StarStrap.App.Logger.WriteLine(LOG_IDENT, $"Waiting for {processName} to start and become visible...");
 
         var sw = Stopwatch.StartNew();
         while (sw.Elapsed.TotalSeconds < 60)
@@ -39,20 +39,20 @@ public class RobloxFullscreen
 
                 if (roblox.MainWindowHandle != IntPtr.Zero && IsWindowVisible(roblox.MainWindowHandle))
                 {
-                    Voidstrap.App.Logger.WriteLine(LOG_IDENT, "Found visible Roblox window, triggering Alt+Enter");
+                    StarStrap.App.Logger.WriteLine(LOG_IDENT, "Found visible Roblox window, triggering Alt+Enter");
 
                     SetForegroundWindow(roblox.MainWindowHandle);
                     Thread.Sleep(500);
 
                     SendAltEnter();
-                    Voidstrap.App.Logger.WriteLine(LOG_IDENT, "Alt+Enter triggered");
+                    StarStrap.App.Logger.WriteLine(LOG_IDENT, "Alt+Enter triggered");
                     return;
                 }
             }
             Thread.Sleep(500);
         }
 
-        Voidstrap.App.Logger.WriteLine(LOG_IDENT, "Timed out waiting for Roblox window");
+        StarStrap.App.Logger.WriteLine(LOG_IDENT, "Timed out waiting for Roblox window");
     }
 
     private static void SendAltEnter()

@@ -1,12 +1,12 @@
-﻿using Voidstrap.Integrations;
-using Voidstrap.UI.Elements.About;
-using Voidstrap.UI.Elements.ContextMenu;
+using StarStrap.Integrations;
+using StarStrap.UI.Elements.About;
+using StarStrap.UI.Elements.ContextMenu;
 using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Threading;
 
-namespace Voidstrap.UI
+namespace StarStrap.UI
 {
     public class NotifyIconWrapper : IDisposable
     {
@@ -26,8 +26,8 @@ namespace Voidstrap.UI
 
             _notifyIcon = new NotifyIcon(new System.ComponentModel.Container())
             {
-                Icon = Properties.Resources.IconVoidstrap,
-                Text = "Voidstrap",
+                Icon = Properties.Resources.IconStarStrap,
+                Text = "StarStrap",
                 Visible = true
             };
 
@@ -78,7 +78,7 @@ namespace Voidstrap.UI
             }
             else
             {
-                App.Logger.WriteLine("NotifyIconWrapper::OnGameJoinAsync", "App notifications disabled — skipping alert");
+                App.Logger.WriteLine("NotifyIconWrapper::OnGameJoinAsync", "App notifications disabled  skipping alert");
             }
         }
 
@@ -86,7 +86,7 @@ namespace Voidstrap.UI
         {
             if (!EnableAppNotifications)
             {
-                App.Logger.WriteLine("NotifyIconWrapper::ShowAlert", "Notifications disabled — skipping alert display");
+                App.Logger.WriteLine("NotifyIconWrapper::ShowAlert", "Notifications disabled  skipping alert display");
                 return;
             }
 

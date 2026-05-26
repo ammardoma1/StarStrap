@@ -1,4 +1,4 @@
-namespace Voidstrap.Integrations.SwiftTunnel.Models
+namespace StarStrap.Integrations.SwiftTunnel.Models
 {
     /// <summary>
     /// VPN connection state enumeration

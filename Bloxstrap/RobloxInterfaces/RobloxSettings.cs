@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Xml.Linq;
 
-namespace Voidstrap
+namespace StarStrap
 {
     public static class RobloxSettings
     {

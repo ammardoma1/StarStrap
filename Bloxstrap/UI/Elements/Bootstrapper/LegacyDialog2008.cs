@@ -1,8 +1,8 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using System.Windows.Forms;
-using Voidstrap.UI.Elements.Bootstrapper.Base;
+using StarStrap.UI.Elements.Bootstrapper.Base;
 
-namespace Voidstrap.UI.Elements.Bootstrapper
+namespace StarStrap.UI.Elements.Bootstrapper
 {
     public partial class LegacyDialog2008 : WinFormsDialogBase
     {
@@ -59,7 +59,7 @@ namespace Voidstrap.UI.Elements.Bootstrapper
 
         public LegacyDialog2008()
         {
-            InitializeComponent(); // ✔ controls created first
+            InitializeComponent(); // ? controls created first
 
             if (LicenseManager.UsageMode == LicenseUsageMode.Designtime)
                 return;

@@ -1,4 +1,4 @@
-﻿using System.Media;
+using System.Media;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Interop;
@@ -7,9 +7,9 @@ using System.Windows.Media.Imaging;
 using Windows.Win32;
 using Windows.Win32.Foundation;
 
-using Voidstrap.UI.Utility;
+using StarStrap.UI.Utility;
 
-namespace Voidstrap.UI.Elements.Dialogs
+namespace StarStrap.UI.Elements.Dialogs
 {
     // wpfui does have its own messagebox control but it SUCKS so heres this instead, ayo man chill out on wpf ui its amazing :3
 

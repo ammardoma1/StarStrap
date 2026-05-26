@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.Models.VoidstrapRPC
+namespace StarStrap.Models.StarStrapRPC
 {
     class RichPresenceImage
     {

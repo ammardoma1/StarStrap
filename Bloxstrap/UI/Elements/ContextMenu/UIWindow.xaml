@@ -1,4 +1,4 @@
-﻿<Window x:Class="Voidstrap.UI.Elements.FPS.FPSOverlayWindow"
+<Window x:Class="StarStrap.UI.Elements.FPS.FPSOverlayWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         AllowsTransparency="True"

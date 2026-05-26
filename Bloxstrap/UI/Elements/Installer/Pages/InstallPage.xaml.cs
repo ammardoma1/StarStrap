@@ -1,9 +1,9 @@
-﻿using System.Windows;
+using System.Windows;
 using System.Windows.Controls;
 
-using Voidstrap.UI.ViewModels.Installer;
+using StarStrap.UI.ViewModels.Installer;
 
-namespace Voidstrap.UI.Elements.Installer.Pages
+namespace StarStrap.UI.Elements.Installer.Pages
 {
     /// <summary>
     /// Interaction logic for WelcomePage.xaml

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Net.Http;
 using System.Threading;
@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
-using Voidstrap.Integrations;
+using StarStrap.Integrations;
 
-namespace Voidstrap.UI.ViewModels.ContextMenu
+namespace StarStrap.UI.ViewModels.ContextMenu
 {
     internal class ServerInformationViewModel : NotifyPropertyChangedViewModel
     {

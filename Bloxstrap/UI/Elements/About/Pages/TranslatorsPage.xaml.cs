@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.UI.Elements.About.Pages
+namespace StarStrap.UI.Elements.About.Pages
 {
     /// <summary>
     /// Interaction logic for TranslatorsPage.xaml

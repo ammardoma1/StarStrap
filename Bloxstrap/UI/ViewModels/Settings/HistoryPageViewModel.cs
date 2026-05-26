@@ -1,4 +1,4 @@
-﻿using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,10 +8,10 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-using Voidstrap.Integrations;
-using Voidstrap.Models.Entities;
+using StarStrap.Integrations;
+using StarStrap.Models.Entities;
 
-namespace Voidstrap.UI.ViewModels.Pages
+namespace StarStrap.UI.ViewModels.Pages
 {
     internal class HistoryPageViewModel : NotifyPropertyChangedViewModel
     {

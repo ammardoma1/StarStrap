@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Voidstrap.Utility
+namespace StarStrap.Utility
 {
     public sealed class AsyncMutex : IAsyncDisposable
     {

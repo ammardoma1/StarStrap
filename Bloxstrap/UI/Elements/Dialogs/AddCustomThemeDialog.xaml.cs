@@ -1,11 +1,11 @@
-﻿using Voidstrap.UI.Elements.Base;
-using Voidstrap.UI.ViewModels.Dialogs;
+using StarStrap.UI.Elements.Base;
+using StarStrap.UI.ViewModels.Dialogs;
 using Microsoft.Win32;
 using System.IO.Compression;
 using System.Windows;
-using Voidstrap;
+using StarStrap;
 
-namespace Voidstrap.UI.Elements.Dialogs
+namespace StarStrap.UI.Elements.Dialogs
 {
     /// <summary>
     /// Interaction logic for AddCustomThemeDialog.xaml

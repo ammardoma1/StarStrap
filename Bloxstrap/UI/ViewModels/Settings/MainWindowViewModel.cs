@@ -1,14 +1,14 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Input;
-using Voidstrap.UI.Elements.About;
-using static Voidstrap.UI.Elements.Settings.MainWindow;
+using StarStrap.UI.Elements.About;
+using static StarStrap.UI.Elements.Settings.MainWindow;
 
-namespace Voidstrap.UI.ViewModels.Settings
+namespace StarStrap.UI.ViewModels.Settings
 {
     public class MainWindowViewModel : NotifyPropertyChangedViewModel
     {

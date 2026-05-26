@@ -1,9 +1,9 @@
-﻿namespace Voidstrap.Enums
+namespace StarStrap.Enums
 {
     public enum BootstrapperIcon
     {
-        [EnumName(StaticName = "Voidstrap")]
-        IconVoidstrap,
+        [EnumName(StaticName = "StarStrap")]
+        IconStarStrap,
         [EnumName(StaticName = "2008")]
         Icon2008,
         [EnumName(StaticName = "2011")]

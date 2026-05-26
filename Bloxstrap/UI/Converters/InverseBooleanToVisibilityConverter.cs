@@ -1,7 +1,7 @@
-﻿using System.Windows;
+using System.Windows;
 using System.Windows.Data;
 
-namespace Voidstrap.UI.Converters
+namespace StarStrap.UI.Converters
 {
     public class InverseBooleanToVisibilityConverter : IValueConverter
     {

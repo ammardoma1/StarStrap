@@ -10,25 +10,25 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shell;
 using System.Windows.Threading;
-using Voidstrap.Integrations;
-using Voidstrap.UI.Elements.Bootstrapper;
-using Voidstrap.UI.ViewModels.ContextMenu;
+using StarStrap.Integrations;
+using StarStrap.UI.Elements.Bootstrapper;
+using StarStrap.UI.ViewModels.ContextMenu;
 using Wpf.Ui.Hardware;
 
-namespace Voidstrap
+namespace StarStrap
 {
     public partial class App : Application
     {
 #if QA_BUILD
-        public const string ProjectName = "Voidstrap-QA";
+        public const string ProjectName = "StarStrap-QA";
 #else
-        public const string ProjectName = "Voidstrap";
+        public const string ProjectName = "StarStrap";
 #endif
-        public const string ProjectOwner = "Voidstrap";
-        public const string ProjectRepository = "/voidstrap/Voidstrap/";
-        public const string ProjectDownloadLink = "https://github.com/voidstrap/Voidstrap/releases";
+        public const string ProjectOwner = "StarStrap";
+        public const string ProjectRepository = "/StarStrap/StarStrap/";
+        public const string ProjectDownloadLink = "https://github.com/StarStrap/StarStrap/releases";
         public const string ProjectHelpLink = "https://github.com/BloxstrapLabs/Bloxstrap/wiki";
-        public const string ProjectSupportLink = "https://github.com/voidstrap/Voidstrap/issues/new";
+        public const string ProjectSupportLink = "https://github.com/StarStrap/StarStrap/issues/new";
 
         public const string RobloxPlayerAppName = "RobloxPlayerBeta";
         public const string RobloxStudioAppName = "RobloxStudioBeta";
@@ -197,7 +197,7 @@ namespace Voidstrap
                 Logger.WriteLine(LOG_IDENT, $"Detected unsupported Windows version ({Environment.OSVersion.Version}).");
 
                 if (!LaunchSettings.QuietFlag.Active)
-                    Frontend.ShowMessageBox("Your Windows Version is not supported with Voidstrap!", MessageBoxImage.Error);
+                    Frontend.ShowMessageBox("Your Windows Version is not supported with StarStrap!", MessageBoxImage.Error);
 
                 Terminate(ErrorCode.ERROR_INVALID_FUNCTION);
             }

@@ -1,12 +1,12 @@
-﻿using System.Drawing;
+using System.Drawing;
 
-namespace Voidstrap.Extensions
+namespace StarStrap.Extensions
 {
     static class BootstrapperIconEx
     {
         public static IReadOnlyCollection<BootstrapperIcon> Selections => new BootstrapperIcon[]
         {
-            BootstrapperIcon.IconVoidstrap,
+            BootstrapperIcon.IconStarStrap,
             BootstrapperIcon.Icon2022,
             BootstrapperIcon.Icon2019,
             BootstrapperIcon.Icon2017,
@@ -48,12 +48,12 @@ namespace Voidstrap.Extensions
                     }
                 }
 
-                return customIcon ?? Properties.Resources.IconVoidstrap;
+                return customIcon ?? Properties.Resources.IconStarStrap;
             }
 
             return icon switch
             {
-                BootstrapperIcon.IconVoidstrap => Properties.Resources.IconVoidstrap,
+                BootstrapperIcon.IconStarStrap => Properties.Resources.IconStarStrap,
                 BootstrapperIcon.Icon2008 => Properties.Resources.Icon2008,
                 BootstrapperIcon.Icon2011 => Properties.Resources.Icon2011,
                 BootstrapperIcon.IconEarly2015 => Properties.Resources.IconEarly2015,
@@ -61,7 +61,7 @@ namespace Voidstrap.Extensions
                 BootstrapperIcon.Icon2017 => Properties.Resources.Icon2017,
                 BootstrapperIcon.Icon2019 => Properties.Resources.Icon2019,
                 BootstrapperIcon.Icon2022 => Properties.Resources.Icon2022,
-                _ => Properties.Resources.IconVoidstrap
+                _ => Properties.Resources.IconStarStrap
             };
         }
     }

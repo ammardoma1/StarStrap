@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.Enums
+namespace StarStrap.Enums
 {
     public enum Theme
     {
@@ -6,7 +6,7 @@
         Default,
         Dark,
         Light,
-        Voidstrap,
+        StarStrap,
         UltraGray,
         Berry,
         Blue,
@@ -17,6 +17,15 @@
         Purple,
         Red,
         Yellow,
-        Custom
+        Midnight,
+        Nebula,
+        Aurora,
+        Crimson,
+        Sunset,
+        Frost,
+        Void,
+        Sakura,
+        Galaxy,
+        Neon
     }
 }

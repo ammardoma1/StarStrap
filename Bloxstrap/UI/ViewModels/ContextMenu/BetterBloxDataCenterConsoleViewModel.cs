@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.ObjectModel;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Voidstrap.Enums;
+using StarStrap.Enums;
 
-namespace Voidstrap.UI.ViewModels.ContextMenu
+namespace StarStrap.UI.ViewModels.ContextMenu
 {
     public class BetterBloxDataCenterConsoleViewModel : NotifyPropertyChangedViewModel
     {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,9 +6,9 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
-using Voidstrap;
+using StarStrap;
 
-namespace Voidstrap.RobloxInterfaces
+namespace StarStrap.RobloxInterfaces
 {
     public class ApplicationSettings
     {

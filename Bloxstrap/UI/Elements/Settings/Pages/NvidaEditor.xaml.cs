@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
@@ -9,12 +9,12 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Threading;
 using System.Xml;
-using Voidstrap.Integrations;
-using Voidstrap.Models;
-using Voidstrap.UI.Elements.Dialogs;
+using StarStrap.Integrations;
+using StarStrap.Models;
+using StarStrap.UI.Elements.Dialogs;
 using Wpf.Ui.Controls;
 
-namespace Voidstrap.UI.Elements.Settings.Pages
+namespace StarStrap.UI.Elements.Settings.Pages
 {
     public partial class NvidiaFFlagEditorPage : UiPage, INotifyPropertyChanged
     {
@@ -25,7 +25,7 @@ namespace Voidstrap.UI.Elements.Settings.Pages
             Path.Combine(Paths.Base, "NipProfiles");
 
         private static readonly string NipPath =
-            Path.Combine(NipDirectory, "Voidstrap.nip");
+            Path.Combine(NipDirectory, "StarStrap.nip");
 
         private FileSystemWatcher? _watcher;
         private bool _pendingSave;
@@ -189,7 +189,7 @@ namespace Voidstrap.UI.Elements.Settings.Pages
             {
                 Title = "Export NVIDIA Profile",
                 Filter = "NVIDIA Profile (*.nip)|*.nip",
-                FileName = "Voidstrap.nip"
+                FileName = "StarStrap.nip"
             };
 
             if (dialog.ShowDialog() != true)
@@ -295,7 +295,7 @@ namespace Voidstrap.UI.Elements.Settings.Pages
         {
             Directory.CreateDirectory(NipDirectory);
 
-            _watcher = new FileSystemWatcher(NipDirectory, "Voidstrap.nip")
+            _watcher = new FileSystemWatcher(NipDirectory, "StarStrap.nip")
             {
                 NotifyFilter = NotifyFilters.LastWrite | NotifyFilters.Size
             };
@@ -362,7 +362,7 @@ namespace Voidstrap.UI.Elements.Settings.Pages
         @"<?xml version=""1.0"" encoding=""utf-16""?>
 <ArrayOfProfile>
   <Profile>
-    <ProfileName>Voidstrap</ProfileName>
+    <ProfileName>StarStrap</ProfileName>
     <Executeables>
       <string>robloxplayerbeta.exe</string>
     </Executeables>

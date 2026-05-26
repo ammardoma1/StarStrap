@@ -1,8 +1,8 @@
-﻿using System.Collections.ObjectModel;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
-using static Voidstrap.UI.Elements.Settings.Pages.FastFlagEditorPage;
+using static StarStrap.UI.Elements.Settings.Pages.FastFlagEditorPage;
 
-namespace Voidstrap.Models
+namespace StarStrap.Models
 {
     public class FastFlag : INotifyPropertyChanged
     {

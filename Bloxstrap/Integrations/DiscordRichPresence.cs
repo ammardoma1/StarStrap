@@ -8,14 +8,14 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using DiscordRPC;
-using Voidstrap.Models.RobloxApi;
-using Voidstrap.Models.VoidstrapRPC;
+using StarStrap.Models.RobloxApi;
+using StarStrap.Models.StarStrapRPC;
 
-namespace Voidstrap.Integrations
+namespace StarStrap.Integrations
 {
     public class DiscordRichPresence : IDisposable
     {
-        private readonly DiscordRpcClient _rpcClient = new("1005469189907173486");
+        private readonly DiscordRpcClient _rpcClient = new("1508536029303410779");
         private readonly ActivityWatcher _activityWatcher;
         private readonly ConcurrentQueue<Message> _messageQueue = new();
         private readonly SemaphoreSlim _updateLock = new(1, 1);
@@ -86,7 +86,7 @@ namespace Voidstrap.Integrations
             }
             else if (message.Command == "SetRichPresence")
             {
-                if (!TryDeserializePresence(message.Data, out Voidstrap.Models.VoidstrapRPC.RichPresence? presenceData))
+                if (!TryDeserializePresence(message.Data, out StarStrap.Models.StarStrapRPC.RichPresence? presenceData))
                     return;
 
                 _currentPresence.Details = UpdateField(_currentPresence.Details, presenceData.Details, _originalPresence.Details, 128);
@@ -100,11 +100,11 @@ namespace Voidstrap.Integrations
                 UpdatePresence();
         }
 
-        private static bool TryDeserializePresence(JsonElement data, out Voidstrap.Models.VoidstrapRPC.RichPresence? presence)
+        private static bool TryDeserializePresence(JsonElement data, out StarStrap.Models.StarStrapRPC.RichPresence? presence)
         {
             try
             {
-                presence = data.Deserialize<Voidstrap.Models.VoidstrapRPC.RichPresence>();
+                presence = data.Deserialize<StarStrap.Models.StarStrapRPC.RichPresence>();
                 return presence != null;
             }
             catch
@@ -381,7 +381,7 @@ namespace Voidstrap.Integrations
         private async Task<(string key, string text)> GetSmallImageAsync(ActivityData activity)
         {
             if (!App.Settings.Prop.ShowAccountOnRichPresence)
-                return ("voidstrap", "Voidstrap");
+                return ("StarStrap", "StarStrap");
 
             try
             {
@@ -390,7 +390,7 @@ namespace Voidstrap.Integrations
             }
             catch
             {
-                return ("voidstrap", "Voidstrap");
+                return ("StarStrap", "StarStrap");
             }
         }
 

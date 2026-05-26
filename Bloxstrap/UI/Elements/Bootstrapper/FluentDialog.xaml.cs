@@ -1,5 +1,5 @@
-﻿using Voidstrap.UI.Elements.Bootstrapper.Base;
-using Voidstrap.UI.ViewModels.Bootstrapper;
+using StarStrap.UI.Elements.Bootstrapper.Base;
+using StarStrap.UI.ViewModels.Bootstrapper;
 using System;
 using System.ComponentModel;
 using System.IO;
@@ -9,14 +9,14 @@ using System.Windows.Shell;
 using System.Windows.Threading;
 using System.Windows.Forms;
 
-namespace Voidstrap.UI.Elements.Bootstrapper
+namespace StarStrap.UI.Elements.Bootstrapper
 {
     public partial class FluentDialog : IBootstrapperDialog
     {
         private readonly FluentDialogViewModel _viewModel;
         private bool _isClosing;
         private Window? _mainWindow;
-        public Voidstrap.Bootstrapper? Bootstrapper { get; set; }
+        public StarStrap.Bootstrapper? Bootstrapper { get; set; }
         public string? CustomBackgroundPath { get; set; }
 
         #region Properties
@@ -74,23 +74,23 @@ namespace Voidstrap.UI.Elements.Bootstrapper
             _viewModel = new FluentDialogViewModel(this, aero);
             DataContext = _viewModel;
             _mainWindow = System.Windows.Application.Current.Windows
-            .OfType<Voidstrap.UI.Elements.Settings.MainWindow>()
+            .OfType<StarStrap.UI.Elements.Settings.MainWindow>()
             .FirstOrDefault();
             if (App.Settings.Prop.BackgroundWindow)
             {
                 _mainWindow?.Hide();
             }
-            Voidstrap.UI.Elements.Bootstrapper.AudioPlayerHelper.PlayStartupAudio();
+            StarStrap.UI.Elements.Bootstrapper.AudioPlayerHelper.PlayStartupAudio();
             this.Closed += (s, e) =>
             {
                 _mainWindow = System.Windows.Application.Current.Windows
-                .OfType<Voidstrap.UI.Elements.Settings.MainWindow>()
+                .OfType<StarStrap.UI.Elements.Settings.MainWindow>()
                 .FirstOrDefault();
                 if (App.Settings.Prop.BackgroundWindow)
                 {
                     _mainWindow?.Show();
                 }
-                Voidstrap.UI.Elements.Bootstrapper.AudioPlayerHelper.StopAudio();
+                StarStrap.UI.Elements.Bootstrapper.AudioPlayerHelper.StopAudio();
             };
             Title = App.Settings.Prop.BootstrapperTitle;
             Icon = App.Settings.Prop.BootstrapperIcon.GetIcon().GetImageSource();

@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace Voidstrap.Models
+namespace StarStrap.Models
 {
     public class LaunchFlag
     {

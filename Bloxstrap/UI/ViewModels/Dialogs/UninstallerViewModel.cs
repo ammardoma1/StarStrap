@@ -1,10 +1,10 @@
-﻿using System.Windows.Input;
+using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
 
-using Voidstrap.Resources;
-using Voidstrap;
+using StarStrap.Resources;
+using StarStrap;
 
-namespace Voidstrap.UI.ViewModels.Dialogs
+namespace StarStrap.UI.ViewModels.Dialogs
 {
     public class UninstallerViewModel
     {

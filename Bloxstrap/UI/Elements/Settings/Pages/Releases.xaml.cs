@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -18,12 +18,12 @@ using Wpf.Ui.Controls;
 using Process = System.Diagnostics.Process;
 using ProcessStartInfo = System.Diagnostics.ProcessStartInfo;
 
-namespace Voidstrap.UI.Elements.Settings.Pages
+namespace StarStrap.UI.Elements.Settings.Pages
 {
     public partial class ReleasesPage
     {
         private static readonly Uri ReleasesApiUri =
-            new("https://api.github.com/repos/voidstrap/Voidstrap/releases");
+            new("https://api.github.com/repos/StarStrap/StarStrap/releases");
 
         private static readonly HttpClient HttpClient = CreateHttpClient();
         private static readonly string CacheFile =
@@ -40,7 +40,7 @@ namespace Voidstrap.UI.Elements.Settings.Pages
         {
             var client = new HttpClient { Timeout = TimeSpan.FromSeconds(15) };
             client.DefaultRequestHeaders.UserAgent.ParseAdd(
-                "VoidstrapApp/1.0 (+https://github.com/voidstrap/Voidstrap)");
+                "StarStrapApp/1.0 (+https://github.com/StarStrap/StarStrap)");
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
             return client;

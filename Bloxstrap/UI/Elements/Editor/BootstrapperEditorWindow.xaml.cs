@@ -1,4 +1,4 @@
-﻿using System.Windows.Input;
+using System.Windows.Input;
 using System.Xml;
 
 using ICSharpCode.AvalonEdit.CodeCompletion;
@@ -7,13 +7,13 @@ using ICSharpCode.AvalonEdit.Editing;
 using ICSharpCode.AvalonEdit.Highlighting.Xshd;
 using ICSharpCode.AvalonEdit.Highlighting;
 
-using Voidstrap.UI.Elements.Base;
-using Voidstrap.UI.ViewModels.Editor;
+using StarStrap.UI.Elements.Base;
+using StarStrap.UI.ViewModels.Editor;
 using System.Windows;
-using Voidstrap;
+using StarStrap;
 using Wpf.Ui.Controls;
 
-namespace Voidstrap.UI.Elements.Editor
+namespace StarStrap.UI.Elements.Editor
 {
     /// <summary>
     /// Interaction logic for BootstrapperEditorWindow.xaml

@@ -1,4 +1,4 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Drawing;
@@ -11,13 +11,13 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
-using Voidstrap.Integrations;
-using Voidstrap.RobloxInterfaces;
-using Voidstrap.UI.ViewModels.Settings;
+using StarStrap.Integrations;
+using StarStrap.RobloxInterfaces;
+using StarStrap.UI.ViewModels.Settings;
 using Wpf.Ui.Controls;
 using Wpf.Ui.Mvvm.Interfaces;
 
-namespace Voidstrap.UI.Elements.Settings.Pages
+namespace StarStrap.UI.Elements.Settings.Pages
 {
     /// <summary>
     /// Interaction logic for ModsPage.xaml
@@ -72,10 +72,10 @@ namespace Voidstrap.UI.Elements.Settings.Pages
                     await Deployment.DownloadForModGenerator();
                 App.Logger?.WriteLine(LOG_IDENT, $"DownloadForModGenerator returned. Version: {version} ({versionHash})");
 
-                string VoidstrapTemp = Path.Combine(Path.GetTempPath(), "Voidstrap");
-                string luaPackagesDir = Path.Combine(VoidstrapTemp, "ExtraContent", "LuaPackages");
-                string extraTexturesDir = Path.Combine(VoidstrapTemp, "ExtraContent", "textures");
-                string contentTexturesDir = Path.Combine(VoidstrapTemp, "content", "textures");
+                string StarStrapTemp = Path.Combine(Path.GetTempPath(), "StarStrap");
+                string luaPackagesDir = Path.Combine(StarStrapTemp, "ExtraContent", "LuaPackages");
+                string extraTexturesDir = Path.Combine(StarStrapTemp, "ExtraContent", "textures");
+                string contentTexturesDir = Path.Combine(StarStrapTemp, "content", "textures");
 
                 void SafeExtract(string zipPath, string targetDir)
                 {
@@ -120,8 +120,8 @@ namespace Voidstrap.UI.Elements.Settings.Pages
                 Dictionary<string, string[]> mappings;
                 var assembly = Assembly.GetExecutingAssembly();
                 string resourceName = assembly.GetManifestResourceNames()
-                                              .FirstOrDefault(r => r.EndsWith("Voidstrap.Resources.mappings.json", StringComparison.OrdinalIgnoreCase))
-                                              ?? throw new FileNotFoundException("Could not find embedded resource 'Voidstrap.Resources.mappings.json'.");
+                                              .FirstOrDefault(r => r.EndsWith("StarStrap.Resources.mappings.json", StringComparison.OrdinalIgnoreCase))
+                                              ?? throw new FileNotFoundException("Could not find embedded resource 'StarStrap.Resources.mappings.json'.");
 
                 using (var stream = assembly.GetManifestResourceStream(resourceName))
                 using (var reader = new StreamReader(stream!))
@@ -133,7 +133,7 @@ namespace Voidstrap.UI.Elements.Settings.Pages
 
                 App.Logger?.WriteLine(LOG_IDENT, $"Loaded {resourceName} with {mappings.Count} top-level entries.");
 
-                string foundationImagesDir = Path.Combine(VoidstrapTemp, @"ExtraContent\LuaPackages\Packages\_Index\FoundationImages\FoundationImages");
+                string foundationImagesDir = Path.Combine(StarStrapTemp, @"ExtraContent\LuaPackages\Packages\_Index\FoundationImages\FoundationImages");
                 string? getImageSetDataPath = Directory.EnumerateFiles(foundationImagesDir, "GetImageSetData.lua", SearchOption.AllDirectories).FirstOrDefault();
 
                 App.Logger?.WriteLine(LOG_IDENT, getImageSetDataPath != null
@@ -162,33 +162,33 @@ namespace Voidstrap.UI.Elements.Settings.Pages
                 bool colorVoiceChat = VoiceChatCheckBox?.IsChecked == true;
 
                 App.Logger?.WriteLine(LOG_IDENT, "Starting RecolorAllPngs...");
-                ModGenerator.RecolorAllPngs(VoidstrapTemp, solidColor, gradient, getImageSetDataPath ?? string.Empty, CustomLogoPath, CustomSpinnerPath, (float)_gradientAngle, colorCursors, colorShiftlock, colorEmoteWheel, colorVoiceChat);
+                ModGenerator.RecolorAllPngs(StarStrapTemp, solidColor, gradient, getImageSetDataPath ?? string.Empty, CustomLogoPath, CustomSpinnerPath, (float)_gradientAngle, colorCursors, colorShiftlock, colorEmoteWheel, colorVoiceChat);
                 App.Logger?.WriteLine(LOG_IDENT, "RecolorAllPngs finished.");
 
                 DownloadStatusText.Text = "Cleaning up unnecessary files...";
                 var preservePaths = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
         {
-            Path.Combine(VoidstrapTemp, @"ExtraContent\LuaPackages\Packages\_Index\FoundationImages\FoundationImages\SpriteSheets")
+            Path.Combine(StarStrapTemp, @"ExtraContent\LuaPackages\Packages\_Index\FoundationImages\FoundationImages\SpriteSheets")
         };
 
                 foreach (var entry in mappings.Values)
-                    preservePaths.Add(Path.Combine(VoidstrapTemp, Path.Combine(entry)));
+                    preservePaths.Add(Path.Combine(StarStrapTemp, Path.Combine(entry)));
 
                 if (getImageSetDataPath != null) preservePaths.Add(getImageSetDataPath);
 
                 if (colorCursors)
                 {
-                    preservePaths.Add(Path.Combine(VoidstrapTemp, @"content\textures\Cursors\KeyboardMouse\IBeamCursor.png"));
-                    preservePaths.Add(Path.Combine(VoidstrapTemp, @"content\textures\Cursors\KeyboardMouse\ArrowCursor.png"));
-                    preservePaths.Add(Path.Combine(VoidstrapTemp, @"content\textures\Cursors\KeyboardMouse\ArrowFarCursor.png"));
+                    preservePaths.Add(Path.Combine(StarStrapTemp, @"content\textures\Cursors\KeyboardMouse\IBeamCursor.png"));
+                    preservePaths.Add(Path.Combine(StarStrapTemp, @"content\textures\Cursors\KeyboardMouse\ArrowCursor.png"));
+                    preservePaths.Add(Path.Combine(StarStrapTemp, @"content\textures\Cursors\KeyboardMouse\ArrowFarCursor.png"));
                 }
 
                 if (colorShiftlock)
-                    preservePaths.Add(Path.Combine(VoidstrapTemp, @"content\textures\MouseLockedCursor.png"));
+                    preservePaths.Add(Path.Combine(StarStrapTemp, @"content\textures\MouseLockedCursor.png"));
 
                 if (colorEmoteWheel)
                 {
-                    string emotesDir = Path.Combine(VoidstrapTemp, @"content\textures\ui\Emotes\Large");
+                    string emotesDir = Path.Combine(StarStrapTemp, @"content\textures\ui\Emotes\Large");
                     preservePaths.UnionWith(new[]
                     {
                 Path.Combine(emotesDir, "SelectedGradient.png"),
@@ -209,7 +209,7 @@ namespace Voidstrap.UI.Elements.Settings.Pages
 
                     foreach (var mapping in voiceChatMappings.Values)
                     {
-                        string baseDir = Path.Combine(VoidstrapTemp, mapping.BaseDir);
+                        string baseDir = Path.Combine(StarStrapTemp, mapping.BaseDir);
                         foreach (var file in mapping.Files)
                             preservePaths.Add(Path.Combine(baseDir, file));
                     }
@@ -242,7 +242,7 @@ namespace Voidstrap.UI.Elements.Settings.Pages
                 if (Directory.Exists(extraTexturesDir)) DeleteExcept(extraTexturesDir);
                 if (Directory.Exists(contentTexturesDir)) DeleteExcept(contentTexturesDir);
 
-                string infoPath = Path.Combine(VoidstrapTemp, "info.json");
+                string infoPath = Path.Combine(StarStrapTemp, "info.json");
                 object? colorInfo = solidColor.HasValue
                     ? new { SolidColor = $"#{solidColor.Value.R:X2}{solidColor.Value.G:X2}{solidColor.Value.B:X2}" }
                     : gradient != null && gradient.Count > 0
@@ -251,8 +251,8 @@ namespace Voidstrap.UI.Elements.Settings.Pages
 
                 var infoData = new
                 {
-                    VoidstrapVersion = App.Version,
-                    CreatedUsing = "Voidstrap",
+                    StarStrapVersion = App.Version,
+                    CreatedUsing = "StarStrap",
                     RobloxVersion = version,
                     RobloxVersionHash = versionHash,
                     OptionsUsed = new
@@ -272,12 +272,12 @@ namespace Voidstrap.UI.Elements.Settings.Pages
                     if (!Directory.Exists(Paths.Mods)) Directory.CreateDirectory(Paths.Mods);
 
                     int copiedFiles = 0;
-                    foreach (var file in Directory.GetFiles(VoidstrapTemp, "*", SearchOption.AllDirectories))
+                    foreach (var file in Directory.GetFiles(StarStrapTemp, "*", SearchOption.AllDirectories))
                     {
                         if (Path.GetExtension(file).Equals(".zip", StringComparison.OrdinalIgnoreCase))
                             continue;
 
-                        string relativePath = Path.GetRelativePath(VoidstrapTemp, file);
+                        string relativePath = Path.GetRelativePath(StarStrapTemp, file);
                         string destPath = Path.Combine(Paths.Mods, relativePath);
                         Directory.CreateDirectory(Path.GetDirectoryName(destPath)!);
                         File.Copy(file, destPath, true);
@@ -377,7 +377,7 @@ namespace Voidstrap.UI.Elements.Settings.Pages
             {
                 var asm = Assembly.GetExecutingAssembly();
                 string? resName = asm.GetManifestResourceNames()
-                    .FirstOrDefault(n => n.EndsWith(".png", StringComparison.OrdinalIgnoreCase) && n.Contains("Voidstrap.Resources"));
+                    .FirstOrDefault(n => n.EndsWith(".png", StringComparison.OrdinalIgnoreCase) && n.Contains("StarStrap.Resources"));
                 if (resName == null)
                     resName = asm.GetManifestResourceNames().FirstOrDefault(n => n.EndsWith(".png", StringComparison.OrdinalIgnoreCase));
                 if (resName == null) return;

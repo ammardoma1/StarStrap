@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Microsoft.Win32;
 
-namespace Voidstrap.Extensions
+namespace StarStrap.Extensions
 {
     public static class ThemeEx
     {
@@ -24,7 +24,7 @@ namespace Voidstrap.Extensions
             Theme.Default,
             Theme.Dark,
             Theme.Light,
-            Theme.Voidstrap,
+            Theme.StarStrap,
             Theme.UltraGray,
             Theme.Blue,
             Theme.Cyan,
@@ -34,8 +34,7 @@ namespace Voidstrap.Extensions
             Theme.Purple,
             Theme.Berry,
             Theme.Red,
-            Theme.Yellow,
-            Theme.Custom
+            Theme.Yellow
         };
     }
 }

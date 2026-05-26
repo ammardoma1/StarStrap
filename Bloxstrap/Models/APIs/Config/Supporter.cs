@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.Models.APIs.Config
+namespace StarStrap.Models.APIs.Config
 {
     public class Supporter
     {

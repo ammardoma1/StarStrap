@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace Voidstrap.UI.Elements.Bootstrapper
+namespace StarStrap.UI.Elements.Bootstrapper
 {
     public static class BackgroundEvents
     {

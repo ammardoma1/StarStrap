@@ -3,9 +3,9 @@ using System.Net.Http.Headers;
 using System.Net.NetworkInformation;
 using System.Text;
 using System.Text.Json;
-using Voidstrap.Integrations.SwiftTunnel.Models;
+using StarStrap.Integrations.SwiftTunnel.Models;
 
-namespace Voidstrap.Integrations.SwiftTunnel
+namespace StarStrap.Integrations.SwiftTunnel
 {
     /// <summary>
     /// HTTP client for SwiftTunnel API calls

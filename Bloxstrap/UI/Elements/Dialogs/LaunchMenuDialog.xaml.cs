@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,11 +11,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Voidstrap.UI.ViewModels.Dialogs;
-using Voidstrap.UI.ViewModels.Installer;
+using StarStrap.UI.ViewModels.Dialogs;
+using StarStrap.UI.ViewModels.Installer;
 using Wpf.Ui.Mvvm.Interfaces;
 
-namespace Voidstrap.UI.Elements.Dialogs
+namespace StarStrap.UI.Elements.Dialogs
 {
     /// <summary>
     /// Interaction logic for LaunchMenuDialog.xaml

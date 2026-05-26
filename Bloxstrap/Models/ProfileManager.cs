@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -9,9 +9,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
-using Voidstrap.Models;
+using StarStrap.Models;
 
-namespace Voidstrap.Integrations
+namespace StarStrap.Integrations
 {
     public static class NvidiaProfileManager
     {
@@ -31,7 +31,7 @@ namespace Voidstrap.Integrations
 @"<?xml version=""1.0"" encoding=""utf-16""?>
 <ArrayOfProfile>
   <Profile>
-    <ProfileName>Voidstrap</ProfileName>
+    <ProfileName>StarStrap</ProfileName>
     <Executeables>
       <string>robloxplayerbeta.exe</string>
     </Executeables>
@@ -73,7 +73,7 @@ namespace Voidstrap.Integrations
                 new XDeclaration("1.0", "utf-16", null),
                 new XElement("ArrayOfProfile",
                     new XElement("Profile",
-                        new XElement("ProfileName", "Voidstrap"),
+                        new XElement("ProfileName", "StarStrap"),
                         new XElement("Executeables",
                             new XElement("string", "robloxplayerbeta.exe")),
                         settings
@@ -335,12 +335,12 @@ namespace Voidstrap.Integrations
 
             Frontend.ShowMessageBox(
                 "NVIDIA Profile Inspector Opened.\n\n" +
-                "‚Ä¢ Search for: Roblox VR\n" +
-                "‚Ä¢ Select the profile\n" +
-                "‚Ä¢ Click ‚ùå Delete Profile\n" +
-                "‚Ä¢ Click Apply Changes\n" +
-                "‚Ä¢ Close NVIDIA Profile Inspector\n" +
-                "‚Ä¢ Click OK",
+                "ï Search for: Roblox VR\n" +
+                "ï Select the profile\n" +
+                "ï Click ? Delete Profile\n" +
+                "ï Click Apply Changes\n" +
+                "ï Close NVIDIA Profile Inspector\n" +
+                "ï Click OK",
                 System.Windows.MessageBoxImage.Warning
             );
 

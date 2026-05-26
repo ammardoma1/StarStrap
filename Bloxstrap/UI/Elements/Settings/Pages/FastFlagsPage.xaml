@@ -1,16 +1,16 @@
-﻿<ui:UiPage
-    x:Class="Voidstrap.UI.Elements.Settings.Pages.FastFlagsPage"
+<ui:UiPage
+    x:Class="StarStrap.UI.Elements.Settings.Pages.FastFlagsPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:controls="clr-namespace:Voidstrap.UI.Elements.Controls"
-    xmlns:local="clr-namespace:Voidstrap"
+    xmlns:controls="clr-namespace:StarStrap.UI.Elements.Controls"
+    xmlns:local="clr-namespace:StarStrap"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:models="clr-namespace:Voidstrap.UI.ViewModels"
-    xmlns:pages="clr-namespace:Voidstrap.UI.Elements.Settings.Pages"
-    xmlns:resources="clr-namespace:Voidstrap.Resources"
-    xmlns:settings="clr-namespace:Voidstrap.UI.ViewModels.Settings"
-    xmlns:conv="clr-namespace:Voidstrap.Converters"
+    xmlns:models="clr-namespace:StarStrap.UI.ViewModels"
+    xmlns:pages="clr-namespace:StarStrap.UI.Elements.Settings.Pages"
+    xmlns:resources="clr-namespace:StarStrap.Resources"
+    xmlns:settings="clr-namespace:StarStrap.UI.ViewModels.Settings"
+    xmlns:conv="clr-namespace:StarStrap.Converters"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     Title="FastFlagsPage"
     d:DataContext="{d:DesignInstance Type=settings:FastFlagsViewModel}"
@@ -466,16 +466,28 @@ Margin="8,0,8,0" />
         </ui:CardExpander>
 
         <StackPanel Margin="0,8,0,0">
-            <Button Name="CheckSystemButton"
-            Content="Apply Recommended"
-            HorizontalAlignment="Right"
-            Click="CheckSystemButton_Click"/>
+            <WrapPanel HorizontalAlignment="Right" Margin="0,0,0,8">
+                <Button Name="CheckSystemButton"
+                        Content="Apply Recommended"
+                        Margin="0,0,8,0"
+                        Click="CheckSystemButton_Click"/>
+                <Button Name="ApplyPerformanceButton"
+                        Content="Apply best performance"
+                        Margin="0,0,8,0"
+                        Click="ApplyPerformance_Click"/>
+                <Button Name="ApplyQualityButton"
+                        Content="Apply best quality"
+                        Margin="0,0,8,0"
+                        Click="ApplyQuality_Click"/>
+                <Button Name="ApplyNvidiaButton"
+                        Content="Apply nvidea"
+                        Click="ApplyNvidia_Click"/>
+            </WrapPanel>
 
             <ProgressBar Name="SystemCheckProgress"
                  HorizontalAlignment="Right"
                  Height="20"
                  Width="150"
-                 Margin="0,8,0,0"
                  Minimum="0"
                  Maximum="100"
                  Value="0"

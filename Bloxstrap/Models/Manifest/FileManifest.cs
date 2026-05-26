@@ -1,6 +1,6 @@
-﻿using Voidstrap.RobloxInterfaces;
+using StarStrap.RobloxInterfaces;
 
-namespace Voidstrap.Models.Manifest
+namespace StarStrap.Models.Manifest
 {
     public class FileManifest : List<ManifestFile>
     {

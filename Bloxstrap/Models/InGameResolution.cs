@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 using System.Windows;
-using static Voidstrap.Models.Persistable.AppSettings;
+using static StarStrap.Models.Persistable.AppSettings;
 
-namespace Voidstrap.Integrations
+namespace StarStrap.Integrations
 {
     public static class InGameResolutionApplier
     {

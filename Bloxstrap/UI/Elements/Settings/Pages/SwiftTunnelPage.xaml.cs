@@ -1,9 +1,9 @@
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Navigation;
-using Voidstrap.UI.ViewModels.Settings;
+using StarStrap.UI.ViewModels.Settings;
 
-namespace Voidstrap.UI.Elements.Settings.Pages
+namespace StarStrap.UI.Elements.Settings.Pages
 {
     /// <summary>
     /// Interaction logic for SwiftTunnelPage.xaml

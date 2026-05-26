@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.Models
+namespace StarStrap.Models
 {
     internal class WatcherData
     {

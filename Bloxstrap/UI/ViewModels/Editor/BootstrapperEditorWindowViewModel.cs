@@ -1,4 +1,4 @@
-﻿using Voidstrap.UI.Elements.Bootstrapper;
+using StarStrap.UI.Elements.Bootstrapper;
 using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
@@ -7,10 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-using Voidstrap.UI.ViewModels;
-using Voidstrap;
+using StarStrap.UI.ViewModels;
+using StarStrap;
 
-namespace Voidstrap.UI.ViewModels.Editor
+namespace StarStrap.UI.ViewModels.Editor
 {
     public class BootstrapperEditorWindowViewModel : NotifyPropertyChangedViewModel
     {

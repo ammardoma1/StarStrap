@@ -2,9 +2,9 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
-using Voidstrap.Integrations.SwiftTunnel.Models;
+using StarStrap.Integrations.SwiftTunnel.Models;
 
-namespace Voidstrap.Integrations.SwiftTunnel
+namespace StarStrap.Integrations.SwiftTunnel
 {
     /// <summary>
     /// Manages SwiftTunnel authentication state and credentials

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -6,14 +6,14 @@ using System.Runtime.InteropServices;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Voidstrap.UI.Elements.Settings.Pages;
-using static Voidstrap.Models.Persistable.AppSettings;
+using StarStrap.UI.Elements.Settings.Pages;
+using static StarStrap.Models.Persistable.AppSettings;
 
-namespace Voidstrap.Integrations
+namespace StarStrap.Integrations
 {
     public class ActivityWatcher : IDisposable
     {
-        private const string GameMessageEntry = "[FLog::Output] [VoidstrapRPC]";
+        private const string GameMessageEntry = "[FLog::Output] [StarStrapRPC]";
         private const string GameJoiningEntry = "[FLog::Output] ! Joining game";
         private const string GameTeleportingEntry = "[FLog::GameJoinUtil] GameJoinUtil::initiateTeleportToPlace";
         private const string GameJoiningPrivateServerEntry = "[FLog::GameJoinUtil] GameJoinUtil::joinGamePostPrivateServer";
@@ -30,7 +30,7 @@ namespace Voidstrap.Integrations
         private const string GameJoiningUniversePattern = @"universeid:([0-9]+).*userid:([0-9]+)";
         private const string GameJoiningUDMUXPattern = @"UDMUX Address = ([0-9\.]+), Port = [0-9]+ \| RCC Server Address = ([0-9\.]+), Port = [0-9]+";
         private const string GameJoinedEntryPattern = @"serverId:\s*([0-9a-f\-]{36})";
-        private const string GameMessageEntryPattern = @"\[VoidstrapRPC\] (.*)";
+        private const string GameMessageEntryPattern = @"\[StarStrapRPC\] (.*)";
         private const string GamePlayerJoinLeavePattern = @"(added|removed): (.*) (.*[0-9])";
         private const string GameMessageLogPattern = @"Success Text: (.*)";
         private const int ENUM_CURRENT_SETTINGS = -1;

@@ -1,4 +1,4 @@
-﻿using ICSharpCode.AvalonEdit;
+using ICSharpCode.AvalonEdit;
 using ICSharpCode.AvalonEdit.Document;
 using ICSharpCode.AvalonEdit.Rendering;
 using System;
@@ -11,7 +11,7 @@ using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Threading;
 
-namespace Voidstrap.UI.Elements.ContextMenu
+namespace StarStrap.UI.Elements.ContextMenu
 {
     public partial class CustomThemeEditor
     {
@@ -187,7 +187,7 @@ namespace Voidstrap.UI.Elements.ContextMenu
                 }
 
                 var lines = LogConsole.Text.Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
-                var lastErrorIndex = Array.LastIndexOf(lines, lines.LastOrDefault(l => l.StartsWith("❌")));
+                var lastErrorIndex = Array.LastIndexOf(lines, lines.LastOrDefault(l => l.StartsWith("?")));
 
                 string errorText;
                 if (lastErrorIndex >= 0)
@@ -307,7 +307,7 @@ namespace Voidstrap.UI.Elements.ContextMenu
         private string DefaultTheme() =>
 @"<ResourceDictionary xmlns=""http://schemas.microsoft.com/winfx/2006/xaml/presentation""
                     xmlns:x=""http://schemas.microsoft.com/winfx/2006/xaml""
-                    xmlns:base=""clr-namespace:Voidstrap.UI.Elements.Base"">
+                    xmlns:base=""clr-namespace:StarStrap.UI.Elements.Base"">
 
     <SolidColorBrush x:Key=""NewTextEditorBackground"" Color=""#CC1E1E1E"" />
     <SolidColorBrush x:Key=""NewTextEditorForeground"" Color=""#FF1C1C1C"" />

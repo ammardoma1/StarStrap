@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.Extensions
+namespace StarStrap.Extensions
 {
     static class EmojiTypeEx
     {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -12,7 +12,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
 
-namespace Voidstrap.UI.Elements.Settings.Pages
+namespace StarStrap.UI.Elements.Settings.Pages
 {
     public partial class ServerBrowserPage
     {
@@ -248,7 +248,7 @@ namespace Voidstrap.UI.Elements.Settings.Pages
             loadCts = new CancellationTokenSource();
             var token = loadCts.Token;
 
-            SetStatus("Loading servers…");
+            SetStatus("Loading servers");
 
             try
             {
@@ -329,7 +329,7 @@ namespace Voidstrap.UI.Elements.Settings.Pages
                 if (token.IsCancellationRequested || isUnloaded)
                     return;
 
-                SetStatus($"Rate limited — retrying in {remaining}s…");
+                SetStatus($"Rate limited  retrying in {remaining}s");
                 await Task.Delay(1000, token);
                 remaining--;
             }

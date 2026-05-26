@@ -1,10 +1,10 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Media;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace Voidstrap.UI.Elements.Bootstrapper
+namespace StarStrap.UI.Elements.Bootstrapper
 {
     public partial class CustomDialog
     {

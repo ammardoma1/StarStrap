@@ -1,7 +1,7 @@
-﻿using System.Windows.Forms;
+using System.Windows.Forms;
 using System.Windows.Shell;
 
-namespace Voidstrap.UI
+namespace StarStrap.UI
 {
     public interface IBootstrapperDialog
     {

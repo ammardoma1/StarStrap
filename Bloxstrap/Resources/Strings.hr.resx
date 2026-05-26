@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Bootstrapper.AutoUpdateFailed" xml:space="preserve">
-    <value>Voidstrap se nije uspio automatski ažurirati na verziju {0}. Molimo ažurirajte ju ručno tako da je preuzmete i pokrenete sa web-stranice.</value>
+    <value>StarStrap se nije uspio automatski ažurirati na verziju {0}. Molimo ažurirajte ju ručno tako da je preuzmete i pokrenete sa web-stranice.</value>
   </data>
   <data name="Bootstrapper.ConfirmLaunch" xml:space="preserve">
     <value>Roblox je trenutno pokrenut, pokretanjem novog primera će ga ugasiti. Da li si siguran da želiš da nastaviš sa pokretanjem?</value>
@@ -127,13 +127,13 @@
     <value>Roblox trenutno možda ne radi. Pogledajte {0} za više informacija.</value>
   </data>
   <data name="Dialog.Connectivity.BadConnection" xml:space="preserve">
-    <value>Veza se nije mogla uspostaviti, što vjerojatno ukazuje na nestabilnu internetsku vezu ili blokadu vatrozida. Ako je Vaša veza u redu, molimo provjerite blokira li Vaš antivirus Voidstrap.</value>
+    <value>Veza se nije mogla uspostaviti, što vjerojatno ukazuje na nestabilnu internetsku vezu ili blokadu vatrozida. Ako je Vaša veza u redu, molimo provjerite blokira li Vaš antivirus StarStrap.</value>
   </data>
   <data name="Bootstrapper.FirstRunUninstall" xml:space="preserve">
-    <value>Vi morate prvo instalirati Voidstrap pre deinstaliranja.</value>
+    <value>Vi morate prvo instalirati StarStrap pre deinstaliranja.</value>
   </data>
   <data name="Bootstrapper.NotEnoughSpace" xml:space="preserve">
-    <value>Voidstrap nema dovoljno prostora na disku kako bi preuzeo i instalirao Roblox. Molimo, oslobodite nešto prostora pa zatim pokušajte ponovno.</value>
+    <value>StarStrap nema dovoljno prostora na disku kako bi preuzeo i instalirao Roblox. Molimo, oslobodite nešto prostora pa zatim pokušajte ponovno.</value>
   </data>
   <data name="Bootstrapper.Status.ApplyingModifications" xml:space="preserve">
     <value>Primjenjivanje modifikacija Robloxa...</value>
@@ -157,8 +157,8 @@
   <data name="Bootstrapper.Status.Upgrading" xml:space="preserve">
     <value>Nadogradnja {product}...</value>
   </data>
-  <data name="Bootstrapper.Status.UpgradingVoidstrap" xml:space="preserve">
-    <value>Dobivanje najnovije verzije Voidstrapa...</value>
+  <data name="Bootstrapper.Status.UpgradingStarStrap" xml:space="preserve">
+    <value>Dobivanje najnovije verzije StarStrapa...</value>
   </data>
   <data name="Bootstrapper.Status.WaitingOtherInstances" xml:space="preserve">
     <value>Čekanje ostalih slučajeva...</value>
@@ -172,10 +172,10 @@
     <comment>Text for style previews that use text button that says "Cancel"</comment>
   </data>
   <data name="Bootstrapper.SuccessfullyUninstalled" xml:space="preserve">
-    <value>Voidstrap je uspješno deinstaliran</value>
+    <value>StarStrap je uspješno deinstaliran</value>
   </data>
   <data name="Bootstrapper.Uninstall.RobloxRunning" xml:space="preserve">
-    <value>Roblox se trenutno pokreće, ali mora biti zatvoren prije nego što se Voidstrap deinstalira. Želite li ugasiti Roblox sada?</value>
+    <value>Roblox se trenutno pokreće, ali mora biti zatvoren prije nego što se StarStrap deinstalira. Želite li ugasiti Roblox sada?</value>
   </data>
   <data name="Bootstrapper.WMFNotFound" xml:space="preserve">
     <value>Roblox zahteva upotrebu Windows Media Foundation komponenta. Izgleda da vam nedostaju, verovatno zato što koristite N ediciju Windows-a. Molimo, prvo ih instalirajte, a zatim pokrenite Roblox.</value>
@@ -279,22 +279,22 @@ Kliknite za više informacija</value>
     <value>Greška sa povezivanjem</value>
   </data>
   <data name="Dialog.Connectivity.UnableToConnect" xml:space="preserve">
-    <value>Voidstrap se ne može povezati na {0}</value>
+    <value>StarStrap se ne može povezati na {0}</value>
     <comment>{0} is the name of a service (i.e. Roblox, GitHub)</comment>
   </data>
   <data name="Dialog.Exception.CopyLogContents" xml:space="preserve">
     <value>Kopiranje aktivnosti</value>
   </data>
   <data name="Dialog.Exception.Info.1" xml:space="preserve">
-    <value>Došlo je do izuzetka tokom pokretanja Voidstrap-a</value>
+    <value>Došlo je do izuzetka tokom pokretanja StarStrap-a</value>
   </data>
   <data name="Dialog.Exception.Info.2" xml:space="preserve">
-    <value>Prvo provjerite [Voidstrap Wiki]({0}) kako biste vidjeli je li ovaj problem već riješen.
+    <value>Prvo provjerite [StarStrap Wiki]({0}) kako biste vidjeli je li ovaj problem već riješen.
 
 Ako nije, molimo prijavite ovu iznimku preko [GitHub issue]({1}) zajedno sa kopijom log datoteke koja je bila stvorena.</value>
   </data>
   <data name="Dialog.Exception.Title" xml:space="preserve">
-    <value>Voidstrap Izuzetak</value>
+    <value>StarStrap Izuzetak</value>
   </data>
   <data name="Common.Custom" xml:space="preserve">
     <value>Prilagođeno</value>
@@ -309,10 +309,10 @@ Ako nije, molimo prijavite ovu iznimku preko [GitHub issue]({1}) zajedno sa kopi
     <value>Lažni Byfron (2023)</value>
   </data>
   <data name="Enums.BootstrapperStyle.ClassicFluentDialog" xml:space="preserve">
-    <value>Voidstrap (Klasično)</value>
+    <value>StarStrap (Klasično)</value>
   </data>
   <data name="Enums.BootstrapperStyle.FluentAeroDialog" xml:space="preserve">
-    <value>Voidstrap (Stakleno)</value>
+    <value>StarStrap (Stakleno)</value>
   </data>
   <data name="Enums.BootstrapperStyle.LegacyDialog2008" xml:space="preserve">
     <value>Nasledje (2008-2011)</value>
@@ -396,10 +396,10 @@ Ako nije, molimo prijavite ovu iznimku preko [GitHub issue]({1}) zajedno sa kopi
     <value>Svjetlo</value>
   </data>
   <data name="InstallChecker.Updated" xml:space="preserve">
-    <value>Voidstrap je nadograđen na v{0}</value>
+    <value>StarStrap je nadograđen na v{0}</value>
   </data>
   <data name="InstallChecker.VersionDifferentThanInstalled" xml:space="preserve">
-    <value>Verzija Voidstrapa koju ste pokrenuli je drukčija od verzije koju imate instaliranu. Želite li nadograditi svoju trenutno instaliranu verziju?</value>
+    <value>Verzija StarStrapa koju ste pokrenuli je drukčija od verzije koju imate instaliranu. Želite li nadograditi svoju trenutno instaliranu verziju?</value>
   </data>
   <data name="Menu.About.Contributors" xml:space="preserve">
     <value>Suradnici</value>
@@ -408,7 +408,7 @@ Ako nije, molimo prijavite ovu iznimku preko [GitHub issue]({1}) zajedno sa kopi
     <value>Kod</value>
   </data>
   <data name="Menu.About.Contributors.Description" xml:space="preserve">
-    <value>Ovo su ljudi koji su dali značajan doprinos Voidstrapu, Pomagajući da se učiniti onakvim kakav jest.</value>
+    <value>Ovo su ljudi koji su dali značajan doprinos StarStrapu, Pomagajući da se učiniti onakvim kakav jest.</value>
   </data>
   <data name="Menu.About.Contributors.FeatureIdeas" xml:space="preserve">
     <value>Značajne Ideje</value>
@@ -454,7 +454,7 @@ Ako nije, molimo prijavite ovu iznimku preko [GitHub issue]({1}) zajedno sa kopi
     <value>Imajte na umu da se neće sve vaše promjene primjeniti sve dok ne zatvorite sve trenutno otvorene Roblox Slučajeve.</value>
   </data>
   <data name="Menu.AlreadyRunning.Title" xml:space="preserve">
-    <value>Voidstrap je već pokrenut</value>
+    <value>StarStrap je već pokrenut</value>
   </data>
   <data name="Menu.Appearance.Bootstrapper.Description" xml:space="preserve">
     <value>Možete ga učiniti da izgleda drugačije, retro, ili čak samo kao Roblox.</value>
@@ -481,7 +481,7 @@ Ako nije, molimo prijavite ovu iznimku preko [GitHub issue]({1}) zajedno sa kopi
     <value>Naslov</value>
   </data>
   <data name="Menu.Appearance.Description" xml:space="preserve">
-    <value>Konfigurirajte kako da Voidstrap izgleda.</value>
+    <value>Konfigurirajte kako da StarStrap izgleda.</value>
   </data>
   <data name="Menu.Appearance.Global.Theme.Title" xml:space="preserve">
     <value>Globalna tema</value>
@@ -505,10 +505,10 @@ Ako nije, molimo prijavite ovu iznimku preko [GitHub issue]({1}) zajedno sa kopi
     <value>Izgled</value>
   </data>
   <data name="Menu.Behaviour.AutoUpdate.Description" xml:space="preserve">
-    <value>Voidstrap će se automatski provjeriti i ažurirati kada se Roblox pokrene.</value>
+    <value>StarStrap će se automatski provjeriti i ažurirati kada se Roblox pokrene.</value>
   </data>
   <data name="Menu.Behaviour.AutoUpdate.Title" xml:space="preserve">
-    <value>Automatsko Ažuriranje Voidstrap-a</value>
+    <value>Automatsko Ažuriranje StarStrap-a</value>
   </data>
   <data name="Menu.Behaviour.ConfirmLaunches.Description" xml:space="preserve">
     <value>Spriječite zatvaranja svoje postojeće igre od slučajno pokretanja druge.</value>
@@ -517,7 +517,7 @@ Ako nije, molimo prijavite ovu iznimku preko [GitHub issue]({1}) zajedno sa kopi
     <value>Upit za potvrdu otvaranja novog Roblox primera</value>
   </data>
   <data name="Menu.Behaviour.Description" xml:space="preserve">
-    <value>Konfigurirajte što da Voidstrap napravi kada pokreće Roblox.</value>
+    <value>Konfigurirajte što da StarStrap napravi kada pokreće Roblox.</value>
   </data>
   <data name="Menu.Behaviour.ForceRobloxReinstall.Description" xml:space="preserve">
     <value>Roblox će se reinstalirati nakon sljedećeg pokretanja.</value>
@@ -635,7 +635,7 @@ NE koristite ovo da biste uvozili velike 'liste zastavica' koje su napravili dru
     <value>Framerate granica</value>
   </data>
   <data name="Menu.FastFlags.Presets.HideGuis.Description" xml:space="preserve">
-    <value>Prebacuje se sa [keyboard shortcuts]({0}). Radi samo ako ste u [Voidstrap group]({1}).</value>
+    <value>Prebacuje se sa [keyboard shortcuts]({0}). Radi samo ako ste u [StarStrap group]({1}).</value>
   </data>
   <data name="Menu.FastFlags.Presets.HideGuis.Title" xml:space="preserve">
     <value>Uključi mogućnost za skrivanje GUIa</value>
@@ -659,10 +659,10 @@ NE koristite ovo da biste uvozili velike 'liste zastavica' koje su napravili dru
     <value>Datoteke ikona</value>
   </data>
   <data name="Menu.InstallLocation.CantInstall" xml:space="preserve">
-    <value>Voidstrap ne može biti instaliran ovdje. Molimo, odaberite drugu lokaciju, ili koristite zadanu lokaciju tako da kliknete gumb za resetiranje.</value>
+    <value>StarStrap ne može biti instaliran ovdje. Molimo, odaberite drugu lokaciju, ili koristite zadanu lokaciju tako da kliknete gumb za resetiranje.</value>
   </data>
   <data name="Menu.InstallLocation.NotEmpty" xml:space="preserve">
-    <value>Mapa koju ste odabrali za instalaciju Voidstrapa već postoji i NIJE prazna. Toplo se preporučuje da se Voidstrap instalira u nezavisnoj mapi.
+    <value>Mapa koju ste odabrali za instalaciju StarStrapa već postoji i NIJE prazna. Toplo se preporučuje da se StarStrap instalira u nezavisnoj mapi.
 
 Promjena na iduću lokaciju je preporučena: {0}
 
@@ -673,7 +673,7 @@ Promjena na iduću lokaciju je preporučena: {0}
     <value>Morate postaviti lokaciju instalacije</value>
   </data>
   <data name="Menu.InstallLocation.NoWritePerms" xml:space="preserve">
-    <value>Voidstrap nema write pristup lokaciji koju ste odabrali. Molimo odaberite drugu lokaciju.</value>
+    <value>StarStrap nema write pristup lokaciji koju ste odabrali. Molimo odaberite drugu lokaciju.</value>
   </data>
   <data name="Menu.Integrations.ActivityTracking" xml:space="preserve">
     <value>Praćenje aktivnosti</value>
@@ -724,7 +724,7 @@ Promjena na iduću lokaciju je preporučena: {0}
     <value>Ne izlazite iz Desktop aplikacije</value>
   </data>
   <data name="Menu.Integrations.EnableActivityTracking.Description" xml:space="preserve">
-    <value>Dopušta Voidstrapu da detektira koju Roblox igru igrate. Neki dodatci možda zahtjevaju ovo.</value>
+    <value>Dopušta StarStrapu da detektira koju Roblox igru igrate. Neki dodatci možda zahtjevaju ovo.</value>
   </data>
   <data name="Menu.Integrations.EnableActivityTracking.Title" xml:space="preserve">
     <value>Odobrite praćenje aktivnosti</value>
@@ -821,7 +821,7 @@ Promjena na iduću lokaciju je preporučena: {0}
     <value>Podešavanja Sačuvana!</value>
   </data>
   <data name="Menu.Title" xml:space="preserve">
-    <value>Voidstrap postavke</value>
+    <value>StarStrap postavke</value>
   </data>
   <data name="Dialog.LanguageSelector.Header" xml:space="preserve">
     <value>Odaberi preferirani jezik</value>
@@ -851,7 +851,7 @@ Promjena na iduću lokaciju je preporučena: {0}
     <value>Korisničko sučelje i Raspored</value>
   </data>
   <data name="Menu.FastFlags.ManagerEnabled.Title" xml:space="preserve">
-    <value>Dozvoli Voidstrap-u da upravlja s Fast Flags</value>
+    <value>Dozvoli StarStrap-u da upravlja s Fast Flags</value>
   </data>
   <data name="Menu.FastFlags.ManagerEnabled.Description" xml:space="preserve">
     <value>Onemogućavanje će spriječiti da se bilo što ovdje konfigurirano primjeni na Roblox.</value>
@@ -896,7 +896,7 @@ Promjena na iduću lokaciju je preporučena: {0}
     <value>Onemogući teksture terena</value>
   </data>
   <data name="Dialog.Connectivity.UnableToDownload" xml:space="preserve">
-    <value>Voidstrap ne može preuzeti Roblox</value>
+    <value>StarStrap ne može preuzeti Roblox</value>
   </data>
   <data name="Dialog.Connectivity.UnableToDownloadReason" xml:space="preserve">
     <value>Roblox se trenutno ne može preuzeti. Molimo pročitajte sljedeću stranicu za pomoć za više informacija: {0}</value>
@@ -917,7 +917,7 @@ Promjena na iduću lokaciju je preporučena: {0}
     <value>Unos za '{0}' ne važi jer vrijednost mora biti broj</value>
   </data>
   <data name="Logger.NoWriteMode" xml:space="preserve">
-    <value>Log datoteka neće biti napisana za ovaj pokret jer Voidstrap ne može pisati u folderu na '{0}'</value>
+    <value>Log datoteka neće biti napisana za ovaj pokret jer StarStrap ne može pisati u folderu na '{0}'</value>
   </data>
   <data name="Common.Default" xml:space="preserve">
     <value>Zadano</value>
@@ -932,7 +932,7 @@ Promjena na iduću lokaciju je preporučena: {0}
     <value>Unos za '{0}' nije valjan jer filter mjesta nije formatiran pravilno.</value>
   </data>
   <data name="Installer.Title" xml:space="preserve">
-    <value>Instalator Voidstrapa</value>
+    <value>Instalator StarStrapa</value>
   </data>
   <data name="Installer.Welcome.Title" xml:space="preserve">
     <value>Dobrodošli</value>
@@ -951,18 +951,18 @@ Promjena na iduću lokaciju je preporučena: {0}
     <value>Dalje</value>
   </data>
   <data name="Installer.Welcome.MainText" xml:space="preserve">
-    <value>Hvala što ste preuzeli Voidstrap.
+    <value>Hvala što ste preuzeli StarStrap.
 
-Jedine službene web-stranice za preuzimanje Voidstrapa su {0} i {1}, molimo Vas da provjerite jeste li ga preuzeli sa službenog izvora.
+Jedine službene web-stranice za preuzimanje StarStrapa su {0} i {1}, molimo Vas da provjerite jeste li ga preuzeli sa službenog izvora.
 
-Proces instalacije će biti brz i jednostavan, i moći ćete konfigurirati bilo koje Voidstrap postavke nakon instalacije.</value>
+Proces instalacije će biti brz i jednostavan, i moći ćete konfigurirati bilo koje StarStrap postavke nakon instalacije.</value>
     <comment>{0} and {1} are URLs</comment>
   </data>
   <data name="Installer.Welcome.NextToContinue" xml:space="preserve">
     <value>Molimo kliknite 'Dalje' da biste nastavili.</value>
   </data>
   <data name="Installer.Welcome.UpdateNotice" xml:space="preserve">
-    <value>Pokušavate instalirati verziju {0} Voidstrapa, ali najnovija dostupna verzija je {1}. Želite li ju preuzeti?</value>
+    <value>Pokušavate instalirati verziju {0} StarStrapa, ali najnovija dostupna verzija je {1}. Želite li ju preuzeti?</value>
   </data>
   <data name="Installer.Install.Location.Title" xml:space="preserve">
     <value>Odaberite gdje želite instalirati</value>
@@ -983,16 +983,16 @@ Proces instalacije će biti brz i jednostavan, i moći ćete konfigurirati bilo 
     <value>Start Meni ikona</value>
   </data>
   <data name="Installer.Completion.Text" xml:space="preserve">
-    <value>Voidstrap se je uspješno instalirao.
+    <value>StarStrap se je uspješno instalirao.
 
-Roblox još nije bio instaliran, to će se dogoditi kada ga pokrenete s Voidstrapom prvi put. Ali, prije nego li to napravite, možda biste htjeli prvo konfigurirati Voidstrap postavke.
+Roblox još nije bio instaliran, to će se dogoditi kada ga pokrenete s StarStrapom prvi put. Ali, prije nego li to napravite, možda biste htjeli prvo konfigurirati StarStrap postavke.
 
-Isto tako, izbjegnite koristiti "Roblox Player" prečac za pokretanje Roblox-a, jer se Voidstrap neće pokrenuti s Roblox-om. Ako ne vidite Voidstrap kako se pojavljuje kada pokrećete s web-stranice, samo pokrenite Roblox sa Voidstrapom jedan put s desktopa da biste to popravili.
+Isto tako, izbjegnite koristiti "Roblox Player" prečac za pokretanje Roblox-a, jer se StarStrap neće pokrenuti s Roblox-om. Ako ne vidite StarStrap kako se pojavljuje kada pokrećete s web-stranice, samo pokrenite Roblox sa StarStrapom jedan put s desktopa da biste to popravili.
 
 Što biste htjeli napraviti?</value>
   </data>
   <data name="Installer.Completion.Settings.Title" xml:space="preserve">
-    <value>Konfigurirajte Voidstrap postavke</value>
+    <value>Konfigurirajte StarStrap postavke</value>
   </data>
   <data name="Installer.Completion.Settings.Description" xml:space="preserve">
     <value>Igrajte se sa svim značajkama koje Vam nudi</value>
@@ -1004,22 +1004,22 @@ Isto tako, izbjegnite koristiti "Roblox Player" prečac za pokretanje Roblox-a, 
     <value>Prebacit će Vas u desktop aplikaciju kad je sve gotovo</value>
   </data>
   <data name="Uninstaller.Title" xml:space="preserve">
-    <value>Deinstaliraj Voidstrap</value>
+    <value>Deinstaliraj StarStrap</value>
   </data>
   <data name="Uninstaller.Text" xml:space="preserve">
-    <value>Deinstaliranje će maknuti Voidstrap s Vašeg sustava, i automatski rekonfigurirati zadani Roblox pokretač ako je još dalje instaliran.
+    <value>Deinstaliranje će maknuti StarStrap s Vašeg sustava, i automatski rekonfigurirati zadani Roblox pokretač ako je još dalje instaliran.
 
 Ako deinstalirate ili reinstalirate zato što imate poteškoće s Roblox-om, prvo pročitajte [ovu stranicu za pomoć]({0}).
 
-Proces deinstalacije se možda neće moći počistiti do kraja sam sa sobom, pa ćete možda trebati ručno počistiti bilo koje preostale datoteke gdje je Voidstrap bio instaliran.
+Proces deinstalacije se možda neće moći počistiti do kraja sam sa sobom, pa ćete možda trebati ručno počistiti bilo koje preostale datoteke gdje je StarStrap bio instaliran.
 
-Voidstrap je bio instaliran na "{1}".</value>
+StarStrap je bio instaliran na "{1}".</value>
   </data>
   <data name="Uninstaller.KeepData.Label" xml:space="preserve">
     <value>Zadrži moje postavke i modifikacije</value>
   </data>
   <data name="Uninstaller.KeepData.Description" xml:space="preserve">
-    <value>Biti će zadržani na mjestu gdje je Voidstrap bio instaliran, i bit će automatski vraćeni na reinstalaciji.</value>
+    <value>Biti će zadržani na mjestu gdje je StarStrap bio instaliran, i bit će automatski vraćeni na reinstalaciji.</value>
   </data>
   <data name="Uninstaller.Uninstall" xml:space="preserve">
     <value>Deinstaliraj</value>
@@ -1040,19 +1040,19 @@ Voidstrap je bio instaliran na "{1}".</value>
     <value>Trenutno nemate WebView2 runtime instaliran. Neke Roblox-ove značajke neće raditi ispravno bez toga, poput desktop aplikacije. Želite li to sada preuzeti?</value>
   </data>
   <data name="Dialog.CannotCreateShortcuts" xml:space="preserve">
-    <value>Voidstrap nije mogao kreirati prečace za Desktop i Start Meni. Pokušajte ih kreirati kasnije preko postavki.</value>
+    <value>StarStrap nije mogao kreirati prečace za Desktop i Start Meni. Pokušajte ih kreirati kasnije preko postavki.</value>
   </data>
   <data name="Dialog.Exception.Info.2.Alt" xml:space="preserve">
-    <value>Prvo pogledajte [Voidstrap Wiki]({0}) kako biste vidjeli je li ovaj problem već bio adresiran s popravkom.
+    <value>Prvo pogledajte [StarStrap Wiki]({0}) kako biste vidjeli je li ovaj problem već bio adresiran s popravkom.
 
-Ako nije, onda molimo prijavite ovu iznimku održavateljima ovog fork-a. NEMOJTE ovo prijaviti na Voidstrapove GitHub probleme, jer ovo nije službena inačica.</value>
+Ako nije, onda molimo prijavite ovu iznimku održavateljima ovog fork-a. NEMOJTE ovo prijaviti na StarStrapove GitHub probleme, jer ovo nije službena inačica.</value>
     <comment>"fork" in general means "a variation of" or "a different version of". You can alternatively write the first sentence as "...to the maintainers of this version."</comment>
   </data>
   <data name="Installer.Install.Shortcuts.Description" xml:space="preserve">
     <value>Ovo su opći prečaci koji pokažu izbornik za pokretanje s više izbora. Prečaci za specifične funkcije mogu biti kreirane kasnije u postavkama.</value>
   </data>
   <data name="Menu.Shortcuts.Description" xml:space="preserve">
-    <value>Konfigurirajte kako Voidstrap može biti spremno pokrenut.</value>
+    <value>Konfigurirajte kako StarStrap može biti spremno pokrenut.</value>
   </data>
   <data name="Menu.Shortcuts.General.Title" xml:space="preserve">
     <value>Općenito</value>
@@ -1082,7 +1082,7 @@ Ako nije, onda molimo prijavite ovu iznimku održavateljima ovog fork-a. NEMOJTE
     <value>Molimo pričekajte da deinstalacija dovrši.</value>
   </data>
   <data name="About.Title" xml:space="preserve">
-    <value>O Voidstrapu</value>
+    <value>O StarStrapu</value>
   </data>
   <data name="About.Licenses.Title" xml:space="preserve">
     <value>Licence</value>
@@ -1095,7 +1095,7 @@ Ako nije, onda molimo prijavite ovu iznimku održavateljima ovog fork-a. NEMOJTE
     <value>Imate promjene koje niste spremili. Jeste li sigurni da želite zatvoriti bez spremanja?</value>
   </data>
   <data name="InstallChecker.VersionLessThanInstalled" xml:space="preserve">
-    <value>Verzija Voidstrapa koju ste pokrenuli je starija od verzije koju trenutno imate instaliranu.
+    <value>Verzija StarStrapa koju ste pokrenuli je starija od verzije koju trenutno imate instaliranu.
 Problemi se mogu pojaviti i postavke će se možda promijeniti. Reinstalacija je preporučena.
 Jeste li sigurni da želite nastaviti?</value>
   </data>
@@ -1108,7 +1108,7 @@ Jeste li sigurni da želite nastaviti?</value>
   <data name="Dialog.PlayerError.HelpInformation" xml:space="preserve">
     <value>Za informacije o tome zašto bi se ovo moglo događati i kako se može riješiti, molimo pročitajte [ovaj članak za pomoć]({0}).
 
-Provjerite radi li Robloxov [originalni pokretač]({1}). Ako ne radi, onda ovo nije poteškoća kod Voidstrapa. Ako radi, onda pogledajte članak za pomoć.</value>
+Provjerite radi li Robloxov [originalni pokretač]({1}). Ako ne radi, onda ovo nije poteškoća kod StarStrapa. Ako radi, onda pogledajte članak za pomoć.</value>
   </data>
   <data name="Common.NetworkError" xml:space="preserve">
     <value>Nije moguće učitati podatke zbog greške s mrežom.</value>
@@ -1120,7 +1120,7 @@ Provjerite radi li Robloxov [originalni pokretač]({1}). Ako ne radi, onda ovo n
     <value>Podržavatelji</value>
   </data>
   <data name="About.Supporters.Description" xml:space="preserve">
-    <value>Ovo su ljudi koji podržavaju Voidstrap preko Ko-fi. Veliko hvala svima ovdje!
+    <value>Ovo su ljudi koji podržavaju StarStrap preko Ko-fi. Veliko hvala svima ovdje!
 Svaka osoba ovdje je rangirana svojim sveukupnim zalogom.</value>
   </data>
   <data name="JsonManager.SettingsLoadFailed" xml:space="preserve">
@@ -1151,12 +1151,12 @@ Svaka osoba ovdje je rangirana svojim sveukupnim zalogom.</value>
     <value>Za ovaj pokret, Roblox se neće provjeriti za nadogradnje i promjene modifikacijama se neće primijeniti.</value>
   </data>
   <data name="Dialog.Connectivity.RobloxUpgradeNeeded" xml:space="preserve">
-    <value>Voidstrap ne može nastaviti zato što Roblox treba biti instaliran ili nadograđen.</value>
+    <value>StarStrap ne može nastaviti zato što Roblox treba biti instaliran ili nadograđen.</value>
   </data>
   <data name="Installer.Install.CannotOverwrite" xml:space="preserve">
-    <value>Voidstrap se je prije instalirao na ovu lokaciju i još dalje je prisutan, ali instalator ne može prebrisati staru izvršnu datoteku.
+    <value>StarStrap se je prije instalirao na ovu lokaciju i još dalje je prisutan, ali instalator ne može prebrisati staru izvršnu datoteku.
 
-Molimo ručno izbrišite Voidstrap.exe iz lokacije instalacije ili pokušajte ponovno pokrenuti Vaš sustav, i onda ponovno probajte instalirati nakon.</value>
+Molimo ručno izbrišite StarStrap.exe iz lokacije instalacije ili pokušajte ponovno pokrenuti Vaš sustav, i onda ponovno probajte instalirati nakon.</value>
   </data>
   <data name="Common.NotAvailable" xml:space="preserve">
     <value>Nije dostupno</value>
@@ -1168,7 +1168,7 @@ Molimo ručno izbrišite Voidstrap.exe iz lokacije instalacije ili pokušajte po
     <value>Konfigurirajte parametre aplikacije kao što je ponašanje DPI skaliranja i [optimizacije cijelog zaslona]({0}).</value>
   </data>
   <data name="Common.RobloxNotInstalled" xml:space="preserve">
-    <value>Roblox još nije bio instaliran. Molimo pokrenite Roblox koristeći Voidstrap barem jednom prije pokušavanja korištenja ove opcije.</value>
+    <value>Roblox još nije bio instaliran. Molimo pokrenite Roblox koristeći StarStrap barem jednom prije pokušavanja korištenja ove opcije.</value>
   </data>
   <data name="Installer.ShouldCancel" xml:space="preserve">
     <value>Jeste li sigurni da želite prekinuti instalaciju?</value>
@@ -1186,10 +1186,10 @@ Molimo ručno izbrišite Voidstrap.exe iz lokacije instalacije ili pokušajte po
     <value>Izdvojite Roblox ikone u mapu</value>
   </data>
   <data name="Menu.Shortcuts.ExtractIcons.Description" xml:space="preserve">
-    <value>Dopušta Vam da koristite Voidstrapov raspon Roblox ikona za Vaše prečace. [Pogledajte kako.]({0})</value>
+    <value>Dopušta Vam da koristite StarStrapov raspon Roblox ikona za Vaše prečace. [Pogledajte kako.]({0})</value>
   </data>
   <data name="Dialog.RegistryWriteError" xml:space="preserve">
-    <value>Voidstrap ne može pisati u Windows Registar. Antivirus se vjerojatno miješa i proizvodi poteškoće. Molimo provjerite postoji li išta što bi moglo ograničiti Voidstrapove operacije.</value>
+    <value>StarStrap ne može pisati u Windows Registar. Antivirus se vjerojatno miješa i proizvodi poteškoće. Molimo provjerite postoji li išta što bi moglo ograničiti StarStrapove operacije.</value>
   </data>
   <data name="About.Supporters.Monthly" xml:space="preserve">
     <value>Mjesečno</value>
@@ -1197,13 +1197,13 @@ Molimo ručno izbrišite Voidstrap.exe iz lokacije instalacije ili pokušajte po
   <data name="About.Supporters.OneOff" xml:space="preserve">
     <value>Jednokratno</value>
   </data>
-  <data name="Menu.Voidstrap.Description" xml:space="preserve">
-    <value>Konfigurirajte postavke vezane za samo Voidstrapovo ponašanje.</value>
+  <data name="Menu.StarStrap.Description" xml:space="preserve">
+    <value>Konfigurirajte postavke vezane za samo StarStrapovo ponašanje.</value>
   </data>
-  <data name="Menu.Voidstrap.Analytics.Title" xml:space="preserve">
+  <data name="Menu.StarStrap.Analytics.Title" xml:space="preserve">
     <value>Uključi slanje analitike</value>
   </data>
-  <data name="Menu.Voidstrap.Analytics.Description" xml:space="preserve">
+  <data name="Menu.StarStrap.Analytics.Description" xml:space="preserve">
     <value>Anonimno je i nije ništa zlo, obećajemo. Za uvid u ono što pokupljamo i zašto, pogledajte našu [politiku privatnosti]({0}).</value>
   </data>
   <data name="Common.Analytics" xml:space="preserve">
@@ -1227,7 +1227,7 @@ Kada uključen, automatski će pokrenuti Roblox nakon zatvaranja postavki, i pon
 Želite li uključiti testni mod?</value>
   </data>
   <data name="About.Translators.Description" xml:space="preserve">
-    <value>Svi Voidstrapovi prijevodi su crowdsourcani preko [Crowdin-a]({0}). Svi navedeni ovdje su ljudi koji su velikodušno volontirali svoje vrijeme i trud kako bi pomogli lokalizirati Voidstrap. Veliko hvala svima ovdje!</value>
+    <value>Svi StarStrapovi prijevodi su crowdsourcani preko [Crowdin-a]({0}). Svi navedeni ovdje su ljudi koji su velikodušno volontirali svoje vrijeme i trud kako bi pomogli lokalizirati StarStrap. Veliko hvala svima ovdje!</value>
   </data>
   <data name="Common.Navigation.Install" xml:space="preserve">
     <value>Instaliraj</value>
@@ -1244,7 +1244,7 @@ Kada uključen, automatski će pokrenuti Roblox nakon zatvaranja postavki, i pon
     <value>Verzija {0}</value>
   </data>
   <data name="Bootstrapper.FilesInUse" xml:space="preserve">
-    <value>Voidstrap je pokušao ažurirati Roblox, ali ne može jer se Robloxove datoteke još dalje koriste.
+    <value>StarStrap je pokušao ažurirati Roblox, ali ne može jer se Robloxove datoteke još dalje koriste.
 
 Molimo zatvorite bilo koju aplikaciju koja bi mogla koristiti Robloxove datoteke, i ponovno pokrenite.</value>
     <comment>This is *not* for when Roblox is still running when trying to upgrade. This applies to files being open (i.e. image assets)</comment>
@@ -1255,10 +1255,10 @@ Molimo zatvorite bilo koju aplikaciju koja bi mogla koristiti Robloxove datoteke
   </data>
   <data name="Common.Export" xml:space="preserve">
     <value>Izvezi</value>
-    <comment>Currently used under the "Voidstrap" settings tab for the button to export diagnostic data</comment>
+    <comment>Currently used under the "StarStrap" settings tab for the button to export diagnostic data</comment>
   </data>
   <data name="Dialog.Connectivity.Preventing" xml:space="preserve">
-    <value>Nešto vjerojatno prekida Voidstrap od spajanja na internet.</value>
+    <value>Nešto vjerojatno prekida StarStrap od spajanja na internet.</value>
   </data>
   <data name="Dialog.Connectivity.TimedOut" xml:space="preserve">
     <value>Veza je istekla, što može naznačiti lošu internetsku vezu ili blokadu vatrozida.</value>

@@ -1,4 +1,4 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
@@ -9,14 +9,14 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
-using Voidstrap;
-using Voidstrap.UI.Elements.Dialogs;
-using Voidstrap.UI.Elements.Settings.Pages;
+using StarStrap;
+using StarStrap.UI.Elements.Dialogs;
+using StarStrap.UI.Elements.Settings.Pages;
 using Wpf.Ui.Mvvm.Contracts;
 using static ICSharpCode.SharpZipLib.Zip.ExtendedUnixData;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
-namespace Voidstrap.UI.Elements.Settings.Pages
+namespace StarStrap.UI.Elements.Settings.Pages
 {
     /// <summary>
     /// Interaction logic for FastFlagEditorPage.xaml
@@ -684,7 +684,7 @@ namespace Voidstrap.UI.Elements.Settings.Pages
             {
                 Filter = "JSON files (*.json)|*.json|Text files (*.txt)|*.txt",
                 Title = "Save JSON or TXT File",
-                FileName = "VoidstrapExport.json"
+                FileName = "StarStrapExport.json"
             };
 
             if (saveFileDialog.ShowDialog() == true)

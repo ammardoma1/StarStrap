@@ -1,9 +1,9 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using Voidstrap.UI.Elements.Bootstrapper.Base;
+using StarStrap.UI.Elements.Bootstrapper.Base;
 
-namespace Voidstrap.UI.Elements.Bootstrapper
+namespace StarStrap.UI.Elements.Bootstrapper
 {
     // basically just the modern dialog
     public partial class ProgressDialog : WinFormsDialogBase

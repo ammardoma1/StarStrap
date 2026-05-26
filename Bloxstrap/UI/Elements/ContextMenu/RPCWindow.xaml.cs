@@ -1,8 +1,8 @@
-﻿using System.Windows;
-using Voidstrap.UI.ViewModels;
-using Voidstrap.UI.ViewModels.ContextMenu;
+using System.Windows;
+using StarStrap.UI.ViewModels;
+using StarStrap.UI.ViewModels.ContextMenu;
 
-namespace Voidstrap.UI.Elements.ContextMenu
+namespace StarStrap.UI.Elements.ContextMenu
 {
     public partial class RPCWindow
     {

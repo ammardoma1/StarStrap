@@ -1,12 +1,12 @@
-﻿<ui:UiPage
-    x:Class="Voidstrap.UI.Elements.Settings.Pages.NvidiaFastFlagsPage"
+<ui:UiPage
+    x:Class="StarStrap.UI.Elements.Settings.Pages.NvidiaFastFlagsPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:controls="clr-namespace:Voidstrap.UI.Elements.Controls"
-    xmlns:settings="clr-namespace:Voidstrap.UI.ViewModels.Settings"
+    xmlns:controls="clr-namespace:StarStrap.UI.Elements.Controls"
+    xmlns:settings="clr-namespace:StarStrap.UI.ViewModels.Settings"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-    xmlns:resources="clr-namespace:Voidstrap.Resources"
-    xmlns:models="clr-namespace:Voidstrap.UI.ViewModels"
+    xmlns:resources="clr-namespace:StarStrap.Resources"
+    xmlns:models="clr-namespace:StarStrap.UI.ViewModels"
     Title="NVIDIA FastFlags"
     Scrollable="True">
 
@@ -35,7 +35,7 @@
 
             <ui:CardAction
             Command="models:GlobalViewModel.OpenWebpageCommand"
-            CommandParameter="https://voidstrapp.netlify.app/documentation/documentation#nvidia_fflags"
+            CommandParameter="https://voidstrap.netlify.app/documentation/documentation#nvidia_fflags"
             Margin="0,8,0,0"
             Icon="Book24">
                 <StackPanel>

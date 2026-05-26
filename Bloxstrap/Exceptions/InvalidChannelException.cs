@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.Exceptions
+namespace StarStrap.Exceptions
 {
     public class InvalidChannelException : Exception
     {

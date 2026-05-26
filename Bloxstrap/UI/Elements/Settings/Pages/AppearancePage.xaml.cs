@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -6,11 +6,11 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
-using Voidstrap.Enums;
-using Voidstrap.UI.Elements.ContextMenu;
-using Voidstrap.UI.ViewModels.Settings;
+using StarStrap.Enums;
+using StarStrap.UI.Elements.ContextMenu;
+using StarStrap.UI.ViewModels.Settings;
 
-namespace Voidstrap.UI.Elements.Settings.Pages
+namespace StarStrap.UI.Elements.Settings.Pages
 {
     public partial class AppearancePage
     {
@@ -23,7 +23,6 @@ namespace Voidstrap.UI.Elements.Settings.Pages
 
             _appearanceViewModel = new AppearanceViewModel();
             DataContext = _appearanceViewModel;
-            _ = DownloadCustomThemeAsync();
         }
 
         #region Existing Theme Logic
@@ -46,7 +45,7 @@ namespace Voidstrap.UI.Elements.Settings.Pages
             }
 
             Frontend.ShowMessageBox(
-                "Theme applied!\nIf the theme didn't apply, please restart Voidstrap.",
+                "Theme applied!\nIf the theme didn't apply, please restart StarStrap.",
                 MessageBoxImage.Information
             );
         }
@@ -95,35 +94,6 @@ namespace Voidstrap.UI.Elements.Settings.Pages
             var editor = new CustomThemeEditor();
             editor.Owner = Window.GetWindow(this);
             editor.ShowDialog();
-        }
-
-        #endregion
-
-        #region Custom Theme Download
-
-        private async Task DownloadCustomThemeAsync()
-        {
-            var url = "https://raw.githubusercontent.com/KloBraticc/VoidstrapCustomThemes/main/Custom.xaml";
-            var destinationPath = Path.Combine(Paths.Base, "Custom.xaml");
-
-            try
-            {
-                if (!File.Exists(destinationPath))
-                {
-                    using var http = new HttpClient();
-                    var xaml = await http.GetStringAsync(url);
-
-                    Directory.CreateDirectory(Paths.Base);
-                    await File.WriteAllTextAsync(destinationPath, xaml);
-                }
-            }
-            catch (Exception ex)
-            {
-                Frontend.ShowMessageBox(
-                    $"Failed to download custom theme:\n{ex.Message}",
-                    MessageBoxImage.Warning
-                );
-            }
         }
 
         #endregion

@@ -1,4 +1,4 @@
-﻿using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,9 +7,9 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-using Voidstrap.Integrations;
+using StarStrap.Integrations;
 
-namespace Voidstrap.UI.ViewModels.ContextMenu
+namespace StarStrap.UI.ViewModels.ContextMenu
 {
     internal class ServerHistoryViewModel : NotifyPropertyChangedViewModel, IDisposable
     {

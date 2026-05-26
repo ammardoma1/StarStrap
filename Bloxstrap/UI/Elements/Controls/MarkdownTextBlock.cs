@@ -1,4 +1,4 @@
-﻿using Voidstrap.UI.ViewModels;
+using StarStrap.UI.ViewModels;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Markup;
@@ -8,7 +8,7 @@ using Markdig.Syntax.Inlines;
 using Markdig;
 using System.Windows.Media;
 
-namespace Voidstrap.UI.Elements.Controls
+namespace StarStrap.UI.Elements.Controls
 {
     /// <summary>
     /// TextBlock with markdown support.
@@ -114,7 +114,7 @@ namespace Voidstrap.UI.Elements.Controls
             var lastBlock = document.Last();
 
             // matt was evidently very tired on the night he was first writing this
-            // https://github.com/BloxstrapLabs/Bloxstrap/blob/289b9dec77cf35b2cc6504019bc9c7701626be1f/Voidstrap/UI/Elements/Controls/MarkdownTextBlock.cs#L111
+            // https://github.com/BloxstrapLabs/Bloxstrap/blob/289b9dec77cf35b2cc6504019bc9c7701626be1f/StarStrap/UI/Elements/Controls/MarkdownTextBlock.cs#L111
             foreach (var block in document)
             {
                 if (block is not ParagraphBlock paragraphBlock || paragraphBlock.Inline is null)

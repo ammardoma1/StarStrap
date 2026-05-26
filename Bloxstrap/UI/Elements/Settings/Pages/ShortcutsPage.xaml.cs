@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
@@ -11,18 +11,18 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
-using Voidstrap.UI.ViewModels.Settings;
+using StarStrap.UI.ViewModels.Settings;
 using Wpf.Ui.Controls;
 using System.Runtime.InteropServices;
 using SD = System.Drawing;
 
-namespace Voidstrap.UI.Elements.Settings.Pages
+namespace StarStrap.UI.Elements.Settings.Pages
 {
     public partial class ShortcutsPage : UiPage
     {
         private readonly string instanceFilePath = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
-            "Voidstrap",
+            "StarStrap",
             "instance_id.txt"
         );
 
@@ -87,7 +87,7 @@ namespace Voidstrap.UI.Elements.Settings.Pages
                 {
                     string folderPath = Path.Combine(
                         Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
-                        "Voidstrap"
+                        "StarStrap"
                     );
                     Directory.CreateDirectory(folderPath);
                     string privateCodePath = Path.Combine(folderPath, "PrivateServerCode.txt");
@@ -262,7 +262,7 @@ namespace Voidstrap.UI.Elements.Settings.Pages
 
                 string folder = Path.Combine(
                     Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
-                    "Voidstrap",
+                    "StarStrap",
                     "Icons"
                 );
                 Directory.CreateDirectory(folder);

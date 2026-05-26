@@ -1,17 +1,17 @@
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using Voidstrap.Enums;
-using Voidstrap.UI.Elements.Base;
+using StarStrap.Enums;
+using StarStrap.UI.Elements.Base;
 
-namespace Voidstrap.UI.Elements.Dialogs
+namespace StarStrap.UI.Elements.Dialogs
 {
     /// <summary>
     /// Dialog for previewing cursor types before applying them
     /// </summary>
     public partial class CursorPreviewDialog : WpfUiWindow
     {
-        public Voidstrap.Enums.CursorType? SelectedCursor { get; private set; }
+        public StarStrap.Enums.CursorType? SelectedCursor { get; private set; }
 
         public CursorPreviewDialog()
         {
@@ -23,15 +23,15 @@ namespace Voidstrap.UI.Elements.Dialogs
         {
             var cursors = new[]
             {
-                Voidstrap.Enums.CursorType.Default,
-                Voidstrap.Enums.CursorType.FPSCursor,
-                Voidstrap.Enums.CursorType.CleanCursor,
-                Voidstrap.Enums.CursorType.DotCursor,
-                Voidstrap.Enums.CursorType.StoofsCursor,
-                Voidstrap.Enums.CursorType.From2006,
-                Voidstrap.Enums.CursorType.From2013,
-                Voidstrap.Enums.CursorType.WhiteDotCursor,
-                Voidstrap.Enums.CursorType.VerySmallWhiteDot
+                StarStrap.Enums.CursorType.Default,
+                StarStrap.Enums.CursorType.FPSCursor,
+                StarStrap.Enums.CursorType.CleanCursor,
+                StarStrap.Enums.CursorType.DotCursor,
+                StarStrap.Enums.CursorType.StoofsCursor,
+                StarStrap.Enums.CursorType.From2006,
+                StarStrap.Enums.CursorType.From2013,
+                StarStrap.Enums.CursorType.WhiteDotCursor,
+                StarStrap.Enums.CursorType.VerySmallWhiteDot
             };
 
             foreach (var cursor in cursors)
@@ -41,7 +41,7 @@ namespace Voidstrap.UI.Elements.Dialogs
             }
         }
 
-        private FrameworkElement CreateCursorPreviewItem(Voidstrap.Enums.CursorType cursor)
+        private FrameworkElement CreateCursorPreviewItem(StarStrap.Enums.CursorType cursor)
         {
             var border = new System.Windows.Controls.Border
             {
@@ -112,35 +112,35 @@ namespace Voidstrap.UI.Elements.Dialogs
             return border;
         }
 
-        private string GetCursorImagePath(Voidstrap.Enums.CursorType cursor)
+        private string GetCursorImagePath(StarStrap.Enums.CursorType cursor)
         {
             return cursor switch
             {
-                Voidstrap.Enums.CursorType.FPSCursor => "Cursor/FPSCursor/ArrowCursor.png",
-                Voidstrap.Enums.CursorType.CleanCursor => "Cursor/CleanCursor/ArrowCursor.png",
-                Voidstrap.Enums.CursorType.DotCursor => "Cursor/DotCursor/ArrowCursor.png",
-                Voidstrap.Enums.CursorType.StoofsCursor => "Cursor/StoofsCursor/ArrowCursor.png",
-                Voidstrap.Enums.CursorType.From2006 => "Cursor/From2006/ArrowCursor.png",
-                Voidstrap.Enums.CursorType.From2013 => "Cursor/From2013/ArrowCursor.png",
-                Voidstrap.Enums.CursorType.WhiteDotCursor => "Cursor/WhiteDotCursor/ArrowCursor.png",
-                Voidstrap.Enums.CursorType.VerySmallWhiteDot => "Cursor/VerySmallWhiteDot/ArrowCursor.png",
+                StarStrap.Enums.CursorType.FPSCursor => "Cursor/FPSCursor/ArrowCursor.png",
+                StarStrap.Enums.CursorType.CleanCursor => "Cursor/CleanCursor/ArrowCursor.png",
+                StarStrap.Enums.CursorType.DotCursor => "Cursor/DotCursor/ArrowCursor.png",
+                StarStrap.Enums.CursorType.StoofsCursor => "Cursor/StoofsCursor/ArrowCursor.png",
+                StarStrap.Enums.CursorType.From2006 => "Cursor/From2006/ArrowCursor.png",
+                StarStrap.Enums.CursorType.From2013 => "Cursor/From2013/ArrowCursor.png",
+                StarStrap.Enums.CursorType.WhiteDotCursor => "Cursor/WhiteDotCursor/ArrowCursor.png",
+                StarStrap.Enums.CursorType.VerySmallWhiteDot => "Cursor/VerySmallWhiteDot/ArrowCursor.png",
                 _ => string.Empty
             };
         }
 
-        private string GetCursorDisplayName(Voidstrap.Enums.CursorType cursor)
+        private string GetCursorDisplayName(StarStrap.Enums.CursorType cursor)
         {
             return cursor switch
             {
-                Voidstrap.Enums.CursorType.Default => "Default",
-                Voidstrap.Enums.CursorType.FPSCursor => "FPS Cursor (V1)",
-                Voidstrap.Enums.CursorType.CleanCursor => "Clean Cursor",
-                Voidstrap.Enums.CursorType.DotCursor => "Dot Cursor",
-                Voidstrap.Enums.CursorType.StoofsCursor => "Stoofs Cursor",
-                Voidstrap.Enums.CursorType.From2006 => "2006 Legacy Cursor",
-                Voidstrap.Enums.CursorType.From2013 => "2013 Legacy Cursor",
-                Voidstrap.Enums.CursorType.WhiteDotCursor => "White Dot Cursor",
-                Voidstrap.Enums.CursorType.VerySmallWhiteDot => "Very Small White Dot",
+                StarStrap.Enums.CursorType.Default => "Default",
+                StarStrap.Enums.CursorType.FPSCursor => "FPS Cursor (V1)",
+                StarStrap.Enums.CursorType.CleanCursor => "Clean Cursor",
+                StarStrap.Enums.CursorType.DotCursor => "Dot Cursor",
+                StarStrap.Enums.CursorType.StoofsCursor => "Stoofs Cursor",
+                StarStrap.Enums.CursorType.From2006 => "2006 Legacy Cursor",
+                StarStrap.Enums.CursorType.From2013 => "2013 Legacy Cursor",
+                StarStrap.Enums.CursorType.WhiteDotCursor => "White Dot Cursor",
+                StarStrap.Enums.CursorType.VerySmallWhiteDot => "Very Small White Dot",
                 _ => cursor.ToString()
             };
         }

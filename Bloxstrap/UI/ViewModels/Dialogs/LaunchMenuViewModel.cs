@@ -1,10 +1,10 @@
-﻿using System.Windows;
+using System.Windows;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
 
-using Voidstrap.UI.Elements.About;
+using StarStrap.UI.Elements.About;
 
-namespace Voidstrap.UI.ViewModels.Installer
+namespace StarStrap.UI.ViewModels.Installer
 {
     public class LaunchMenuViewModel
     {

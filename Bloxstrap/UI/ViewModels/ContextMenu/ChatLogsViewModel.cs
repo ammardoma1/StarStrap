@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
-using Voidstrap.Integrations;
-using Voidstrap.UI.ViewModels;
+using StarStrap.Integrations;
+using StarStrap.UI.ViewModels;
 
-namespace Voidstrap.UI.ViewModels.ContextMenu
+namespace StarStrap.UI.ViewModels.ContextMenu
 {
     internal class ChatLogsViewModel : NotifyPropertyChangedViewModel
     {

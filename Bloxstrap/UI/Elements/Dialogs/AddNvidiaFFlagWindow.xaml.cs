@@ -1,13 +1,13 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Xml.Linq;
-using Voidstrap.Models;
+using StarStrap.Models;
 
-namespace Voidstrap.UI.Elements.Dialogs
+namespace StarStrap.UI.Elements.Dialogs
 {
     public partial class AddNvidiaFFlagWindow// I think diddy coded thiss
     {

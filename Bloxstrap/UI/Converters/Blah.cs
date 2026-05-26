@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
 
-namespace Voidstrap.Converters
+namespace StarStrap.Converters
 {
     public sealed class EnumToVisibilityConverter : IValueConverter
     {

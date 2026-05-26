@@ -1,6 +1,6 @@
-﻿using Voidstrap;
+using StarStrap;
 
-namespace Voidstrap
+namespace StarStrap
 {
     internal class HttpClientLoggingHandler : MessageProcessingHandler
     {

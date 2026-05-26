@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 using System.Threading;
 using System.Windows;
 
-namespace Voidstrap
+namespace StarStrap
 {
     public class JsonManager<T> where T : class, new()
     {

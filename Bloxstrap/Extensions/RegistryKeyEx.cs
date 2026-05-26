@@ -1,6 +1,6 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 
-namespace Voidstrap.Extensions
+namespace StarStrap.Extensions
 {
     public static class RegistryKeyEx
     {

@@ -1,8 +1,8 @@
-﻿using System.Windows;
+using System.Windows;
 using System.Windows.Navigation;
-using Voidstrap.UI.ViewModels.Installer;
+using StarStrap.UI.ViewModels.Installer;
 
-namespace Voidstrap.UI.Elements.Installer.Pages
+namespace StarStrap.UI.Elements.Installer.Pages
 {
     /// <summary>
     /// Interaction logic for WelcomePage.xaml
@@ -33,11 +33,11 @@ namespace Voidstrap.UI.Elements.Installer.Pages
         }
         private void DonateButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Process.Start(new ProcessStartInfo("https://voidstrapp.netlify.app/donate/donate") { UseShellExecute = true });
+            Process.Start(new ProcessStartInfo("https://voidstrap.netlify.app/donate/donate") { UseShellExecute = true });
         }
         private void ContributorsButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Process.Start(new ProcessStartInfo("https://voidstrapp.netlify.app/contributors/contributors") { UseShellExecute = true });
+            Process.Start(new ProcessStartInfo("https://voidstrap.netlify.app/contributors/contributors") { UseShellExecute = true });
         }
     }
 }

@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Text.Json;
-using Voidstrap;
+using StarStrap;
 
-public static class VoidstrapRobloxSettingsManager // lowk didnt know what tf to name this file
+public static class StarStrapRobloxSettingsManager // lowk didnt know what tf to name this file
 {
-    public class VoidstrapRobloxSettings
+    public class StarStrapRobloxSettings
     {
         public int MemoryCleanerIntervalSeconds { get; set; }
     }
@@ -13,26 +13,26 @@ public static class VoidstrapRobloxSettingsManager // lowk didnt know what tf to
     private static readonly string FolderPath = Paths.Base;
 
     private static readonly string FilePath =
-        Path.Combine(FolderPath, "VoidstrapRobloxSaves.json");
+        Path.Combine(FolderPath, "StarStrapRobloxSaves.json");
 
-    public static VoidstrapRobloxSettings Load()
+    public static StarStrapRobloxSettings Load()
     {
         try
         {
             if (!File.Exists(FilePath))
-                return new VoidstrapRobloxSettings();
+                return new StarStrapRobloxSettings();
 
             string json = File.ReadAllText(FilePath);
-            return JsonSerializer.Deserialize<VoidstrapRobloxSettings>(json)
-                   ?? new VoidstrapRobloxSettings();
+            return JsonSerializer.Deserialize<StarStrapRobloxSettings>(json)
+                   ?? new StarStrapRobloxSettings();
         }
         catch
         {
-            return new VoidstrapRobloxSettings();
+            return new StarStrapRobloxSettings();
         }
     }
 
-    public static void Save(VoidstrapRobloxSettings settings)
+    public static void Save(StarStrapRobloxSettings settings)
     {
         try
         {

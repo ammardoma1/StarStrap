@@ -1,24 +1,24 @@
-﻿using System.Windows.Controls;
+using System.Windows.Controls;
 using Wpf.Ui.Controls.Interfaces;
 using Wpf.Ui.Mvvm.Contracts;
 using System.ComponentModel;
 using System.Windows;
 
-using Voidstrap.UI.ViewModels.Installer;
-using Voidstrap.UI.Elements.Installer.Pages;
-using Voidstrap.UI.Elements.Base;
+using StarStrap.UI.ViewModels.Installer;
+using StarStrap.UI.Elements.Installer.Pages;
+using StarStrap.UI.Elements.Base;
 using System.Windows.Media.Animation;
 using System.Reflection.Metadata.Ecma335;
-using Voidstrap.Resources;
+using StarStrap.Resources;
 
-namespace Voidstrap.UI.Elements.Installer
+namespace StarStrap.UI.Elements.Installer
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     /// 
     /// The logic behind this wizard-like interface is full of gross hacks, but there's no easy way to do this and I've tried to 
-    /// make it as nice and MVVM-"""conformant""" as can possibly be ¯\_(ツ)_/¯
+    /// make it as nice and MVVM-"""conformant""" as can possibly be \_(?)_/
     /// 
     /// Page ViewModels can request changing of navigation button states through the following call flow:
     /// - Page ViewModel holds event for requesting button state change

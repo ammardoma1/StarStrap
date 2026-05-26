@@ -1,4 +1,4 @@
-﻿namespace Voidstrap
+namespace StarStrap
 {
     static class Paths
     {
@@ -16,7 +16,7 @@
         public static string Cache { get; private set; } = "";
         public static string RobloxLogs { get; private set; } = "";
         public static string RobloxCache { get; private set; } = "";
-        public static string RobloxBase { get; set; } = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Voidstrap");
+        public static string RobloxBase { get; set; } = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "StarStrap");
         public static string Base { get; private set; } = "";
         public static string Downloads { get; private set; } = "";
         public static string SavedBackups { get; private set; } = "";
@@ -48,7 +48,7 @@
             Logs = Path.Combine(Base, "Logs");
             Integrations = Path.Combine(Base, "Integrations");
             Versions = Path.Combine(RobloxBase, "RblxVersions");
-            Mods = Path.Combine(Base, "VoidstrapMods");
+            Mods = Path.Combine(Base, "StarStrapMods");
             Roblox = Path.Combine(Base, "Roblox");
             CustomThemes = Path.Combine(Base, "CustomThemes");
             SavedFlagBackup = Path.Combine(Base, "SavedFlagBackup");

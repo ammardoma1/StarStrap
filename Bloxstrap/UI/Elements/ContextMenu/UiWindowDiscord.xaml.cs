@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Threading;
-using Voidstrap.UI.Chat;
+using StarStrap.UI.Chat;
 
-namespace Voidstrap.UI.Elements.Overlay
+namespace StarStrap.UI.Elements.Overlay
 {
     public partial class DiscordChatOverlayWindow : Window
     {

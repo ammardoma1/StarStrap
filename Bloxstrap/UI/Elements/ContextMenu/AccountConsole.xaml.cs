@@ -1,7 +1,7 @@
-﻿using System.Windows;
-using Voidstrap.UI.ViewModels;
+using System.Windows;
+using StarStrap.UI.ViewModels;
 
-namespace Voidstrap.UI.Elements.ContextMenu
+namespace StarStrap.UI.Elements.ContextMenu
 {
     public partial class AccountManagerWindow
     {

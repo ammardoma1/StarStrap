@@ -1,4 +1,4 @@
-﻿using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Input;
 using DiscordRPC.Logging;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Input;
-using Voidstrap.Enums.FlagPresets;
+using StarStrap.Enums.FlagPresets;
 
 
 public static class SystemInfo
@@ -37,7 +37,7 @@ public static class SystemInfo
     }
 }
 
-namespace Voidstrap.UI.ViewModels.Settings
+namespace StarStrap.UI.ViewModels.Settings
 {
     public class FastFlagsViewModel : NotifyPropertyChangedViewModel
     {

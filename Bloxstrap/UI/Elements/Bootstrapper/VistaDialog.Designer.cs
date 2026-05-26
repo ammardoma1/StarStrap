@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.UI.Elements.Bootstrapper
+namespace StarStrap.UI.Elements.Bootstrapper
 {
     partial class VistaDialog
     {

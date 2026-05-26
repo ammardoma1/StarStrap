@@ -1,7 +1,7 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Voidstrap.Models
+namespace StarStrap.Models
 {
     public class NvidiaProfileSetting
     {

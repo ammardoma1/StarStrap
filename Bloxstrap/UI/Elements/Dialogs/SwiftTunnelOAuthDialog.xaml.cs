@@ -2,7 +2,7 @@ using System.Web;
 using System.Windows;
 using Microsoft.Web.WebView2.Core;
 
-namespace Voidstrap.UI.Elements.Dialogs
+namespace StarStrap.UI.Elements.Dialogs
 {
     /// <summary>
     /// OAuth dialog for SwiftTunnel Google sign-in

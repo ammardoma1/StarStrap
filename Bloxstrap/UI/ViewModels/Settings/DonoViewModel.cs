@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Windows.Input;
-using Voidstrap.UI.ViewModels.ContextMenu;
+using StarStrap.UI.ViewModels.ContextMenu;
 
-namespace Voidstrap.UI.Elements.Settings.Pages
+namespace StarStrap.UI.Elements.Settings.Pages
 {
     public class DonoPageViewModel
     {

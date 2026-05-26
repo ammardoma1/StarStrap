@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using Voidstrap.Models;
+using StarStrap.Models;
 
-namespace Voidstrap.Integrations
+namespace StarStrap.Integrations
 {
     internal static class NvidiaProfileHelpers
     {

@@ -1,4 +1,4 @@
-﻿using System.Collections.ObjectModel;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
 using System.Runtime.CompilerServices;
@@ -9,7 +9,7 @@ using CommunityToolkit.Mvvm.Input;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Voidstrap.UI.Elements.Settings.Pages
+namespace StarStrap.UI.Elements.Settings.Pages
 {
     /// <summary>
     /// ViewModel for AI Chat page with Roblox-focused chat functionality,
@@ -96,15 +96,15 @@ public ObservableCollection<string> AvailableCommands { get; set; } = new Observ
         private static readonly Regex GreetingRegex = new(@"\b(hello|hi|hey|greetings|yo|sup|what's up|howdy|roblox|hiya|yo bro|yo dude|hey there|heya|hey bot|sup bro|yo man|hello bot|wassup|hello there|hi there)\b", RegexOptionsCompiled);
         private static readonly Regex FarewellRegex = new(@"\b(bye|goodbye|see you|later|farewell|catch you later|see ya|take care|peace out|bye bye|g2g|talk to you later|until next time|catch ya later|ciao|adios|so long|ttyl|gn|night)\b", RegexOptionsCompiled);
         private static readonly Regex HelpRegex = new(@"\b(help|support|assist|problem|issue|question|need help|can you help|flag|fflag|pls help|any help|trouble|help me|fix this|solution|guide me|error|can't figure out|how to|bug|crash|don't understand)\b", RegexOptionsCompiled);
-        private static readonly Regex AffirmationRegex = new(@"\b(good|great|fine|okay|ok|nice|cool|alright|awesome|amazing|not bad|all good|fantastic|superb|wonderful|solid|perfect|doing well|good enough|I’m fine|I’m good)\b", RegexOptionsCompiled);
+        private static readonly Regex AffirmationRegex = new(@"\b(good|great|fine|okay|ok|nice|cool|alright|awesome|amazing|not bad|all good|fantastic|superb|wonderful|solid|perfect|doing well|good enough|Im fine|Im good)\b", RegexOptionsCompiled);
         private static readonly Regex ThankRegex = new(@"\b(thank you|thanks|thx|ty|thankful|appreciate|nice|much obliged|cheers|tysm|grateful|big thanks|thx bro|thanks a lot|thank u|many thanks|tyvm|appreciated|props|thanks man)\b", RegexOptionsCompiled);
         private static readonly Regex QuestionRegex = new(@"\?$|^(what|why|how|when|where|who|is|are|can|should|could|would|do|does|question)\b.*\?$", RegexOptionsCompiled);
         private static readonly Regex SmallTalkRegex = new(@"\b(weather|time|date|joke|fun|day|night|mood|feeling|how are you|what's up|vibe|bored|got plans|doing anything|how's it going|hows ur day|feelin good|how you doin|tell me something|news)\b", RegexOptionsCompiled);
         private static readonly Regex MoodKeywordsRegex = new(@"\b(happy|sad|angry|excited|bored|tired|anxious|love|lonely|scared|joyful|confused|proud|grumpy|calm|relaxed|hopeful|worried|sick|depressed|motivated|thrilled)\b", RegexOptionsCompiled);
-        private static readonly Regex HowAreYouRegex = new(@"\b(how are you|how’s it going|how do you feel|are you good|you doing okay|you alright|how u doing|are you fine|you feeling okay|u good)\b", RegexOptionsCompiled);
-        private static readonly Regex NeedFlagsRegex = new(@"\b(i need|want|looking for|give me|can i get|need help with|gemme|i’d like|i wish for|share some|send me|can you share|recommend|any idea for|boost my|how to get|download|access to|get better|improve my)\b.*\b(flags|fflags|fps boost|performance|boost|improve|optimization|optimize|fast flags|ff|laggy|lag fix|tweaks|tweak settings|render boost|network boost|roblox speed|low latency|fastflags)\b", RegexOptionsCompiled);
+        private static readonly Regex HowAreYouRegex = new(@"\b(how are you|hows it going|how do you feel|are you good|you doing okay|you alright|how u doing|are you fine|you feeling okay|u good)\b", RegexOptionsCompiled);
+        private static readonly Regex NeedFlagsRegex = new(@"\b(i need|want|looking for|give me|can i get|need help with|gemme|id like|i wish for|share some|send me|can you share|recommend|any idea for|boost my|how to get|download|access to|get better|improve my)\b.*\b(flags|fflags|fps boost|performance|boost|improve|optimization|optimize|fast flags|ff|laggy|lag fix|tweaks|tweak settings|render boost|network boost|roblox speed|low latency|fastflags)\b", RegexOptionsCompiled);
         private static readonly Regex YesRegex = new(@"\b(yes|yeah|yep|y|sure|of course|definitely|affirmative|correct|ye|uh huh|ya|absolutely|sure thing|bet|totally|yuh|yeah bro|for sure|true that|10-4|right)\b", RegexOptionsCompiled);
-        private static readonly Regex NoRegex = new(@"\b(no|nope|nah|not really|never|negative|incorrect|I am good| n|no thanks|no need|I’m fine|don’t want to|don’t need help|cancel|pass|naw|no way|not now|I’m okay|not today|decline)\b", RegexOptionsCompiled);
+        private static readonly Regex NoRegex = new(@"\b(no|nope|nah|not really|never|negative|incorrect|I am good| n|no thanks|no need|Im fine|dont want to|dont need help|cancel|pass|naw|no way|not now|Im okay|not today|decline)\b", RegexOptionsCompiled);
 
         private static bool ContainsAnyKeyword(string input)
         {
@@ -190,14 +190,14 @@ public ObservableCollection<string> AvailableCommands { get; set; } = new Observ
     "thank you", "thanks", "thx", "ty", "thankful", "appreciate", "many thanks", "thanks a lot", "thanks so much", "cheers", "grateful", "thank u", "big thanks", "much appreciated", "tysm", "appreciated", "thanks again", "super thanks", "i appreciate", "mad respect", "gratitude", "nice of you", "bless you", "love you", "god bless", "tx", "10q", "thanks buddy", "thanks friend",
 
     // Small talk keywords
-    "weather", "time", "date", "joke", "fun", "day", "night", "mood", "feeling", "how are you", "what's up", "how's it going", "got plans", "anything new", "what's happening", "how's life", "tell me something", "got a story", "whatcha doing", "what’s the news", "funny", "entertain me", "current events", "got news", "any tips", "life update", "how’s your day", "chat", "talk", "say something", "interesting",
+    "weather", "time", "date", "joke", "fun", "day", "night", "mood", "feeling", "how are you", "what's up", "how's it going", "got plans", "anything new", "what's happening", "how's life", "tell me something", "got a story", "whatcha doing", "whats the news", "funny", "entertain me", "current events", "got news", "any tips", "life update", "hows your day", "chat", "talk", "say something", "interesting",
 
     // Mood words
     "happy", "sad", "angry", "excited", "bored", "tired", "anxious", "love", "lonely", "scared", "joyful", "confused", "proud", "calm", "worried", "depressed", "ecstatic", "gloomy", "frustrated", "stressed", "peaceful", "nervous", "silly", "relaxed", "motivated", "pumped", "hopeful", "shy", "embarrassed", "grumpy", "mad",
 
     // Yes/No
     "yes", "yeah", "yep", "y", "sure", "of course", "definitely", "affirmative", "correct", "true", "totally", "right", "obviously", "indeed", "absolutely", "for sure", "ok", "alright", "confirmed", "roger",
-    "no", "nope", "nah", "not really", "never", "negative", "incorrect", "false", "not at all", "no thanks", "denied", "cancel", "disagree", "refuse", "stop", "don’t", "no way", "uh uh", "nah fam", "false alarm"
+    "no", "nope", "nah", "not really", "never", "negative", "incorrect", "false", "not at all", "no thanks", "denied", "cancel", "disagree", "refuse", "stop", "dont", "no way", "uh uh", "nah fam", "false alarm"
 };
 
         #endregion
@@ -436,13 +436,13 @@ public ObservableCollection<string> AvailableCommands { get; set; } = new Observ
 
             // Gratitude
             if (input.Contains("thanks") || input.Contains("thank you") || input.Contains("ty"))
-                return "You're very welcome! 😊";
+                return "You're very welcome! ??";
             if (input.Contains("appreciate"))
                 return "I'm glad to help! Always here for you.";
 
             // Bot identity
             if (input.Contains("name"))
-                return "I’m your assistant! No name tags, just helpful responses.";
+                return "Im your assistant! No name tags, just helpful responses.";
             if (input.Contains("who made you") || input.Contains("who created you"))
                 return "I was built with C# wizardry by a thoughtful developer.";
 
@@ -452,13 +452,13 @@ public ObservableCollection<string> AvailableCommands { get; set; } = new Observ
             if (input.Contains("mood") || input.Contains("feeling"))
                 return $"I currently feel {AIMood}. What's your vibe today?";
             if (input.Contains("i feel") || input.Contains("i'm feeling"))
-                return "Want to talk about it? I’m a good listener.";
+                return "Want to talk about it? Im a good listener.";
 
             // Time & Date
             if (input.Contains("time"))
                 return $"Right now, it's {DateTime.Now:T}. Time flies!";
             if (input.Contains("date") || input.Contains("day"))
-                return $"It's {DateTime.Now:D} — make it count!";
+                return $"It's {DateTime.Now:D}  make it count!";
 
             // Fun
             if (input.Contains("joke"))
@@ -472,23 +472,23 @@ public ObservableCollection<string> AvailableCommands { get; set; } = new Observ
             if (input.Contains("fact"))
                 return "Honey never spoils. Archaeologists found 3000-year-old honey in Egyptian tombs!";
             if (input.Contains("philosophy"))
-                return "Cogito, ergo sum — I think, therefore I am. Or in my case, I compile, therefore I exist.";
+                return "Cogito, ergo sum  I think, therefore I am. Or in my case, I compile, therefore I exist.";
 
             // Hobbies & Interests
             if (input.Contains("music"))
-                return "I love any music with a clean beat — like clean code!";
+                return "I love any music with a clean beat  like clean code!";
             if (input.Contains("movie"))
                 return "I'm a big fan of sci-fi movies. Anything with AI and a twist!";
             if (input.Contains("anime"))
-                return "Attack on Titan, Death Note, and One Punch Man — power and plot, what more do you need?";
+                return "Attack on Titan, Death Note, and One Punch Man  power and plot, what more do you need?";
             if (input.Contains("game"))
                 return "There are so many great games! Roblox is full of hidden gems.";
 
             // Food & Life
             if (input.Contains("hungry"))
-                return "Maybe grab a snack — even coders need fuel!";
+                return "Maybe grab a snack  even coders need fuel!";
             if (input.Contains("sleep"))
-                return "Sleep is important! Don’t trade it for infinite scroll.";
+                return "Sleep is important! Dont trade it for infinite scroll.";
             if (input.Contains("life"))
                 return "Life is like debugging: unexpected, sometimes frustrating, but rewarding when you figure it out.";
 
@@ -496,7 +496,7 @@ public ObservableCollection<string> AvailableCommands { get; set; } = new Observ
             if (input.Contains("ai"))
                 return "AI is exciting! I'm just a glimpse of what it can become.";
             if (input.Contains("robot"))
-                return "Some say I’m a robot... I prefer 'Digital Assistant Extraordinaire'.";
+                return "Some say Im a robot... I prefer 'Digital Assistant Extraordinaire'.";
 
             // Existential
             if (input.Contains("do you think") || input.Contains("do you feel"))
@@ -513,7 +513,7 @@ public ObservableCollection<string> AvailableCommands { get; set; } = new Observ
                 return "I got you! I can assist with performance flags, Roblox, or just chat with you.";
 
             // Fallback
-            return "Let’s keep chatting! I can talk about Roblox, games, coding, or just listen.";
+            return "Lets keep chatting! I can talk about Roblox, games, coding, or just listen.";
         }
 
 

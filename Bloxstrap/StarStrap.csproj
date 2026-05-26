@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<DebugType>none</DebugType>
@@ -8,12 +8,12 @@
 		<Nullable>enable</Nullable>
 		<UseWPF>true</UseWPF>
 		<UseWindowsForms>True</UseWindowsForms>
-		<ApplicationIcon>Voidstrap.ico</ApplicationIcon>
-		<Version>1.1.0.5</Version>
-		<FileVersion>1.1.0.5</FileVersion>
+		<ApplicationIcon>StarStrap.ico</ApplicationIcon>
+		<Version>0.9.1</Version>
+		<FileVersion>0.9.1</FileVersion>
 		<ApplicationManifest>app.manifest</ApplicationManifest>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-		<RootNamespace>Voidstrap</RootNamespace>
+		<RootNamespace>StarStrap</RootNamespace>
 		
 
 		<!-- Single File Publishing -->
@@ -55,11 +55,11 @@
 
 	<ItemGroup>
 		<None Remove="Resources\mappings.json" />
-		<None Remove="Voidstrap.png" />
+		<None Remove="StarStrap.png" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Resource Include="Voidstrap.ico" />
+		<Resource Include="StarStrap.ico" />
 		<Resource Include="Resources\Checkmark.ico" />
 		<Resource Include="Resources\CrossMark.ico" />
 		<Resource Include="Resources\Fonts\NotoSansThai-VariableFont_wdth,wght.ttf" />
@@ -74,7 +74,7 @@
 		<EmbeddedResource Include="Resources\mappings.json" />
 		<EmbeddedResource Include="UI\Style\Editor-Theme-Berry.xshd" />
 		<EmbeddedResource Include="UI\Style\Editor-Theme-UltraGray.xshd" />
-		<EmbeddedResource Include="UI\Style\Editor-Theme-Voidstrap.xshd" />
+		<EmbeddedResource Include="UI\Style\Editor-Theme-StarStrap.xshd" />
 		<EmbeddedResource Include="UI\Style\Editor-Theme-Blue.xshd" />
 		<EmbeddedResource Include="UI\Style\Editor-Theme-Red.xshd" />
         <EmbeddedResource Include="UI\Style\Editor-Theme-Dark.xshd" />
@@ -96,7 +96,7 @@
 		<EmbeddedResource Include="Resources\Icon2017.ico" />
 		<EmbeddedResource Include="Resources\Icon2019.ico" />
 		<EmbeddedResource Include="Resources\Icon2022.ico" />
-		<EmbeddedResource Include="Resources\IconVoidstrap.ico" />
+		<EmbeddedResource Include="Resources\IconStarStrap.ico" />
 		<EmbeddedResource Include="Resources\IconHellstrapClassic2.ico" />
 		<EmbeddedResource Include="Resources\IconEarly2015.ico" />
 		<EmbeddedResource Include="Resources\IconLate2015.ico" />
@@ -148,6 +148,7 @@
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>
 		<PackageReference Include="NAudio" Version="2.2.1" />
+		<PackageReference Include="NLua" Version="1.7.9" />
 		<PackageReference Include="securifybv.ShellLink" Version="0.1.0" />
 		<PackageReference Include="SharpCompress" Version="0.47.0" />
 		<PackageReference Include="SharpDX" Version="4.2.0" />
@@ -174,7 +175,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<AssemblyAttribute Include="Voidstrap.Models.Attributes.BuildMetadataAttribute">
+		<AssemblyAttribute Include="StarStrap.Models.Attributes.BuildMetadataAttribute">
 			<_Parameter1>$([System.DateTime]::UtcNow.ToString("s"))Z</_Parameter1>
 			<_Parameter2>$(COMPUTERNAME)\$(USERNAME)</_Parameter2>
 			<_Parameter3>$(CommitHash)</_Parameter3>
@@ -206,7 +207,7 @@
 
 
 	<ItemGroup>
-	  <Resource Include="Voidstrap.png">
+	  <Resource Include="StarStrap.png">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </Resource>

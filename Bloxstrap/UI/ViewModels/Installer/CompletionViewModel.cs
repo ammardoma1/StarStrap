@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Timers;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Voidstrap.Resources;
+using StarStrap.Resources;
 using Microsoft.Win32;
-using Voidstrap.RobloxInterfaces;
+using StarStrap.RobloxInterfaces;
 
-namespace Voidstrap.UI.ViewModels.Installer
+namespace StarStrap.UI.ViewModels.Installer
 {
     public class CompletionViewModel : ObservableObject
     {

@@ -1,8 +1,8 @@
-﻿using System.Windows.Input;
-using Voidstrap.Integrations;
+using System.Windows.Input;
+using StarStrap.Integrations;
 using CommunityToolkit.Mvvm.Input;
 
-namespace Voidstrap.UI.ViewModels.ContextMenu
+namespace StarStrap.UI.ViewModels.ContextMenu
 {
     internal class OutputConsoleViewModel : NotifyPropertyChangedViewModel
     {

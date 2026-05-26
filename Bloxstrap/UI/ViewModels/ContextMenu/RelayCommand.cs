@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Windows.Input;
 
-namespace Voidstrap.UI.ViewModels.ContextMenu
+namespace StarStrap.UI.ViewModels.ContextMenu
 {
     public sealed class RelayCommand : ICommand
     {

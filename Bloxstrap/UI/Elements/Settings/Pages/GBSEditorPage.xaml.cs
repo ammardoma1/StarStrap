@@ -1,9 +1,9 @@
-﻿using System.Windows;
+using System.Windows;
 using System.Windows.Input;
-using Voidstrap.UI.ViewModels.Settings;
+using StarStrap.UI.ViewModels.Settings;
 using Wpf.Ui.Mvvm.Contracts;
 
-namespace Voidstrap.UI.Elements.Settings.Pages
+namespace StarStrap.UI.Elements.Settings.Pages
 {
     public partial class GBSEditorPage
     {

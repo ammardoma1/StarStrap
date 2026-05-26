@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -6,15 +6,15 @@ using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
-using Voidstrap.Integrations;
-using Voidstrap.Models;
+using StarStrap.Integrations;
+using StarStrap.Models;
 
-namespace Voidstrap.UI.ViewModels.Settings
+namespace StarStrap.UI.ViewModels.Settings
 {
     public sealed class NvidiaFastFlagsViewModel : INotifyPropertyChanged
     {
         private static readonly string NipPath =
-            Path.Combine(Paths.Base, "NipProfiles", "Voidstrap.nip");
+            Path.Combine(Paths.Base, "NipProfiles", "StarStrap.nip");
 
         #region Collections
 

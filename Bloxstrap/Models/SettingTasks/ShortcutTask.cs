@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.Models.SettingTasks
+namespace StarStrap.Models.SettingTasks
 {
     public class ShortcutTask : BoolBaseTask
     {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Net.Http;
@@ -6,11 +6,11 @@ using System.Net.Http.Json;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
-using Voidstrap.Enums;
-using Voidstrap.Integrations;
+using StarStrap.Enums;
+using StarStrap.Integrations;
 using System.Text.Json;
 
-namespace Voidstrap.UI.ViewModels.ContextMenu
+namespace StarStrap.UI.ViewModels.ContextMenu
 {
     internal partial class GamePassConsoleViewModel : NotifyPropertyChangedViewModel
     {

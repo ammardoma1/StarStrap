@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,13 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Shapes;
 
-namespace Voidstrap.Integrations
+namespace StarStrap.Integrations
 {
     public class Cleaner
     {
         public static Dictionary<string, string?> Directories = new Dictionary<string, string?> {
-            { "VoidstrapLogs", Paths.Logs },
-            { "VoidstrapCache", Paths.Downloads },
+            { "StarStrapLogs", Paths.Logs },
+            { "StarStrapCache", Paths.Downloads },
             { "RobloxLogs", Paths.RobloxLogs },
             { "RobloxCache", Paths.RobloxCache }
         };

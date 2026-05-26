@@ -1,4 +1,4 @@
-﻿using DiscordRPC;
+using DiscordRPC;
 using DiscordRPC.Logging;
 using Microsoft.VisualBasic.ApplicationServices;
 using Microsoft.Web.WebView2.Core;
@@ -18,19 +18,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
-using Voidstrap.Integrations;
-using Voidstrap.UI.Elements.Base;
-using Voidstrap.UI.Elements.Controls;
-using Voidstrap.UI.Elements.Dialogs;
-using Voidstrap.UI.Elements.Settings.Pages;
-using Voidstrap.UI.ViewModels.Settings;
+using StarStrap.Integrations;
+using StarStrap.UI.Elements.Base;
+using StarStrap.UI.Elements.Controls;
+using StarStrap.UI.Elements.Dialogs;
+using StarStrap.UI.Elements.Settings.Pages;
+using StarStrap.UI.ViewModels.Settings;
 using Wpf.Ui.Common;
 using Wpf.Ui.Controls;
 using Wpf.Ui.Controls.Interfaces;
 using Wpf.Ui.Mvvm.Contracts;
 using Path = System.IO.Path;
 
-namespace Voidstrap.UI.Elements.Settings
+namespace StarStrap.UI.Elements.Settings
 {
     public partial class MainWindow : INavigationWindow
     {
@@ -62,7 +62,6 @@ namespace Voidstrap.UI.Elements.Settings
         private readonly List<Type> _pagesToHideSearchBox = new List<Type> // idfk my lazy bum ass didnt wanna spent 4000hours tranna figure another way for all tis bullshit of work took me 1 day for this shit FAHHHHHHHHHH WSEIEWMIEWOMHGEW
         {
         typeof(FastFlagEditorPage),
-        typeof(NewsPage),
         typeof(NvidiaFFlagEditorPage),
         typeof(ReleasesPage),
         typeof(DonoPage),
@@ -394,7 +393,7 @@ namespace Voidstrap.UI.Elements.Settings
             CreateToolItem("Disable Background Window", "Disables Background Window when Launching Roblox");
             CreateToolItem("Disable RobloxCrashHandler", "Disables the RobloxCrashHandler that runs on startup, improving memory and RAM efficiency.");
             CreateToolItem("Exclusive Fullscreen", "Enables exclusive fullscreen mode. This may fix latency issues.");
-            CreateToolItem("Background Snow", "Adds Snow to Voidstraps background (Restart Required)");
+            CreateToolItem("Background Snow", "Adds Snow to StarStraps background (Restart Required)");
             CreateToolItem("Gradient Movement", "Adds a Gradient Movement with Cursor (Restart Required)");
             CreateToolItem("Smooth ScrollBar", "Adds a Smooth ScrollBar Movement (Restart Required)");
 
@@ -842,7 +841,7 @@ namespace Voidstrap.UI.Elements.Settings
                 BreadcrumbIcon.Symbol = icon;
         }
 
-        //fuck man I dont even understand whats going on in this code dont go asking me 👇 nvm it was just 3am I do understand..
+        //fuck man I dont even understand whats going on in this code dont go asking me ?? nvm it was just 3am I do understand..
         private void GlobalSearchBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (_searchDebounceTimer == null)
@@ -1276,7 +1275,7 @@ namespace Voidstrap.UI.Elements.Settings
 
         private void InitializeDiscordRPC()
         {
-            _discordClient = new DiscordRpcClient("1459679943498661910");
+            _discordClient = new DiscordRpcClient("1508536029303410779");
 
             _discordClient.Logger = new ConsoleLogger() { Level = LogLevel.Warning };
             _discordClient.OnReady += (sender, e) =>
@@ -1356,7 +1355,7 @@ namespace Voidstrap.UI.Elements.Settings
 
             _discordClient.SetPresence(new DiscordRPC.RichPresence()
             {
-                Details = $"Viewing {pageName}", // the fuck was there state I just relized that it already displays fucking voidstrap THE FUCK
+                Details = $"Viewing {pageName}", // the fuck was there state I just relized that it already displays fucking StarStrap THE FUCK
                 State = $"Current Time: {currentTime}",
                 Timestamps = DiscordRPC.Timestamps.Now,
                 Buttons = new[]
@@ -1368,8 +1367,8 @@ namespace Voidstrap.UI.Elements.Settings
             },
             new DiscordRPC.Button
             {
-                Label = "Github",  // sick of this shit ❤️‍🔥 why the fuck I put fire emoji it came out as a heart + fire fah
-                Url = "https://github.com/voidstrap/Voidstrap"
+                Label = "Github",  // sick of this shit ????? why the fuck I put fire emoji it came out as a heart + fire fah
+                Url = "https://github.com/StarStrap/StarStrap"
             }
         }
             });

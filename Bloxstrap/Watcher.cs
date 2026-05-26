@@ -1,9 +1,9 @@
-﻿using Voidstrap.AppData;
-using Voidstrap.Integrations;
-using Voidstrap.Models;
-using Voidstrap.UI.Elements.ContextMenu;
+using StarStrap.AppData;
+using StarStrap.Integrations;
+using StarStrap.Models;
+using StarStrap.UI.Elements.ContextMenu;
 
-namespace Voidstrap
+namespace StarStrap
 {
     public class Watcher : IDisposable
     {

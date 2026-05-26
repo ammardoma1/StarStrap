@@ -1,8 +1,8 @@
-﻿using Voidstrap.Integrations;
-using Voidstrap.UI.Elements.Base;
-using Voidstrap.UI.ViewModels.ContextMenu;
+using StarStrap.Integrations;
+using StarStrap.UI.Elements.Base;
+using StarStrap.UI.ViewModels.ContextMenu;
 
-namespace Voidstrap.UI.Elements.ContextMenu
+namespace StarStrap.UI.Elements.ContextMenu
 {
     public partial class GamePassConsole
     {

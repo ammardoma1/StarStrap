@@ -1,7 +1,7 @@
-﻿using Voidstrap.Enums.FlagPresets;
+using StarStrap.Enums.FlagPresets;
 using System.Windows;
 
-namespace Voidstrap
+namespace StarStrap
 {
     public class FastFlagManager : JsonManager<Dictionary<string, object>>
     {
@@ -471,7 +471,7 @@ namespace Voidstrap
         public static IReadOnlyDictionary<ProfileMode, string> ProfileModes => new Dictionary<ProfileMode, string>
         {
             { ProfileMode.Default, "None" },
-            { ProfileMode.Voidstrap, "Voidstraps Official" },
+            { ProfileMode.StarStrap, "StarStraps Official" },
             { ProfileMode.Stoof, "Stoofs" },
 
         };

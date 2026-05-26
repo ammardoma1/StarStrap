@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,10 +7,10 @@ using System.Windows;
 using System.Windows.Controls;
 using Microsoft.Win32;
 using Newtonsoft.Json.Linq;
-using Voidstrap.Resources;
-using Voidstrap.UI.Elements.Base;
+using StarStrap.Resources;
+using StarStrap.UI.Elements.Base;
 
-namespace Voidstrap.UI.Elements.Dialogs
+namespace StarStrap.UI.Elements.Dialogs
 {
     public class FastFlagItem
     {

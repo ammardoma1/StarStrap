@@ -1,11 +1,11 @@
-﻿using System.Windows;
+using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shell;
 
 using CommunityToolkit.Mvvm.Input;
 
-namespace Voidstrap.UI.ViewModels.Bootstrapper
+namespace StarStrap.UI.ViewModels.Bootstrapper
 {
     public class BootstrapperDialogViewModel : NotifyPropertyChangedViewModel
     {

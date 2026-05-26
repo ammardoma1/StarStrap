@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Globalization;
 
-namespace Voidstrap.Extensions
+namespace StarStrap.Extensions
 {
     public static class DateTimeExtensions
     {

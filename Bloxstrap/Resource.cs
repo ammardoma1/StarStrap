@@ -1,6 +1,6 @@
-﻿using System.Reflection;
+using System.Reflection;
 
-namespace Voidstrap
+namespace StarStrap
 {
     static class Resource
     {

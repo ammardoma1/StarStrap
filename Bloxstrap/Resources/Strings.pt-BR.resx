@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Bootstrapper.AutoUpdateFailed" xml:space="preserve">
-    <value>O Voidstrap não pôde atualizar automaticamente para a versão {0}. Por favor, atualize-o manualmente, baixando e executando-o a partir do site.</value>
+    <value>O StarStrap não pôde atualizar automaticamente para a versão {0}. Por favor, atualize-o manualmente, baixando e executando-o a partir do site.</value>
   </data>
   <data name="Bootstrapper.ConfirmLaunch" xml:space="preserve">
     <value>O Roblox já está em execução, tentar executar outra instância resultará em seu encerramento. Tem certeza de que deseja continuar?</value>
@@ -127,13 +127,13 @@
     <value>O Roblox pode estar offline agora. Veja {0} para mais informações.</value>
   </data>
   <data name="Dialog.Connectivity.BadConnection" xml:space="preserve">
-    <value>Uma conexão não pôde ser feita, o que provavelmente indica uma má conexão com a internet ou um bloqueio do firewall. Se a sua conexão estiver boa, verifique se o seu antivírus não está bloqueando o Voidstrap.</value>
+    <value>Uma conexão não pôde ser feita, o que provavelmente indica uma má conexão com a internet ou um bloqueio do firewall. Se a sua conexão estiver boa, verifique se o seu antivírus não está bloqueando o StarStrap.</value>
   </data>
   <data name="Bootstrapper.FirstRunUninstall" xml:space="preserve">
-    <value>Instalação do Voidstrap não encontrada, instale-o antes de desinstalá-lo.</value>
+    <value>Instalação do StarStrap não encontrada, instale-o antes de desinstalá-lo.</value>
   </data>
   <data name="Bootstrapper.NotEnoughSpace" xml:space="preserve">
-    <value>O Voidstrap não encontrou espaço suficiente no disco para baixar e instalar o Roblox. Por favor, libere espaço no disco e tente novamente.</value>
+    <value>O StarStrap não encontrou espaço suficiente no disco para baixar e instalar o Roblox. Por favor, libere espaço no disco e tente novamente.</value>
   </data>
   <data name="Bootstrapper.Status.ApplyingModifications" xml:space="preserve">
     <value>Aplicando modificações ao Roblox...</value>
@@ -157,8 +157,8 @@
   <data name="Bootstrapper.Status.Upgrading" xml:space="preserve">
     <value>Atualizando {product}...</value>
   </data>
-  <data name="Bootstrapper.Status.UpgradingVoidstrap" xml:space="preserve">
-    <value>Obtendo a versão mais recente do Voidstrap...</value>
+  <data name="Bootstrapper.Status.UpgradingStarStrap" xml:space="preserve">
+    <value>Obtendo a versão mais recente do StarStrap...</value>
   </data>
   <data name="Bootstrapper.Status.WaitingOtherInstances" xml:space="preserve">
     <value>Esperando pelas outras janelas...</value>
@@ -172,10 +172,10 @@
     <comment>Text for style previews that use text button that says "Cancel"</comment>
   </data>
   <data name="Bootstrapper.SuccessfullyUninstalled" xml:space="preserve">
-    <value>Voidstrap foi desinstalado com sucesso</value>
+    <value>StarStrap foi desinstalado com sucesso</value>
   </data>
   <data name="Bootstrapper.Uninstall.RobloxRunning" xml:space="preserve">
-    <value>O Roblox está em execução no momento, mas precisa ser fechado antes de desinstalar o Voidstrap. Você gostaria de fechar o Roblox agora?</value>
+    <value>O Roblox está em execução no momento, mas precisa ser fechado antes de desinstalar o StarStrap. Você gostaria de fechar o Roblox agora?</value>
   </data>
   <data name="Bootstrapper.WMFNotFound" xml:space="preserve">
     <value>O cliente do Roblox precisa dos componentes do Windows Media Foundation. Você não aparenta tê-los instalados, possivelmente por estar usando uma edição N do Windows. Por favor, instale-os primeiro, e então abra o Roblox.</value>
@@ -279,22 +279,22 @@ Clique para mais informações</value>
     <value>Erro de Conexão</value>
   </data>
   <data name="Dialog.Connectivity.UnableToConnect" xml:space="preserve">
-    <value>Voidstrap não consegue se conectar com {0}</value>
+    <value>StarStrap não consegue se conectar com {0}</value>
     <comment>{0} is the name of a service (i.e. Roblox, GitHub)</comment>
   </data>
   <data name="Dialog.Exception.CopyLogContents" xml:space="preserve">
     <value>Copiar conteúdo do registro</value>
   </data>
   <data name="Dialog.Exception.Info.1" xml:space="preserve">
-    <value>Um erro ocorreu enquanto Voidstrap estava sendo executado</value>
+    <value>Um erro ocorreu enquanto StarStrap estava sendo executado</value>
   </data>
   <data name="Dialog.Exception.Info.2" xml:space="preserve">
-    <value>Primeiro, consulte a [Wiki do Voidstrap]({0}) para ver se o problema já foi resolvido.
+    <value>Primeiro, consulte a [Wiki do StarStrap]({0}) para ver se o problema já foi resolvido.
 
 Caso contrário, por favor reporte este erro através de uma [issue no GitHub]({1}), seguido de uma cópia do arquivo de registro criado.</value>
   </data>
   <data name="Dialog.Exception.Title" xml:space="preserve">
-    <value>Exceção do Voidstrap</value>
+    <value>Exceção do StarStrap</value>
   </data>
   <data name="Common.Custom" xml:space="preserve">
     <value>Personalizado</value>
@@ -309,10 +309,10 @@ Caso contrário, por favor reporte este erro através de uma [issue no GitHub]({
     <value>Byfron Falso (2023)</value>
   </data>
   <data name="Enums.BootstrapperStyle.ClassicFluentDialog" xml:space="preserve">
-    <value>Voidstrap (Clássico)</value>
+    <value>StarStrap (Clássico)</value>
   </data>
   <data name="Enums.BootstrapperStyle.FluentAeroDialog" xml:space="preserve">
-    <value>Voidstrap (Transparente)</value>
+    <value>StarStrap (Transparente)</value>
   </data>
   <data name="Enums.BootstrapperStyle.LegacyDialog2008" xml:space="preserve">
     <value>Antigo (2008-2011)</value>
@@ -396,10 +396,10 @@ Caso contrário, por favor reporte este erro através de uma [issue no GitHub]({
     <value>Claro</value>
   </data>
   <data name="InstallChecker.Updated" xml:space="preserve">
-    <value>O Voidstrap atualizou para a versão {0}</value>
+    <value>O StarStrap atualizou para a versão {0}</value>
   </data>
   <data name="InstallChecker.VersionDifferentThanInstalled" xml:space="preserve">
-    <value>A versão do Voidstrap que você abriu difere da versão que você tem instalada.
+    <value>A versão do StarStrap que você abriu difere da versão que você tem instalada.
 Você quer atualizar para a versão instalada?</value>
   </data>
   <data name="Menu.About.Contributors" xml:space="preserve">
@@ -409,7 +409,7 @@ Você quer atualizar para a versão instalada?</value>
     <value>Código</value>
   </data>
   <data name="Menu.About.Contributors.Description" xml:space="preserve">
-    <value>Estas pessoas tiveram uma contribuição notável para o Voidstrap, ajudando-o a ser o que é.</value>
+    <value>Estas pessoas tiveram uma contribuição notável para o StarStrap, ajudando-o a ser o que é.</value>
   </data>
   <data name="Menu.About.Contributors.FeatureIdeas" xml:space="preserve">
     <value>Ideias de Funcionalidades</value>
@@ -455,7 +455,7 @@ Você quer atualizar para a versão instalada?</value>
     <value>Por favor, tenha em mente que nem todas as suas modificações vão ser aplicadas de imediato até você fechar todas as janelas do Roblox.</value>
   </data>
   <data name="Menu.AlreadyRunning.Title" xml:space="preserve">
-    <value>O Voidstrap já está aberto</value>
+    <value>O StarStrap já está aberto</value>
   </data>
   <data name="Menu.Appearance.Bootstrapper.Description" xml:space="preserve">
     <value>Você pode o deixar diferente, retrô, ou da mesma aparência do Roblox.</value>
@@ -482,7 +482,7 @@ Você quer atualizar para a versão instalada?</value>
     <value>Título</value>
   </data>
   <data name="Menu.Appearance.Description" xml:space="preserve">
-    <value>Alterar a aparência do Voidstrap.</value>
+    <value>Alterar a aparência do StarStrap.</value>
   </data>
   <data name="Menu.Appearance.Global.Theme.Title" xml:space="preserve">
     <value>Tema Global</value>
@@ -506,10 +506,10 @@ Você quer atualizar para a versão instalada?</value>
     <value>Aparência</value>
   </data>
   <data name="Menu.Behaviour.AutoUpdate.Description" xml:space="preserve">
-    <value>O Voidstrap vai automaticamente verificar e se atualizar quando abrir o Roblox.</value>
+    <value>O StarStrap vai automaticamente verificar e se atualizar quando abrir o Roblox.</value>
   </data>
   <data name="Menu.Behaviour.AutoUpdate.Title" xml:space="preserve">
-    <value>Atualizar o Voidstrap automaticamente</value>
+    <value>Atualizar o StarStrap automaticamente</value>
   </data>
   <data name="Menu.Behaviour.ConfirmLaunches.Description" xml:space="preserve">
     <value>Evite que o encerramento do seu jogo existente inicie acidentalmente outro.</value>
@@ -518,10 +518,10 @@ Você quer atualizar para a versão instalada?</value>
     <value>Pedir confirmação ao abrir outra janela do Roblox</value>
   </data>
   <data name="Menu.Behaviour.Description" xml:space="preserve">
-    <value>Configure o que o Voidstrap deve fazer quando abrir o Roblox.</value>
+    <value>Configure o que o StarStrap deve fazer quando abrir o Roblox.</value>
   </data>
   <data name="Menu.Behaviour.ForceRobloxReinstall.Description" xml:space="preserve">
-    <value>Quando o Voidstrap for aberto, o Roblox será instalado novamente.</value>
+    <value>Quando o StarStrap for aberto, o Roblox será instalado novamente.</value>
   </data>
   <data name="Menu.Behaviour.ForceRobloxReinstall.Title" xml:space="preserve">
     <value>Forçar reinstalação do Roblox</value>
@@ -635,7 +635,7 @@ NÃO USE o editor para importar grandes "flag lists" feitas por outras pessoas q
     <value>Limite de taxa de quadros (FPS)</value>
   </data>
   <data name="Menu.FastFlags.Presets.HideGuis.Description" xml:space="preserve">
-    <value>Ligado com [atalhos de teclado]({0}). Só funciona se você estiver no [grupo Voidstrap]({1}).</value>
+    <value>Ligado com [atalhos de teclado]({0}). Só funciona se você estiver no [grupo StarStrap]({1}).</value>
   </data>
   <data name="Menu.FastFlags.Presets.HideGuis.Title" xml:space="preserve">
     <value>Habilitar a função de ocultar GUIs</value>
@@ -659,10 +659,10 @@ NÃO USE o editor para importar grandes "flag lists" feitas por outras pessoas q
     <value>Aquivos de ícone</value>
   </data>
   <data name="Menu.InstallLocation.CantInstall" xml:space="preserve">
-    <value>O Voidstrap não pode ser instalado aqui. Por favor, escolha um local diferente para a instalação, ou use o local padrão clicando no botão de reinicialização.</value>
+    <value>O StarStrap não pode ser instalado aqui. Por favor, escolha um local diferente para a instalação, ou use o local padrão clicando no botão de reinicialização.</value>
   </data>
   <data name="Menu.InstallLocation.NotEmpty" xml:space="preserve">
-    <value>A pasta que você escolheu para instalar o Voidstrap já existe e NÃO está vazia. É altamente recomendado que o Voidstrap seja instalado na sua própria pasta independente.
+    <value>A pasta que você escolheu para instalar o StarStrap já existe e NÃO está vazia. É altamente recomendado que o StarStrap seja instalado na sua própria pasta independente.
 
 Mudar para o seguinte local é recomendado:
 {0}
@@ -675,7 +675,7 @@ Selecionar 'Não' vai ignorar este aviso e prosseguir com a instalação.</value
     <value>Você deve escolher um local de instalação</value>
   </data>
   <data name="Menu.InstallLocation.NoWritePerms" xml:space="preserve">
-    <value>O Voidstrap não tem permissão de criar arquivos no local de instalação escolhido. Por favor, escolha outro local.</value>
+    <value>O StarStrap não tem permissão de criar arquivos no local de instalação escolhido. Por favor, escolha outro local.</value>
   </data>
   <data name="Menu.Integrations.ActivityTracking" xml:space="preserve">
     <value>Rastreamento de atividades</value>
@@ -726,7 +726,7 @@ Selecionar 'Não' vai ignorar este aviso e prosseguir com a instalação.</value
     <value>Não sair para o aplicativo do Roblox</value>
   </data>
   <data name="Menu.Integrations.EnableActivityTracking.Description" xml:space="preserve">
-    <value>Permitir que o Voidstrap detecte qual jogo do Roblox você está jogando. Alguns recursos podem precisar disto.</value>
+    <value>Permitir que o StarStrap detecte qual jogo do Roblox você está jogando. Alguns recursos podem precisar disto.</value>
   </data>
   <data name="Menu.Integrations.EnableActivityTracking.Title" xml:space="preserve">
     <value>Ativar rastreamento de atividades</value>
@@ -823,7 +823,7 @@ Selecionar 'Não' vai ignorar este aviso e prosseguir com a instalação.</value
     <value>Configurações salvas!</value>
   </data>
   <data name="Menu.Title" xml:space="preserve">
-    <value>Configurações do Voidstrap</value>
+    <value>Configurações do StarStrap</value>
   </data>
   <data name="Dialog.LanguageSelector.Header" xml:space="preserve">
     <value>Escolher idioma preferido</value>
@@ -853,7 +853,7 @@ Selecionar 'Não' vai ignorar este aviso e prosseguir com a instalação.</value
     <value>Layout da Interface de Usuário</value>
   </data>
   <data name="Menu.FastFlags.ManagerEnabled.Title" xml:space="preserve">
-    <value>Permitir que Voidstrap gerencie as Fast Flags</value>
+    <value>Permitir que StarStrap gerencie as Fast Flags</value>
   </data>
   <data name="Menu.FastFlags.ManagerEnabled.Description" xml:space="preserve">
     <value>Desabilitar isso irá prevenir que qualquer coisa configurada aqui seja aplicada ao Roblox.</value>
@@ -898,7 +898,7 @@ Selecionar 'Não' vai ignorar este aviso e prosseguir com a instalação.</value
     <value>Desativar texturas de terreno</value>
   </data>
   <data name="Dialog.Connectivity.UnableToDownload" xml:space="preserve">
-    <value>Voidstrap não consegue baixar o Roblox</value>
+    <value>StarStrap não consegue baixar o Roblox</value>
   </data>
   <data name="Dialog.Connectivity.UnableToDownloadReason" xml:space="preserve">
     <value>Roblox não pode ser baixado agora. Por favor, leia a página de ajuda para mais informações: {0}</value>
@@ -919,7 +919,7 @@ Selecionar 'Não' vai ignorar este aviso e prosseguir com a instalação.</value
     <value>A entrada para '{0}' não é válida, pois o valor deve ser um número</value>
   </data>
   <data name="Logger.NoWriteMode" xml:space="preserve">
-    <value>Nenhum arquivo de registro será salvo para essa execução porque o Voidstrap não consegue gravar na pasta em '{0}'</value>
+    <value>Nenhum arquivo de registro será salvo para essa execução porque o StarStrap não consegue gravar na pasta em '{0}'</value>
   </data>
   <data name="Common.Default" xml:space="preserve">
     <value>Padrão</value>
@@ -934,7 +934,7 @@ Selecionar 'Não' vai ignorar este aviso e prosseguir com a instalação.</value
     <value>A entrada para '{0}' não é válida pois o place filter não foi formatado corretamente.</value>
   </data>
   <data name="Installer.Title" xml:space="preserve">
-    <value>Instalador do Voidstrap</value>
+    <value>Instalador do StarStrap</value>
   </data>
   <data name="Installer.Welcome.Title" xml:space="preserve">
     <value>Bem-vindo</value>
@@ -953,9 +953,9 @@ Selecionar 'Não' vai ignorar este aviso e prosseguir com a instalação.</value
     <value>Próximo</value>
   </data>
   <data name="Installer.Welcome.MainText" xml:space="preserve">
-    <value>Obrigado por baixar Voidstrap.
+    <value>Obrigado por baixar StarStrap.
 
-Os únicos websites oficiais para baixar o Voidstrap são {0} e {1}, então por favor, tenha certeza de que baixou de uma fonte oficial.
+Os únicos websites oficiais para baixar o StarStrap são {0} e {1}, então por favor, tenha certeza de que baixou de uma fonte oficial.
 
 Esse processo de instalação será rápido e fácil, e você poderá editar qualquer uma das configurações após a instalação.</value>
     <comment>{0} and {1} are URLs</comment>
@@ -964,10 +964,10 @@ Esse processo de instalação será rápido e fácil, e você poderá editar qua
     <value>Por favor clique em 'Próximo' para continuar.</value>
   </data>
   <data name="Installer.Welcome.UpdateNotice" xml:space="preserve">
-    <value>Você está tentando baixar a versão {0} do Voidstrap, mas a última versão disponível é {1}. Você gostaria de baixá-la?</value>
+    <value>Você está tentando baixar a versão {0} do StarStrap, mas a última versão disponível é {1}. Você gostaria de baixá-la?</value>
   </data>
   <data name="Installer.Install.Location.Title" xml:space="preserve">
-    <value>Escolha aonde o Voidstrap deve ser instalado</value>
+    <value>Escolha aonde o StarStrap deve ser instalado</value>
   </data>
   <data name="Installer.Install.Location.Text" xml:space="preserve">
     <value>O Roblox também será instalado neste caminho. Mude isso se você prefere instalar todos os seus jogos em uma unidade separada. Caso contrário, é recomendável que você mantenha como está.</value>
@@ -985,16 +985,16 @@ Esse processo de instalação será rápido e fácil, e você poderá editar qua
     <value>Ícone do Menu Iniciar</value>
   </data>
   <data name="Installer.Completion.Text" xml:space="preserve">
-    <value>O Voidstrap foi instalado com sucesso. 
+    <value>O StarStrap foi instalado com sucesso. 
 
-Roblox ainda não foi instalado, isso acontecerá quando você o executar com o Voidstrap pela primeira vez. No entanto, antes de fazer isso, você pode querer configurar as configurações do Voidstrap primeiro.
+Roblox ainda não foi instalado, isso acontecerá quando você o executar com o StarStrap pela primeira vez. No entanto, antes de fazer isso, você pode querer configurar as configurações do StarStrap primeiro.
 
-Além disso, evite usar o atalho "Roblox Player" para iniciar o Roblox, já que o Voidstrap não iniciará com o Roblox. Se você não ver o Voidstrap ser exibido quando for lançado a partir do site, basta abrir o Roblox com o Voidstrap pelo computador uma vez para corrigi-lo.
+Além disso, evite usar o atalho "Roblox Player" para iniciar o Roblox, já que o StarStrap não iniciará com o Roblox. Se você não ver o StarStrap ser exibido quando for lançado a partir do site, basta abrir o Roblox com o StarStrap pelo computador uma vez para corrigi-lo.
 
 O que você gostaria de fazer?</value>
   </data>
   <data name="Installer.Completion.Settings.Title" xml:space="preserve">
-    <value>Configurar o Voidstrap</value>
+    <value>Configurar o StarStrap</value>
   </data>
   <data name="Installer.Completion.Settings.Description" xml:space="preserve">
     <value>Ajuste com todos os recursos que temos a oferecer</value>
@@ -1006,22 +1006,22 @@ O que você gostaria de fazer?</value>
     <value>Você será direcionado ao aplicativo da área de trabalho quando tudo estiver pronto</value>
   </data>
   <data name="Uninstaller.Title" xml:space="preserve">
-    <value>Desinstalar Voidstrap</value>
+    <value>Desinstalar StarStrap</value>
   </data>
   <data name="Uninstaller.Text" xml:space="preserve">
-    <value>A desinstalação removerá o Voidstrap do seu sistema e reconfigurará automaticamente o inicializador padrão do Roblox, caso ele ainda esteja instalado.
+    <value>A desinstalação removerá o StarStrap do seu sistema e reconfigurará automaticamente o inicializador padrão do Roblox, caso ele ainda esteja instalado.
 
 Se você estiver desinstalando ou reinstalando porque está tendo problemas com o Roblox, leia [esta página de ajuda]({0}) primeiro.
 
-O processo de desinstalação pode não ser capaz de se limpar completamente, então talvez seja necessário limpar manualmente os arquivos restantes onde o Voidstrap foi instalado.
+O processo de desinstalação pode não ser capaz de se limpar completamente, então talvez seja necessário limpar manualmente os arquivos restantes onde o StarStrap foi instalado.
 
-O Voidstrap foi instalado em "{1}".</value>
+O StarStrap foi instalado em "{1}".</value>
   </data>
   <data name="Uninstaller.KeepData.Label" xml:space="preserve">
     <value>Manter minhas configurações e mods</value>
   </data>
   <data name="Uninstaller.KeepData.Description" xml:space="preserve">
-    <value>Eles serão mantidos onde Voidstrap foi instalado, e serão automaticamente restaurados em uma reinstalação.</value>
+    <value>Eles serão mantidos onde StarStrap foi instalado, e serão automaticamente restaurados em uma reinstalação.</value>
   </data>
   <data name="Uninstaller.Uninstall" xml:space="preserve">
     <value>Desinstalar</value>
@@ -1042,20 +1042,20 @@ O Voidstrap foi instalado em "{1}".</value>
     <value>No momento, você não tem o runtime WebView2 instalado. Alguns recursos do Roblox não funcionarão corretamente sem ele, como o aplicativo para desktop. Gostaria de baixá-lo agora?</value>
   </data>
   <data name="Dialog.CannotCreateShortcuts" xml:space="preserve">
-    <value>O Voidstrap não conseguiu criar atalhos para a área de trabalho e o menu Iniciar. Tente criá-los mais tarde através das configurações.</value>
+    <value>O StarStrap não conseguiu criar atalhos para a área de trabalho e o menu Iniciar. Tente criá-los mais tarde através das configurações.</value>
   </data>
   <data name="Dialog.Exception.Info.2.Alt" xml:space="preserve">
-    <value>Verifique primeiro a [Wiki do Voidstrap]({0}) para ver se esse problema já foi resolvido com uma correção.
+    <value>Verifique primeiro a [Wiki do StarStrap]({0}) para ver se esse problema já foi resolvido com uma correção.
 
 
-Se não, então por favor reporte essa exceção aos mantenedores desse fork. NÃO reporte isso nos issues/problemas do GitHub do Voidstrap, pois essa é uma compilação não oficial.</value>
+Se não, então por favor reporte essa exceção aos mantenedores desse fork. NÃO reporte isso nos issues/problemas do GitHub do StarStrap, pois essa é uma compilação não oficial.</value>
     <comment>"fork" in general means "a variation of" or "a different version of". You can alternatively write the first sentence as "...to the maintainers of this version."</comment>
   </data>
   <data name="Installer.Install.Shortcuts.Description" xml:space="preserve">
     <value>Esses são atalhos gerais que abrem um menu de inicialização de múltipla escolha. Atalhos para funções específicas podem ser criados mais tarde nas configurações.</value>
   </data>
   <data name="Menu.Shortcuts.Description" xml:space="preserve">
-    <value>Configure como o Voidstrap pode ser iniciado facilmente.</value>
+    <value>Configure como o StarStrap pode ser iniciado facilmente.</value>
   </data>
   <data name="Menu.Shortcuts.General.Title" xml:space="preserve">
     <value>Geral</value>
@@ -1085,7 +1085,7 @@ Se não, então por favor reporte essa exceção aos mantenedores desse fork. N�
     <value>Por favor, aguarde a desinstalação terminar.</value>
   </data>
   <data name="About.Title" xml:space="preserve">
-    <value>Sobre o Voidstrap</value>
+    <value>Sobre o StarStrap</value>
   </data>
   <data name="About.Licenses.Title" xml:space="preserve">
     <value>Licenças</value>
@@ -1098,7 +1098,7 @@ Se não, então por favor reporte essa exceção aos mantenedores desse fork. N�
     <value>Você tem alterações não salvas. Tem certeza que deseja fechar sem salvar?</value>
   </data>
   <data name="InstallChecker.VersionLessThanInstalled" xml:space="preserve">
-    <value>A versão do Voidstrap que você executou é mais antiga do que a versão que você tem instalada atualmente.
+    <value>A versão do StarStrap que você executou é mais antiga do que a versão que você tem instalada atualmente.
 Problemas podem ocorrer e suas configurações podem ser alteradas. Uma reinstalação é recomendada.
 Tem certeza que deseja continuar?</value>
   </data>
@@ -1111,7 +1111,7 @@ Tem certeza que deseja continuar?</value>
   <data name="Dialog.PlayerError.HelpInformation" xml:space="preserve">
     <value>Para mais informações sobre o porquê disso estar acontecendo e como resolver, leia [este artigo de ajuda]({0}).
 
-Verifique se o Roblox funciona com [o inicializador original]({1}). Se não funcionar, significa que isso não é um problema do Voidstrap. Se funcionar, consulte o artigo de ajuda.</value>
+Verifique se o Roblox funciona com [o inicializador original]({1}). Se não funcionar, significa que isso não é um problema do StarStrap. Se funcionar, consulte o artigo de ajuda.</value>
   </data>
   <data name="Common.NetworkError" xml:space="preserve">
     <value>Não foi possível carregar os dados devido a um erro de rede.</value>
@@ -1123,7 +1123,7 @@ Verifique se o Roblox funciona com [o inicializador original]({1}). Se não func
     <value>Apoiadores</value>
   </data>
   <data name="About.Supporters.Description" xml:space="preserve">
-    <value>Estas são as pessoas que apoiaram o Voidstrap pelo Ko-fi. Um enorme obrigado a todos aqui!
+    <value>Estas são as pessoas que apoiaram o StarStrap pelo Ko-fi. Um enorme obrigado a todos aqui!
 Toda pessoa aqui está classificada pelo seu compromisso geral.</value>
   </data>
   <data name="JsonManager.SettingsLoadFailed" xml:space="preserve">
@@ -1154,12 +1154,12 @@ Toda pessoa aqui está classificada pelo seu compromisso geral.</value>
     <value>Nesta execução, o Roblox não será verificado para atualizações, e as alterações nos mods não serão aplicadas.</value>
   </data>
   <data name="Dialog.Connectivity.RobloxUpgradeNeeded" xml:space="preserve">
-    <value>O Roblox precisa ser instalado ou atualizado, Voidstrap não consegue continuar.</value>
+    <value>O Roblox precisa ser instalado ou atualizado, StarStrap não consegue continuar.</value>
   </data>
   <data name="Installer.Install.CannotOverwrite" xml:space="preserve">
-    <value>O Voidstrap já foi instalado neste local antes e ainda está presente, mas o instalador não consegue substituir o executável antigo. 
+    <value>O StarStrap já foi instalado neste local antes e ainda está presente, mas o instalador não consegue substituir o executável antigo. 
 
-Por favor, exclua manualmente o arquivo Voidstrap.exe do local de instalação ou tente reiniciar o sistema, e depois tente instalar novamente.</value>
+Por favor, exclua manualmente o arquivo StarStrap.exe do local de instalação ou tente reiniciar o sistema, e depois tente instalar novamente.</value>
   </data>
   <data name="Common.NotAvailable" xml:space="preserve">
     <value>Não disponível</value>
@@ -1171,7 +1171,7 @@ Por favor, exclua manualmente o arquivo Voidstrap.exe do local de instalação o
     <value>Configure os parâmetros do aplicativo, como o comportamento de escala de DPI e as [otimizações de tela cheia]({0}).</value>
   </data>
   <data name="Common.RobloxNotInstalled" xml:space="preserve">
-    <value>O Roblox ainda não foi instalado. Por favor, inicie o Roblox usando o Voidstrap pelo menos uma vez antes de tentar usar esta opção.</value>
+    <value>O Roblox ainda não foi instalado. Por favor, inicie o Roblox usando o StarStrap pelo menos uma vez antes de tentar usar esta opção.</value>
   </data>
   <data name="Installer.ShouldCancel" xml:space="preserve">
     <value>Tem certeza que deseja cancelar a instalação?</value>
@@ -1189,10 +1189,10 @@ Por favor, exclua manualmente o arquivo Voidstrap.exe do local de instalação o
     <value>Extrair ícones do Roblox para a pasta</value>
   </data>
   <data name="Menu.Shortcuts.ExtractIcons.Description" xml:space="preserve">
-    <value>Permite que você use a variação de ícones Roblox do Voidstrap para seus atalhos. [Veja como.]({0})</value>
+    <value>Permite que você use a variação de ícones Roblox do StarStrap para seus atalhos. [Veja como.]({0})</value>
   </data>
   <data name="Dialog.RegistryWriteError" xml:space="preserve">
-    <value>Voidstrap não conseguiu escrever no registro do Windows. Um antivírus provavelmente está interferindo e causando problemas. Por favor, verifique se não há nada que restrinja a operação do Voidstrap.</value>
+    <value>StarStrap não conseguiu escrever no registro do Windows. Um antivírus provavelmente está interferindo e causando problemas. Por favor, verifique se não há nada que restrinja a operação do StarStrap.</value>
   </data>
   <data name="About.Supporters.Monthly" xml:space="preserve">
     <value>Mensalmente</value>
@@ -1200,13 +1200,13 @@ Por favor, exclua manualmente o arquivo Voidstrap.exe do local de instalação o
   <data name="About.Supporters.OneOff" xml:space="preserve">
     <value>Uma vez</value>
   </data>
-  <data name="Menu.Voidstrap.Description" xml:space="preserve">
-    <value>Configure opções relacionadas ao comportamento do Voidstrap.</value>
+  <data name="Menu.StarStrap.Description" xml:space="preserve">
+    <value>Configure opções relacionadas ao comportamento do StarStrap.</value>
   </data>
-  <data name="Menu.Voidstrap.Analytics.Title" xml:space="preserve">
+  <data name="Menu.StarStrap.Analytics.Title" xml:space="preserve">
     <value>Habilitar o envio de análises</value>
   </data>
-  <data name="Menu.Voidstrap.Analytics.Description" xml:space="preserve">
+  <data name="Menu.StarStrap.Analytics.Description" xml:space="preserve">
     <value>É anônimo e nada mau, eu prometo. Para saber o que coletamos e o porquê, veja nossa [política de privacidade]({0}).</value>
   </data>
   <data name="Common.Analytics" xml:space="preserve">
@@ -1230,7 +1230,7 @@ Enquanto ativo, ele iniciará o Roblox automaticamente após fechar as Configura
 Gostaria de habilitar o modo de teste?</value>
   </data>
   <data name="About.Translators.Description" xml:space="preserve">
-    <value>Todas as traduções do Voidstrap são colaborativas através do [Crowdin]({0}). Todos listados aqui são pessoas que gentilmente usaram seu tempo e esforço para ajudar a localizar o Voidstrap. Um enorme agradecimento a todos!</value>
+    <value>Todas as traduções do StarStrap são colaborativas através do [Crowdin]({0}). Todos listados aqui são pessoas que gentilmente usaram seu tempo e esforço para ajudar a localizar o StarStrap. Um enorme agradecimento a todos!</value>
   </data>
   <data name="Common.Navigation.Install" xml:space="preserve">
     <value>Instalar</value>
@@ -1247,7 +1247,7 @@ Gostaria de habilitar o modo de teste?</value>
     <value>Versão {0}</value>
   </data>
   <data name="Bootstrapper.FilesInUse" xml:space="preserve">
-    <value>O Voidstrap tentou atualizar o Roblox, mas não pode porque os arquivos do Roblox ainda estão em uso.
+    <value>O StarStrap tentou atualizar o Roblox, mas não pode porque os arquivos do Roblox ainda estão em uso.
 
 Feche quaisquer aplicativos que possam estar usando os arquivos do Roblox e reinicie.</value>
     <comment>This is *not* for when Roblox is still running when trying to upgrade. This applies to files being open (i.e. image assets)</comment>
@@ -1258,10 +1258,10 @@ Feche quaisquer aplicativos que possam estar usando os arquivos do Roblox e rein
   </data>
   <data name="Common.Export" xml:space="preserve">
     <value>Exportar</value>
-    <comment>Currently used under the "Voidstrap" settings tab for the button to export diagnostic data</comment>
+    <comment>Currently used under the "StarStrap" settings tab for the button to export diagnostic data</comment>
   </data>
   <data name="Dialog.Connectivity.Preventing" xml:space="preserve">
-    <value>Algo parece estar impedindo o Voidstrap de se conectar à internet.</value>
+    <value>Algo parece estar impedindo o StarStrap de se conectar à internet.</value>
   </data>
   <data name="Dialog.Connectivity.TimedOut" xml:space="preserve">
     <value>A conexão expirou, o que pode indicar uma conexão de internet ruim ou um bloqueio de firewall.</value>

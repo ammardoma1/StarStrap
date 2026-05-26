@@ -1,7 +1,7 @@
-﻿using Voidstrap.AppData;
-using Voidstrap;
+using StarStrap.AppData;
+using StarStrap;
 
-namespace Voidstrap.AppData
+namespace StarStrap.AppData
 {
     public class RobloxStudioData : CommonAppData, IAppData
     {

@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace Voidstrap.Integrations.SwiftTunnel.Models
+namespace StarStrap.Integrations.SwiftTunnel.Models
 {
     /// <summary>
     /// WireGuard VPN configuration from SwiftTunnel API

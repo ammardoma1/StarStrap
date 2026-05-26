@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
-using Voidstrap.Resources;
+using StarStrap.Resources;
 
-namespace Voidstrap.UI.Elements.Dialogs
+namespace StarStrap.UI.Elements.Dialogs
 {
     /// <summary>
     /// Interaction logic for FlagProfilesDialog.xaml

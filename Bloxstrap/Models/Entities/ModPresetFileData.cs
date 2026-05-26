@@ -1,7 +1,7 @@
-﻿using System.Security.Cryptography;
+using System.Security.Cryptography;
 using System.Windows.Markup;
 
-namespace Voidstrap.Models.Entities
+namespace StarStrap.Models.Entities
 {
     public class ModPresetFileData
     {

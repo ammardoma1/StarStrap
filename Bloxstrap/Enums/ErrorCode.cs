@@ -1,7 +1,7 @@
-﻿namespace Voidstrap.Enums
+namespace StarStrap.Enums
 {
     /// <summary>
-    /// Represents common error codes used within the Voidstrap application.
+    /// Represents common error codes used within the StarStrap application.
     /// References:
     /// - https://learn.microsoft.com/en-us/windows/win32/msi/error-codes
     /// - https://i-logic.com/serial/errorcodes.htm

@@ -1,12 +1,12 @@
-﻿<ui:UiPage
-    x:Class="Voidstrap.UI.Elements.Settings.Pages.IntegrationsPage"
+<ui:UiPage
+    x:Class="StarStrap.UI.Elements.Settings.Pages.IntegrationsPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:controls="clr-namespace:Voidstrap.UI.Elements.Controls"
+    xmlns:controls="clr-namespace:StarStrap.UI.Elements.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:models="clr-namespace:Voidstrap.UI.ViewModels"
-    xmlns:resources="clr-namespace:Voidstrap.Resources"
+    xmlns:models="clr-namespace:StarStrap.UI.ViewModels"
+    xmlns:resources="clr-namespace:StarStrap.Resources"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     x:Name="IntegrationsPageView"
     Title="IntegrationsPage"
@@ -25,7 +25,7 @@
                     Padding="8"
                     IsClosable="False"
                     IsOpen="True"
-                    Message="Voidstrap is a simple yet advanced Roblox bootstrapper. but if you ever get stuck, check our documentation."
+                    Message="Maybe theres hope? If you ever get stuck, check our documentation."
                     Severity="Informational" />
 
         <ui:InfoBar
@@ -33,7 +33,7 @@
                     Padding="4"
                     IsClosable="True"
                     IsOpen="False"
-                    Message="The Version you’re using is a BETA release. Expect occasional errors and issues."
+                    Message="The Version youre using is a BETA release. Expect occasional errors and issues."
                     Severity="Warning" />
 
         <TextBlock

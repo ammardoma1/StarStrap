@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.IO;
 using System.IO.Compression;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Voidstrap;
+using StarStrap;
 
-namespace Voidstrap
+namespace StarStrap
 {
     public class DarkTexturesInstaller
     {

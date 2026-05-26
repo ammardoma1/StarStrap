@@ -1,4 +1,4 @@
-﻿using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Input;
 using ICSharpCode.SharpZipLib.Zip;
 //#define ENABLE_ROSLYN
 
@@ -23,7 +23,7 @@ using System.Windows.Controls;
 using System.Windows.Markup;
 using System.Windows.Media;
 
-namespace Voidstrap.UI.ViewModels.Settings
+namespace StarStrap.UI.ViewModels.Settings
 {
     public class PluginsViewModel : INotifyPropertyChanged
     {
@@ -132,7 +132,7 @@ namespace Voidstrap.UI.ViewModels.Settings
         #region AutoSave Path
         private readonly string AutoSavePath = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-            "Voidstrap",
+            "StarStrap",
             "autosave_plugin.zip"
         );
         #endregion
@@ -225,7 +225,7 @@ namespace Voidstrap.UI.ViewModels.Settings
 
         private readonly string PluginSessionPath = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-            "Voidstrap",
+            "StarStrap",
             "plugin_session.json"
         );
 

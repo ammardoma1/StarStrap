@@ -1,11 +1,11 @@
-﻿using Voidstrap.AppData;
+using StarStrap.AppData;
 using System.ComponentModel;
 using System.Security.AccessControl;
 using System.Windows;
-using Voidstrap;
+using StarStrap;
 using Microsoft.VisualBasic.Devices;
 
-namespace Voidstrap
+namespace StarStrap
 {
     static class Utilities
     {
@@ -177,7 +177,7 @@ namespace Voidstrap
 
         public static void KillBackgroundUpdater()
         {
-            using EventWaitHandle handle = new EventWaitHandle(false, EventResetMode.AutoReset, "Voidstrap-BackgroundUpdaterKillEvent");
+            using EventWaitHandle handle = new EventWaitHandle(false, EventResetMode.AutoReset, "StarStrap-BackgroundUpdaterKillEvent");
             handle.Set();
         }
 

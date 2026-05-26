@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.Integrations
+namespace StarStrap.Integrations
 {
     public class IntegrationWatcher : IDisposable
     {

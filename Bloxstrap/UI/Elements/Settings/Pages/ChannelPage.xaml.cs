@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Windows;
-using Voidstrap.UI.Elements.Dialogs;
-using Voidstrap.UI.ViewModels.Settings;
+using StarStrap.UI.Elements.Dialogs;
+using StarStrap.UI.ViewModels.Settings;
 using Wpf.Ui.Controls;
 using Wpf.Ui.Hardware;
 
-namespace Voidstrap.UI.Elements.Settings.Pages
+namespace StarStrap.UI.Elements.Settings.Pages
 {
     public partial class ChannelPage
     {
@@ -118,11 +118,11 @@ namespace Voidstrap.UI.Elements.Settings.Pages
                 string basePath = Paths.Base;
 
                 string appSettingsSource = Path.Combine(basePath, "AppSettings.json");
-                string modsSource = Path.Combine(basePath, "VoidstrapMods");
+                string modsSource = Path.Combine(basePath, "StarStrapMods");
 
                 var strapDirs = Directory.GetDirectories(localAppData)
                     .Where(d => d.EndsWith("strap", StringComparison.OrdinalIgnoreCase) &&
-                                !d.EndsWith("Voidstrap", StringComparison.OrdinalIgnoreCase))
+                                !d.EndsWith("StarStrap", StringComparison.OrdinalIgnoreCase))
                     .ToList();
 
                 foreach (var dir in strapDirs)
@@ -136,7 +136,7 @@ namespace Voidstrap.UI.Elements.Settings.Pages
                     SafeCopy(modsSource, modsTarget);
                 }
 
-                Frontend.ShowMessageBox("Voidstrap Settings/Mods Synced"); // diddy is synced :)))))))))) eheh not funny ik.. sorry
+                Frontend.ShowMessageBox("StarStrap Settings/Mods Synced"); // diddy is synced :)))))))))) eheh not funny ik.. sorry
             }
             catch (Exception ex)
             {
@@ -199,12 +199,12 @@ namespace Voidstrap.UI.Elements.Settings.Pages
                     Frontend.ShowMessageBox(
                         $"A new version ({latestVersion}) is available!"
                     );
-                    string exeUrl = "https://github.com/voidstrap/Voidstrap/releases/latest/download/voidstrap.exe";
-                    string tempPath = Path.Combine(Path.GetTempPath(), "voidstrap_update.exe");
+                    string exeUrl = "https://github.com/StarStrap/StarStrap/releases/latest/download/StarStrap.exe";
+                    string tempPath = Path.Combine(Path.GetTempPath(), "StarStrap_update.exe");
 
                     using (var client = new HttpClient())
                     {
-                        client.DefaultRequestHeaders.Add("User-Agent", "Voidstrap-Updater");
+                        client.DefaultRequestHeaders.Add("User-Agent", "StarStrap-Updater");
                         var data = await client.GetByteArrayAsync(exeUrl);
                         await File.WriteAllBytesAsync(tempPath, data);
                     }
@@ -218,7 +218,7 @@ namespace Voidstrap.UI.Elements.Settings.Pages
                 else
                 {
                     Frontend.ShowMessageBox(
-                        "You are already running the latest version of Voidstrap."
+                        "You are already running the latest version of StarStrap."
                     );
                 }
             }
@@ -233,9 +233,9 @@ namespace Voidstrap.UI.Elements.Settings.Pages
         private async Task<string> GetLatestGitHubVersion()
         {
             using var client = new HttpClient();
-            client.DefaultRequestHeaders.Add("User-Agent", "Voidstrap-Updater");
+            client.DefaultRequestHeaders.Add("User-Agent", "StarStrap-Updater");
 
-            string apiUrl = "https://api.github.com/repos/voidstrap/Voidstrap/releases/latest";
+            string apiUrl = "https://api.github.com/repos/StarStrap/StarStrap/releases/latest";
             string json = await client.GetStringAsync(apiUrl);
 
             using var doc = JsonDocument.Parse(json);
@@ -286,7 +286,7 @@ namespace Voidstrap.UI.Elements.Settings.Pages
 
         private void DonateButton_Click(object sender, RoutedEventArgs e)
         {
-            string url = "https://voidstrapp.netlify.app/donate/donate";
+            string url = "https://voidstrap.netlify.app/donate/donate";
             try
             {
                 ProcessStartInfo psi = new ProcessStartInfo

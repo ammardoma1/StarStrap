@@ -1,41 +1,41 @@
 {
     "profiles": {
-        "Voidstrap (Launch)": {
+        "StarStrap (Launch)": {
             "commandName": "Project"
         },
-        "Voidstrap (Quiet Launch)": {
+        "StarStrap (Quiet Launch)": {
             "commandName": "Project",
             "commandLineArgs": "-quiet"
         },
-        "Voidstrap (Install)": {
+        "StarStrap (Install)": {
             "commandName": "Project",
             "commandLineArgs": "-install"
         },
-        "Voidstrap (Uninstall)": {
+        "StarStrap (Uninstall)": {
             "commandName": "Project",
             "commandLineArgs": "-uninstall"
         },
-        "Voidstrap (Quiet Uninstall)": {
+        "StarStrap (Quiet Uninstall)": {
             "commandName": "Project",
             "commandLineArgs": "-uninstall -quiet"
         },
-        "Voidstrap (Menu)": {
+        "StarStrap (Menu)": {
             "commandName": "Project",
             "commandLineArgs": "-menu"
         },
-        "Voidstrap (Deeplink)": {
+        "StarStrap (Deeplink)": {
             "commandName": "Project",
             "commandLineArgs": "-player \"roblox://experiences/start?placeId=286090429\""
         },
-        "Voidstrap (Studio Launch)": {
+        "StarStrap (Studio Launch)": {
             "commandName": "Project",
             "commandLineArgs": "-studio"
         },
-        "Voidstrap (Watcher)": {
+        "StarStrap (Watcher)": {
             "commandName": "Project",
             "commandLineArgs": "-watcher"
         },
-        "Voidstrap (Bloxshade)": {
+        "StarStrap (Bloxshade)": {
             "commandName": "Project",
             "commandLineArgs": "-bloxshade"
         }

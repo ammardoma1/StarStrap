@@ -1,4 +1,4 @@
-﻿using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Input;
 using Microsoft.Win32;
 using System;
 using System.Collections.ObjectModel;
@@ -20,7 +20,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using DRPC = DiscordRPC;
 
-namespace Voidstrap.UI.ViewModels.ContextMenu
+namespace StarStrap.UI.ViewModels.ContextMenu
 {
     public class MusicPlayerViewModel : INotifyPropertyChanged, IDisposable
     {
@@ -626,11 +626,11 @@ private void UpdateFilteredLibrary()
                 presence = new DRPC.RichPresence
                 {
                     Details = "Idle",
-                    State = "Voidstrap Music Player",
+                    State = "StarStrap Music Player",
                     Assets = new DRPC.Assets
                     {
-                        LargeImageKey = "voidstrap_logo",
-                        LargeImageText = "Voidstrap Music Player"
+                        LargeImageKey = "StarStrap_logo",
+                        LargeImageText = "StarStrap Music Player"
                     }
                 };
             }
@@ -645,16 +645,16 @@ private void UpdateFilteredLibrary()
 
                 string elapsedStr = FormatTime(elapsed);
                 string totalStr = FormatTime(total);
-                string infoString = $"{(NowPlaying.FileType ?? "FILE").ToUpperInvariant()} • {elapsedStr} / {totalStr} • {(_isPlaying ? "Playing" : "Paused")} in Voidstrap{loopText}";
+                string infoString = $"{(NowPlaying.FileType ?? "FILE").ToUpperInvariant()}  {elapsedStr} / {totalStr}  {(_isPlaying ? "Playing" : "Paused")} in StarStrap{loopText}";
 
                 presence = new DRPC.RichPresence
                 {
-                    Details = _isPlaying ? $"🎵 {NowPlaying.Title}" : $"⏸️ {NowPlaying.Title}",
+                    Details = _isPlaying ? $"?? {NowPlaying.Title}" : $"?? {NowPlaying.Title}",
                     State = infoString,
                     Assets = new DRPC.Assets
                     {
-                        LargeImageKey = "voidstrap_logo",
-                        LargeImageText = "Voidstrap Music Player",
+                        LargeImageKey = "StarStrap_logo",
+                        LargeImageText = "StarStrap Music Player",
                         SmallImageKey = playIcon,
                         SmallImageText = _isPlaying ? "Playing" : "Paused"
                     }
@@ -784,7 +784,7 @@ private void UpdateFilteredLibrary()
         private void UpdateNowPlayingBindings()
         {
             if (NowPlaying == null || string.IsNullOrEmpty(NowPlaying.FilePath))
-                NowPlaying = new TrackItem { Title = "—", FileType = "", FilePath = "" };
+                NowPlaying = new TrackItem { Title = "", FileType = "", FilePath = "" };
 
             OnPropertyChanged(nameof(NowPlaying));
             OnPropertyChanged(nameof(NowPlayingDurationSeconds));

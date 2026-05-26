@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using NAudio.CoreAudioApi;
 using NAudio.Wave;
 
-namespace Voidstrap.UI.ViewModels.ContextMenu
+namespace StarStrap.UI.ViewModels.ContextMenu
 {
     /// <summary>
     /// Handles audio playback, queueing, and simple state management.

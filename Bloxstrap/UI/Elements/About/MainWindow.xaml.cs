@@ -1,8 +1,8 @@
-﻿using System.Windows.Controls;
+using System.Windows.Controls;
 using Wpf.Ui.Controls.Interfaces;
 using Wpf.Ui.Mvvm.Contracts;
 
-namespace Voidstrap.UI.Elements.About
+namespace StarStrap.UI.Elements.About
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -15,8 +15,6 @@ namespace Voidstrap.UI.Elements.About
 
             App.Logger.WriteLine("MainWindow", "Initializing about window");
 
-            if (Locale.CurrentCulture.Name.StartsWith("tr"))
-                TranslatorsText.FontSize = 9;
         }
 
         #region INavigationWindow methods

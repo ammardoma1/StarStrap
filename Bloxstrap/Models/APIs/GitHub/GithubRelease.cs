@@ -1,4 +1,4 @@
-﻿namespace Voidstrap.Models.APIs.GitHub
+namespace StarStrap.Models.APIs.GitHub
 {
     public class GithubRelease
     {

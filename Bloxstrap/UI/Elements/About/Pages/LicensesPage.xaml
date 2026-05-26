@@ -1,12 +1,12 @@
-﻿<ui:UiPage
-    x:Class="Voidstrap.UI.Elements.About.Pages.LicensesPage"
+<ui:UiPage
+    x:Class="StarStrap.UI.Elements.About.Pages.LicensesPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:controls="clr-namespace:Voidstrap.UI.Elements.Controls"
+    xmlns:controls="clr-namespace:StarStrap.UI.Elements.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:models="clr-namespace:Voidstrap.UI.ViewModels"
-    xmlns:resources="clr-namespace:Voidstrap.Resources"
+    xmlns:models="clr-namespace:StarStrap.UI.ViewModels"
+    xmlns:resources="clr-namespace:StarStrap.Resources"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     Title="AboutPage"
     d:DesignHeight="1500"
@@ -36,9 +36,9 @@
                 Grid.Column="0"
                 Margin="0,8,8,0"
                 Command="models:GlobalViewModel.OpenWebpageCommand"
-                CommandParameter="https://github.com/voidstrap/Voidstrap/blob/main/LICENSE.VOIDSTRAP">
+                CommandParameter="https://github.com/StarStrap/StarStrap/blob/main/LICENSE.StarStrap">
                 <StackPanel>
-                    <TextBlock FontSize="14" Text="Voidstrap" />
+                    <TextBlock FontSize="14" Text="StarStrap" />
                     <TextBlock
                         Margin="0,2,0,0"
                         FontSize="12"

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -9,18 +9,18 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-using Voidstrap;
-using Voidstrap.AppData;
-using Voidstrap.UI.ViewModels.ContextMenu;
+using StarStrap;
+using StarStrap.AppData;
+using StarStrap.UI.ViewModels.ContextMenu;
 
-namespace Voidstrap.UI.ViewModels
+namespace StarStrap.UI.ViewModels
 {
     public sealed class BackupItem
     {
         public string FileName { get; init; } = "";
         public string FullPath { get; init; } = "";
         public DateTime CreatedUtc { get; init; }
-        public string Display => $"{FileName} — {CreatedUtc.ToLocalTime():g}";
+        public string Display => $"{FileName}  {CreatedUtc.ToLocalTime():g}";
     }
 
     public class AccountBackupsViewModel : INotifyPropertyChanged
@@ -236,7 +236,7 @@ namespace Voidstrap.UI.ViewModels
                 if (File.Exists(CookiePath))
                 {
                     File.Delete(CookiePath);
-                    Status = "Logged out — Roblox cookie deleted.";
+                    Status = "Logged out  Roblox cookie deleted.";
                     OnPropertyChanged(nameof(CookieDetected));
                 }
                 else

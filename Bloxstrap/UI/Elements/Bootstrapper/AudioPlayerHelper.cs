@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
 using System.Windows.Media;
 
-namespace Voidstrap.UI.Elements.Bootstrapper
+namespace StarStrap.UI.Elements.Bootstrapper
 {
     public static class AudioPlayerHelper
     {

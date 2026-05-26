@@ -1,5 +1,5 @@
-﻿
-namespace Voidstrap.Enums.FlagPresets
+
+namespace StarStrap.Enums.FlagPresets
 {
     public enum TextureQuality
     {

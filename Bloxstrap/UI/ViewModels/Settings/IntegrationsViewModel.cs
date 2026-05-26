@@ -1,4 +1,4 @@
-﻿using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Input;
 using Microsoft.Win32;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -6,11 +6,11 @@ using System.Text.Json.Nodes;
 using System.Windows;
 using System.Windows.Input;
 using System.Xml.Linq;
-using Voidstrap.Integrations;
-using Voidstrap.UI.Elements.ContextMenu;
+using StarStrap.Integrations;
+using StarStrap.UI.Elements.ContextMenu;
 using Wpf.Ui.Appearance;
 
-namespace Voidstrap.UI.ViewModels.Settings
+namespace StarStrap.UI.ViewModels.Settings
 {
     public class IntegrationsViewModel : NotifyPropertyChangedViewModel
     {
@@ -296,6 +296,16 @@ namespace Voidstrap.UI.ViewModels.Settings
         {
             get => RobloxSettings.IsUncapped();
             set => RobloxSettings.SetUncapped(value);
+        }
+
+        public bool MemReductEnabled
+        {
+            get => App.Settings.Prop.MemReductEnabled;
+            set
+            {
+                App.Settings.Prop.MemReductEnabled = value;
+                OnPropertyChanged(nameof(MemReductEnabled));
+            }
         }
 
         public bool DiscordActivityJoinEnabled

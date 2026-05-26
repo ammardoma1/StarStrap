@@ -1,4 +1,4 @@
-﻿using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Input;
 using ICSharpCode.SharpZipLib.Zip;
 using Microsoft.Win32;
 using System;
@@ -11,20 +11,19 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
-using Voidstrap;
-using Voidstrap.UI.Elements.Bootstrapper;
-using Voidstrap.UI.Elements.Dialogs;
-using Voidstrap.UI.Elements.Editor;
-using Voidstrap.UI.Elements.Settings;
-using Voidstrap.UI.ViewModels;
+using StarStrap;
+using StarStrap.UI.Elements.Bootstrapper;
+using StarStrap.UI.Elements.Dialogs;
+using StarStrap.UI.Elements.Editor;
+using StarStrap.UI.Elements.Settings;
+using StarStrap.UI.ViewModels;
 
-namespace Voidstrap.UI.ViewModels.Settings
+namespace StarStrap.UI.ViewModels.Settings
 {
     public class AppearanceViewModel : NotifyPropertyChangedViewModel
     {
         private readonly Page _page;
-        public IEnumerable<Theme> BindableThemes =>
-            Themes.Concat(new[] { Theme.Custom }).Distinct();
+        public IEnumerable<Theme> BindableThemes => Themes;
 
         public ICommand PreviewBootstrapperCommand => new RelayCommand(PreviewBootstrapper);
         public ICommand BrowseCustomIconLocationCommand => new RelayCommand(BrowseCustomIconLocation);
@@ -252,7 +251,7 @@ namespace Voidstrap.UI.ViewModels.Settings
                 if (string.IsNullOrEmpty(value))
                 {
                     if (App.Settings.Prop.BootstrapperIcon == BootstrapperIcon.IconCustom)
-                        App.Settings.Prop.BootstrapperIcon = BootstrapperIcon.IconVoidstrap;
+                        App.Settings.Prop.BootstrapperIcon = BootstrapperIcon.IconStarStrap;
                 }
                 else
                 {
@@ -302,7 +301,7 @@ namespace Voidstrap.UI.ViewModels.Settings
             {
                 window.Closed += (s, e) =>
                 {
-                    Voidstrap.UI.Elements.Bootstrapper.AudioPlayerHelper.StopAudio();
+                    StarStrap.UI.Elements.Bootstrapper.AudioPlayerHelper.StopAudio();
                 };
             }
 

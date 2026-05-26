@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Voidstrap.Models.Attributes
+namespace StarStrap.Models.Attributes
 {
     class EnumNameAttribute : Attribute
     {

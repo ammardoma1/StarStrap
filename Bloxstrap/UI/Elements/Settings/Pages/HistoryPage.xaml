@@ -1,12 +1,12 @@
-﻿<Page
-    x:Class="Voidstrap.UI.Elements.Settings.Pages.HistoryPage"
+<Page
+    x:Class="StarStrap.UI.Elements.Settings.Pages.HistoryPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:controls="clr-namespace:Voidstrap.UI.Elements.Controls"
-    xmlns:settings="clr-namespace:Voidstrap.UI.ViewModels.Settings"
+    xmlns:controls="clr-namespace:StarStrap.UI.Elements.Controls"
+    xmlns:settings="clr-namespace:StarStrap.UI.ViewModels.Settings"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-    xmlns:resources="clr-namespace:Voidstrap.Resources"
-    xmlns:models="clr-namespace:Voidstrap.UI.ViewModels"
+    xmlns:resources="clr-namespace:StarStrap.Resources"
+    xmlns:models="clr-namespace:StarStrap.UI.ViewModels"
     Title="History">
 
     <Grid Margin="0,0,28,0">
