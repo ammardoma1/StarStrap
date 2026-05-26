@@ -32,6 +32,7 @@ Leave a star if you like the project! ⭐️
 </h5>
 
 > [!IMPORTANT]
+> starstrap is a fork of voidstrap, thus anything voidstrap requires, starstrap also requires
 > Voidstrap currently supports **Windows 10 and above**.  
 > **macOS support is in the works**, but it is not available yet.
 >
