@@ -548,7 +548,7 @@ namespace StarStrap
                 await LaunchCustomIntegrations(LOG_IDENT);
                 await DisableCrashHandlerIfNeeded(LOG_IDENT, ct);
                 await LaunchWatcherIfNeeded(logFileName, ct);
-                await LaunchMemReductIfEnabled(LOG_IDENT);
+                await LaunchIntegrationsIfNeeded(LOG_IDENT);
 
                 OptimizeWindowsOnLaunchIfNeeded(LOG_IDENT);
                 ClearTempFilesIfNeeded(LOG_IDENT);
@@ -563,7 +563,7 @@ namespace StarStrap
                     _robloxProcess.Exited += (_, __) =>
                     {
                         StopOptimizer();
-                        StopMemReduct();
+                        StopCleaners();
                     };
                 }
             }
@@ -760,7 +760,6 @@ namespace StarStrap
         private async Task LaunchWatcherIfNeeded(string logFileName, CancellationToken ct)
         {
             bool needWatcher = (App.Settings?.Prop.EnableActivityTracking ?? false)
-                || (App.Settings?.Prop.AIAgentEnabled ?? false)
                 || App.LaunchSettings.TestModeFlag?.Active == true;
 
             if (!needWatcher) return;
@@ -2226,16 +2225,80 @@ namespace StarStrap
 
         #endregion
 
-        #region MemReduct Integration
+                #region Integrations (Memory Cleaners & Winhance)
 
-        private async Task LaunchMemReductIfEnabled(string logIdent)
+        private async Task LaunchIntegrationsIfNeeded(string logIdent)
         {
-            if (!App.Settings.Prop.MemReductEnabled)
-                return;
+            // Windows Memory Compression
+            if (App.Settings.Prop.CompressRamEnabled)
+            {
+                App.Logger.WriteLine(logIdent, "Applying RAM Compression...");
+                try
+                {
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = "powershell.exe",
+                        Arguments = "-WindowStyle Hidden -Command \"Enable-MMAgent -mc\"",
+                        UseShellExecute = true,
+                        Verb = "runas",
+                        CreateNoWindow = true,
+                        WindowStyle = ProcessWindowStyle.Hidden
+                    });
+                }
+                catch (Exception ex)
+                {
+                    App.Logger.WriteLine(logIdent, "Failed to apply RAM Compression: " + ex.Message);
+                }
+            }
 
+            // Winhance
+            if (App.Settings.Prop.WinhanceEnabled)
+            {
+                try
+                {
+                    string winhanceDir = Path.Combine(Paths.Base, "Winhance");
+                    string winhanceExe = Path.Combine(winhanceDir, "Winhance.exe");
+
+                    if (!File.Exists(winhanceExe))
+                    {
+                        App.Logger.WriteLine(logIdent, "Winhance not found, downloading...");
+                        SetStatus("Downloading Winhance...");
+                        Directory.CreateDirectory(winhanceDir);
+                        using var http = new HttpClient();
+                        http.DefaultRequestHeaders.UserAgent.ParseAdd("StarStrap/1.0");
+                        var response = await http.GetAsync("https://github.com/memstechtips/Winhance/releases/latest/download/Winhance.exe");
+                        response.EnsureSuccessStatusCode();
+                        await using var fs = File.Create(winhanceExe);
+                        await response.Content.CopyToAsync(fs);
+                    }
+
+                    if (File.Exists(winhanceExe))
+                    {
+                        App.Logger.WriteLine(logIdent, "Launching Winhance...");
+                        Process.Start(new ProcessStartInfo { FileName = winhanceExe, WorkingDirectory = winhanceDir, UseShellExecute = true });
+                    }
+                }
+                catch (Exception ex)
+                {
+                    App.Logger.WriteLine(logIdent, "Failed to launch Winhance: " + ex.Message);
+                }
+            }
+
+            // Memory Cleaner
+            if (App.Settings.Prop.SelectedMemoryCleaner == StarStrap.Enums.MemoryCleanerType.MemReduct)
+            {
+                await LaunchMemReduct(logIdent);
+            }
+            else if (App.Settings.Prop.SelectedMemoryCleaner == StarStrap.Enums.MemoryCleanerType.WindowsMemoryCleaner)
+            {
+                await LaunchWinMemoryCleaner(logIdent);
+            }
+        }
+
+        private async Task LaunchMemReduct(string logIdent)
+        {
             try
             {
-                // Download MemReduct if not already present
                 if (!File.Exists(MemReductExe))
                 {
                     App.Logger.WriteLine(logIdent, "MemReduct not found, downloading portable version...");
@@ -2243,13 +2306,8 @@ namespace StarStrap
                     await DownloadMemReduct();
                 }
 
-                if (!File.Exists(MemReductExe))
-                {
-                    App.Logger.WriteLine(logIdent, "MemReduct download failed, skipping launch.");
-                    return;
-                }
+                if (!File.Exists(MemReductExe)) return;
 
-                // Launch MemReduct minimized to tray
                 App.Logger.WriteLine(logIdent, "Launching MemReduct...");
                 _memReductProcess = Process.Start(new ProcessStartInfo
                 {
@@ -2259,92 +2317,104 @@ namespace StarStrap
                     UseShellExecute = false,
                     CreateNoWindow = true
                 });
-
-                App.Logger.WriteLine(logIdent, $"MemReduct launched (PID: {_memReductProcess?.Id})");
             }
             catch (Exception ex)
             {
-                App.Logger.WriteLine(logIdent, $"Failed to launch MemReduct: {ex.Message}");
+                App.Logger.WriteLine(logIdent, "Failed to launch MemReduct: " + ex.Message);
+            }
+        }
+
+        private async Task LaunchWinMemoryCleaner(string logIdent)
+        {
+            try
+            {
+                string cleanerDir = Path.Combine(Paths.Base, "WinMemoryCleaner");
+                string cleanerExe = Path.Combine(cleanerDir, "WinMemoryCleaner.exe");
+
+                if (!File.Exists(cleanerExe))
+                {
+                    App.Logger.WriteLine(logIdent, "Windows Memory Cleaner not found, downloading...");
+                    SetStatus("Downloading Windows Memory Cleaner...");
+                    Directory.CreateDirectory(cleanerDir);
+                    using var http = new HttpClient();
+                    http.DefaultRequestHeaders.UserAgent.ParseAdd("StarStrap/1.0");
+                    var response = await http.GetAsync("https://github.com/IgorMundstein/WinMemoryCleaner/releases/latest/download/WinMemoryCleaner.exe");
+                    response.EnsureSuccessStatusCode();
+                    await using var fs = File.Create(cleanerExe);
+                    await response.Content.CopyToAsync(fs);
+                }
+
+                if (!File.Exists(cleanerExe)) return;
+
+                App.Logger.WriteLine(logIdent, "Launching Windows Memory Cleaner...");
+                _memReductProcess = Process.Start(new ProcessStartInfo
+                {
+                    FileName = cleanerExe,
+                    WorkingDirectory = cleanerDir,
+                    UseShellExecute = true,
+                    WindowStyle = ProcessWindowStyle.Minimized
+                });
+            }
+            catch (Exception ex)
+            {
+                App.Logger.WriteLine(logIdent, "Failed to launch Windows Memory Cleaner: " + ex.Message);
             }
         }
 
         private async Task DownloadMemReduct()
         {
             const string downloadUrl = "https://github.com/henrypp/memreduct/releases/latest/download/memreduct-3.4-bin.zip";
-
             try
             {
                 Directory.CreateDirectory(MemReductDir);
-
                 string zipPath = Path.Combine(MemReductDir, "memreduct.zip");
-
                 using var http = new HttpClient();
                 http.Timeout = TimeSpan.FromMinutes(5);
                 http.DefaultRequestHeaders.UserAgent.ParseAdd("StarStrap/1.0");
-
                 var response = await http.GetAsync(downloadUrl);
                 response.EnsureSuccessStatusCode();
-
                 await using var fs = File.Create(zipPath);
                 await response.Content.CopyToAsync(fs);
                 fs.Close();
-
-                // Extract the zip
                 System.IO.Compression.ZipFile.ExtractToDirectory(zipPath, MemReductDir, true);
-
-                // MemReduct portable extracts into a subfolder, find the exe
                 if (!File.Exists(MemReductExe))
                 {
-                    // Search subdirectories for memreduct.exe
                     var found = Directory.GetFiles(MemReductDir, "memreduct.exe", SearchOption.AllDirectories).FirstOrDefault();
                     if (found != null && found != MemReductExe)
                     {
-                        // Move all files from the subfolder to the root MemReduct dir
                         string subDir = Path.GetDirectoryName(found)!;
                         foreach (var file in Directory.GetFiles(subDir))
                         {
                             string destFile = Path.Combine(MemReductDir, Path.GetFileName(file));
-                            if (!File.Exists(destFile))
-                                File.Move(file, destFile);
+                            if (!File.Exists(destFile)) File.Move(file, destFile);
                         }
                     }
                 }
-
-                // Clean up zip
-                if (File.Exists(zipPath))
-                    File.Delete(zipPath);
-
-                App.Logger.WriteLine("MemReduct", "Download and extraction complete.");
+                if (File.Exists(zipPath)) File.Delete(zipPath);
             }
             catch (Exception ex)
             {
-                App.Logger.WriteLine("MemReduct", $"Failed to download MemReduct: {ex.Message}");
+                App.Logger.WriteLine("MemReduct", "Failed to download MemReduct: " + ex.Message);
             }
         }
 
-        private void StopMemReduct()
+        private void StopCleaners()
         {
             try
             {
                 if (_memReductProcess is not null && !_memReductProcess.HasExited)
                 {
                     _memReductProcess.Kill();
-                    App.Logger.WriteLine("MemReduct", "MemReduct process terminated.");
                 }
                 _memReductProcess = null;
 
-                // Also kill any stray memreduct processes we may have spawned
-                foreach (var proc in Process.GetProcessesByName("memreduct"))
-                {
-                    try { proc.Kill(); } catch { }
-                }
+                foreach (var proc in Process.GetProcessesByName("memreduct")) { try { proc.Kill(); } catch { } }
+                foreach (var proc in Process.GetProcessesByName("WinMemoryCleaner")) { try { proc.Kill(); } catch { } }
             }
-            catch (Exception ex)
-            {
-                App.Logger.WriteLine("MemReduct", $"Failed to stop MemReduct: {ex.Message}");
-            }
+            catch (Exception) { }
         }
 
         #endregion
+
     }
 }

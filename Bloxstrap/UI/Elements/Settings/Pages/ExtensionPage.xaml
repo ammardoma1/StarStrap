@@ -38,9 +38,22 @@
             Text="Memory Optimization" />
 
         <controls:OptionControl 
-            Header="MemReduct"
-            Description="Automatically clean Roblox memory every 5 minutes while playing. Downloads portable MemReduct on first enable.">
-            <ui:ToggleSwitch IsChecked="{Binding MemReductEnabled, Mode=TwoWay}" />
+            Header="Memory Cleaner"
+            Description="Automatically clean Roblox memory every 5 minutes while playing. Downloads the selected portable cleaner on first enable.">
+            <ComboBox 
+                Margin="5,0,0,0" 
+                Padding="10,5,10,5" 
+                Width="200" 
+                ItemsSource="{Binding MemoryCleanerTypes}" 
+                DisplayMemberPath="Key" 
+                SelectedValuePath="Value" 
+                SelectedValue="{Binding SelectedMemoryCleaner, Mode=TwoWay}" />
+        </controls:OptionControl>
+
+        <controls:OptionControl 
+            Header="Compress System RAM"
+            Description="Enable Windows memory compression to improve system responsiveness.">
+            <ui:ToggleSwitch IsChecked="{Binding CompressRamEnabled, Mode=TwoWay}" />
         </controls:OptionControl>
 
         <TextBlock
@@ -48,6 +61,12 @@
             FontSize="20"
             FontWeight="Medium"
             Text="Windows Optimization" />
+
+        <controls:OptionControl 
+            Header="Enable Winhance"
+            Description="Automatically debloat and optimize Windows for better performance using Winhance.">
+            <ui:ToggleSwitch IsChecked="{Binding WinhanceEnabled, Mode=TwoWay}" />
+        </controls:OptionControl>
 
         <controls:OptionControl 
             Header="Remove Unimportant Windows"

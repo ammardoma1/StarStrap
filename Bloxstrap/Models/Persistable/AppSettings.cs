@@ -52,7 +52,7 @@ namespace StarStrap.Models.Persistable
         public bool BackgroundWindow { get; set; } = true;
         public bool UsePlaceId { get; set; } = false;
         public bool ClearFont { get; set; } = false;
-        public bool MemReductEnabled { get; set; } = false;
+        public MemoryCleanerType SelectedMemoryCleaner { get; set; } = MemoryCleanerType.None;
 
         public bool Fleasion { get; set; } = false;
         public string PlaceId { get; set; } = "";
@@ -163,12 +163,7 @@ namespace StarStrap.Models.Persistable
             public int RefreshRate { get; set; }
         }
 
-        // AI Agent Settings
-        public bool AIAgentEnabled { get; set; } = false;
-        public AIAgentProvider AIAgentProvider { get; set; } = AIAgentProvider.OpenAI;
-        public string AIAgentApiKey { get; set; } = "";
-        public string AIAgentSystemPrompt { get; set; } = "You are an expert Roblox player and a helpful AI assistant. Analyze the screenshot of the game and give me short, precise advice on what to do next.";
-        public string AIAgentHotkey { get; set; } = "Alt+A";
-        public bool AIAgentLaunchWithRoblox { get; set; } = false;
+        public bool CompressRamEnabled { get; set; } = false;
+        public bool WinhanceEnabled { get; set; } = false;
     }
 }

@@ -298,15 +298,7 @@ namespace StarStrap.UI.ViewModels.Settings
             set => RobloxSettings.SetUncapped(value);
         }
 
-        public bool MemReductEnabled
-        {
-            get => App.Settings.Prop.MemReductEnabled;
-            set
-            {
-                App.Settings.Prop.MemReductEnabled = value;
-                OnPropertyChanged(nameof(MemReductEnabled));
-            }
-        }
+
 
         public bool DiscordActivityJoinEnabled
         {

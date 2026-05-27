@@ -1,4 +1,6 @@
 using System.ComponentModel;
+using System.Collections.Generic;
+using StarStrap.Enums;
 
 namespace StarStrap.UI.ViewModels.Settings
 {
@@ -14,13 +16,40 @@ namespace StarStrap.UI.ViewModels.Settings
             }
         }
 
-        public bool MemReductEnabled
+        public IReadOnlyDictionary<string, MemoryCleanerType> MemoryCleanerTypes => new Dictionary<string, MemoryCleanerType>
         {
-            get => App.Settings.Prop.MemReductEnabled;
+            { "None", MemoryCleanerType.None },
+            { "MemReduct", MemoryCleanerType.MemReduct },
+            { "Windows Memory Cleaner", MemoryCleanerType.WindowsMemoryCleaner }
+        };
+
+        public MemoryCleanerType SelectedMemoryCleaner
+        {
+            get => App.Settings.Prop.SelectedMemoryCleaner;
             set
             {
-                App.Settings.Prop.MemReductEnabled = value;
-                OnPropertyChanged(nameof(MemReductEnabled));
+                App.Settings.Prop.SelectedMemoryCleaner = value;
+                OnPropertyChanged(nameof(SelectedMemoryCleaner));
+            }
+        }
+
+        public bool WinhanceEnabled
+        {
+            get => App.Settings.Prop.WinhanceEnabled;
+            set
+            {
+                App.Settings.Prop.WinhanceEnabled = value;
+                OnPropertyChanged(nameof(WinhanceEnabled));
+            }
+        }
+
+        public bool CompressRamEnabled
+        {
+            get => App.Settings.Prop.CompressRamEnabled;
+            set
+            {
+                App.Settings.Prop.CompressRamEnabled = value;
+                OnPropertyChanged(nameof(CompressRamEnabled));
             }
         }
 
