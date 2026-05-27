@@ -57,5 +57,15 @@ namespace StarStrap.UI.ViewModels.Settings
                 OnPropertyChanged(nameof(AIAgentHotkey));
             }
         }
+
+        public bool AIAgentLaunchWithRoblox
+        {
+            get => App.Settings.Prop.AIAgentLaunchWithRoblox;
+            set
+            {
+                App.Settings.Prop.AIAgentLaunchWithRoblox = value;
+                OnPropertyChanged(nameof(AIAgentLaunchWithRoblox));
+            }
+        }
     }
 }

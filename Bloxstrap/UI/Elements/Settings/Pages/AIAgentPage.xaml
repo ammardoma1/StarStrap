@@ -40,6 +40,13 @@
         </controls:OptionControl>
 
         <controls:OptionControl
+            Header="Launch with Roblox"
+            Description="Automatically trigger the AI Agent as soon as Roblox starts."
+            IsEnabled="{Binding AIAgentEnabled, Mode=OneWay}">
+            <ui:ToggleSwitch Background="{DynamicResource SystemAccentBrush}" IsChecked="{Binding AIAgentLaunchWithRoblox, Mode=TwoWay}" />
+        </controls:OptionControl>
+
+        <controls:OptionControl
             Header="Hotkey"
             Description="The hotkey to press in-game to trigger the AI Agent."
             IsEnabled="{Binding AIAgentEnabled, Mode=OneWay}">

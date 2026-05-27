@@ -22,6 +22,7 @@ namespace StarStrap.Integrations
         private const int HOTKEY_ID = 9000;
         private bool _isDisposed = false;
         private readonly ActivityWatcher _activityWatcher;
+        private HwndSource? _hwndSource;
 
         // Modifiers
         private const uint MOD_ALT = 0x0001;
@@ -41,6 +42,15 @@ namespace StarStrap.Integrations
             if (App.Settings.Prop.AIAgentEnabled)
             {
                 RegisterGlobalHotkey();
+
+                if (App.Settings.Prop.AIAgentLaunchWithRoblox)
+                {
+                    Task.Delay(5000).ContinueWith(_ => 
+                    {
+                        if (!_isDisposed)
+                            OnHotkeyPressed();
+                    });
+                }
             }
         }
 
@@ -66,9 +76,16 @@ namespace StarStrap.Integrations
 
             Application.Current.Dispatcher.Invoke(() =>
             {
-                ComponentDispatcher.ThreadPreprocessMessage += ComponentDispatcher_ThreadPreprocessMessage;
-                // Register using a IntPtr.Zero handle for thread-specific hotkey.
-                RegisterHotKey(IntPtr.Zero, HOTKEY_ID, modifiers, key);
+                if (_hwndSource == null)
+                {
+                    var parameters = new HwndSourceParameters("AIAgentHotkeyWindow")
+                    {
+                        Width = 1, Height = 1, WindowStyle = 0
+                    };
+                    _hwndSource = new HwndSource(parameters);
+                    _hwndSource.AddHook(HwndHook);
+                }
+                RegisterHotKey(_hwndSource.Handle, HOTKEY_ID, modifiers, key);
             });
             App.Logger.WriteLine("AIAgent", "Registered AI Agent global hotkey.");
         }
@@ -77,20 +94,26 @@ namespace StarStrap.Integrations
         {
             Application.Current.Dispatcher.Invoke(() =>
             {
-                ComponentDispatcher.ThreadPreprocessMessage -= ComponentDispatcher_ThreadPreprocessMessage;
-                UnregisterHotKey(IntPtr.Zero, HOTKEY_ID);
+                if (_hwndSource != null)
+                {
+                    UnregisterHotKey(_hwndSource.Handle, HOTKEY_ID);
+                    _hwndSource.RemoveHook(HwndHook);
+                    _hwndSource.Dispose();
+                    _hwndSource = null;
+                }
             });
             App.Logger.WriteLine("AIAgent", "Unregistered AI Agent global hotkey.");
         }
 
-        private void ComponentDispatcher_ThreadPreprocessMessage(ref MSG msg, ref bool handled)
+        private IntPtr HwndHook(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
             const int WM_HOTKEY = 0x0312;
-            if (msg.message == WM_HOTKEY && msg.wParam.ToInt32() == HOTKEY_ID)
+            if (msg == WM_HOTKEY && wParam.ToInt32() == HOTKEY_ID)
             {
                 OnHotkeyPressed();
                 handled = true;
             }
+            return IntPtr.Zero;
         }
 
         private async void OnHotkeyPressed()
