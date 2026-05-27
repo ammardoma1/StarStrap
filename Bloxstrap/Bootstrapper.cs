@@ -760,6 +760,7 @@ namespace StarStrap
         private async Task LaunchWatcherIfNeeded(string logFileName, CancellationToken ct)
         {
             bool needWatcher = (App.Settings?.Prop.EnableActivityTracking ?? false)
+                || (App.Settings?.Prop.AIAgentEnabled ?? false)
                 || App.LaunchSettings.TestModeFlag?.Active == true;
 
             if (!needWatcher) return;

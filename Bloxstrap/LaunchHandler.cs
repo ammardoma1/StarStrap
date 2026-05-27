@@ -73,8 +73,8 @@ namespace StarStrap
             }
             else if (!App.LaunchSettings.QuietFlag.Active)
             {
-                App.Logger.WriteLine(LOG_IDENT, "Opening menu");
-                LaunchMenu();
+                App.Logger.WriteLine(LOG_IDENT, "Opening settings menu");
+                LaunchSettings();
             }
             else
             {

@@ -9,8 +9,8 @@
 		<UseWPF>true</UseWPF>
 		<UseWindowsForms>True</UseWindowsForms>
 		<ApplicationIcon>StarStrap.ico</ApplicationIcon>
-		<Version>0.9.1.5</Version>
-		<FileVersion>0.9.1.5</FileVersion>
+		<Version>0.9.9</Version>
+		<FileVersion>0.9.9</FileVersion>
 		<ApplicationManifest>app.manifest</ApplicationManifest>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<RootNamespace>StarStrap</RootNamespace>
