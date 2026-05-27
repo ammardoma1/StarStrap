@@ -18,6 +18,7 @@ namespace StarStrap
         public readonly DiscordRichPresence? RichPresence;
 
         public readonly IntegrationWatcher? IntegrationWatcher;
+        public readonly AIAgentWatcher? AIAgentWatcher;
 
         public Watcher()
         {
@@ -70,6 +71,8 @@ namespace StarStrap
 
                 IntegrationWatcher = new IntegrationWatcher(ActivityWatcher);
             }
+
+            AIAgentWatcher = new AIAgentWatcher(ActivityWatcher);
 
             _notifyIcon = new(this);
         }
@@ -128,6 +131,7 @@ namespace StarStrap
         {
             App.Logger.WriteLine("Watcher::Dispose", "Disposing Watcher");
 
+            AIAgentWatcher?.Dispose();
             IntegrationWatcher?.Dispose();
             _notifyIcon?.Dispose();
             RichPresence?.Dispose();

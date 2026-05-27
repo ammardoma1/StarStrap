@@ -162,5 +162,12 @@ namespace StarStrap.Models.Persistable
             public int Height { get; set; }
             public int RefreshRate { get; set; }
         }
+
+        // AI Agent Settings
+        public bool AIAgentEnabled { get; set; } = false;
+        public AIAgentProvider AIAgentProvider { get; set; } = AIAgentProvider.OpenAI;
+        public string AIAgentApiKey { get; set; } = "";
+        public string AIAgentSystemPrompt { get; set; } = "You are an expert Roblox player and a helpful AI assistant. Analyze the screenshot of the game and give me short, precise advice on what to do next.";
+        public string AIAgentHotkey { get; set; } = "Alt+A";
     }
 }

@@ -319,6 +319,7 @@
                     <ui:NavigationItem x:Name="FastFlagEditorNavItem" Content="FastFlag Editor" Icon="Flag28" Tag="Flag20" PageType="{x:Type pages:FastFlagEditorPage}" Visibility="{Binding IsFastFlagEditorVisible, Converter={StaticResource BooleanToVisibilityConverter}}" />
                     <ui:NavigationItem Content="Global" Icon="GlobeLocation20" Tag="Globe20" PageType="{x:Type pages:GBSEditorPage}" />
                     <ui:NavigationItem Content="{x:Static resources:Strings.Menu_Mods_Title}" Icon="WrenchScrewdriver20" Tag="Wrench24" PageType="{x:Type pages:ModsPage}" />
+                    <ui:NavigationItem Content="AI Agent" Icon="Bot24" Tag="Bot24" PageType="{x:Type pages:AIAgentPage}" />
                     <ui:NavigationSeparator />
                     <ui:NavigationItem IsEnabled="False" Opacity="0.6" />
                 </ui:NavigationFluent.Items>
